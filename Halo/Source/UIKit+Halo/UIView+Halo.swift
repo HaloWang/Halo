@@ -1,8 +1,18 @@
 
 import UIKit
 
-public func AnimateWithDuration(duration: NSTimeInterval, animations: () -> Void) {
-    UIView.animateWithDuration(duration, animations: animations)
+public func AnimateWithDuration(duration: NSTimeInterval, @noescape animations: () -> Void) {
+    UIView.beginAnimations(nil, context: nil)
+    UIView.setAnimationDuration(duration)
+    animations()
+    UIView.commitAnimations()
+}
+
+public func AnimateWithDuration(duration: NSTimeInterval, animations: () -> Void, completion: (() -> Void)?) {
+    let outCompletion = completion
+    UIView.animateWithDuration(duration, animations: animations, completion: { (_) -> Void in
+        outCompletion?()
+    })
 }
 
 public extension UIView {
@@ -45,7 +55,7 @@ public extension UIView {
         return self
     }
     
-    public func frame(CGRect) -> Self {
+    public func frame(frame:CGRect) -> Self {
         self.frame = frame
         return self
     }

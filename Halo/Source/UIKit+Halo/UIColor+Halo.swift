@@ -1,6 +1,5 @@
 
 import UIKit
-import CoreImage
 
 public let White = UIColor.whiteColor()
 
@@ -28,10 +27,10 @@ public func HEX(hexString:String) -> UIColor {
 
 public extension UIColor {
     
-    func alpha(alpha:Halo_CGFloatable) -> UIColor {
-        var _red = 0.f
+    func alpha(alpha:Halo.CGFloatable) -> UIColor {
+        var _red   = 0.f
         var _green = 0.f
-        var _blue = 0.f
+        var _blue  = 0.f
         var _alpha = 0.f
         getRed(&_red, green: &_green, blue: &_blue, alpha: &_alpha)
         return UIColor(red: _red, green: _green, blue: _blue, alpha: alpha.f)

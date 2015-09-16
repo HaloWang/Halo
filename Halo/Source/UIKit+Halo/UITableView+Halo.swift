@@ -20,4 +20,14 @@ public extension UITableView {
         return self
     }
     
+    func rowHeight(rowHeight: CGFloat) -> Self {
+        self.rowHeight = rowHeight
+        return self
+    }
+    
+    func separatorColor(separatorColor: UIColor) -> Self {
+        self.separatorColor = separatorColor
+        return self
+    }
+    
 }

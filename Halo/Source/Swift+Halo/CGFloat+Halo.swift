@@ -1,7 +1,7 @@
 
 import UIKit
 
-public protocol Halo_CGFloatable {
+public protocol CGFloatable {
     var f : CGFloat { get }
 }
 
@@ -21,8 +21,23 @@ public extension CGFloat {
 	}
 }
 
-extension CGFloat : Halo_CGFloatable {
+extension CGFloat : Halo.CGFloatable {
     public var f : CGFloat {
         return self
+    }
+}
+
+public func *(lhs: Halo.CGFloatable, rhs: Halo.CGFloatable) -> CGFloat {
+    return lhs.f * rhs.f
+}
+
+public func ValueWithScreenWidth(_320 : Halo.CGFloatable, _375 : Halo.CGFloatable, _414 : Halo.CGFloatable) -> CGFloat {
+    switch ScreenWidth {
+    case 375.f:
+        return _375.f
+    case 414.f:
+        return _414.f
+    default:
+        return _320.f
     }
 }

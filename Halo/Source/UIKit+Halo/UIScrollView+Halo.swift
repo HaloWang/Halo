@@ -20,6 +20,24 @@ public extension UIScrollView {
 			contentOffset.y = newValue
 		}
 	}
+    
+    var contentSizeHeight : CGFloat  {
+        get {
+            return contentSize.height
+        }
+        set {
+            contentSize.height = newValue
+        }
+    }
+    
+    var contentSizeWidth : CGFloat {
+        get {
+            return contentSize.width
+        }
+        set {
+            contentSize.width = newValue
+        }
+    }
 	
 	public var insetTop : CGFloat {
 		get {

@@ -14,10 +14,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let v = UIView()
-        addSubview(v)
-        v.frame = ScreenBounds
-        v.backgroundColor(UIColor(red: 0.1, green: 0.9, blue: 0.8, alpha: 1).alpha(0.1))
+        println(ValueWithScreenWidth(12, 13, 14))
+        
     }
 
     override func didReceiveMemoryWarning() {

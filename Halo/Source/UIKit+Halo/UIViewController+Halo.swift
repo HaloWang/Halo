@@ -47,5 +47,9 @@ public extension UIViewController {
 		self.automaticallyAdjustsScrollViewInsets = automaticallyAdjustsScrollViewInsets
 		return self
 	}
+    
+    var navigationed : UINavigationController {
+        return UINavigationController(rootViewController: self)
+    }
 	
 }

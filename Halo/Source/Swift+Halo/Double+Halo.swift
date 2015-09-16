@@ -1,7 +1,7 @@
 
 import UIKit
 
-extension Double : Halo_CGFloatable {
+extension Double : Halo.CGFloatable {
 	public var f : CGFloat {
 		return CGFloat(self)
 	}

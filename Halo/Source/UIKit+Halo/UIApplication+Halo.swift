@@ -8,9 +8,11 @@
 
 import UIKit
 
-public var ScreenBounds : CGRect {
-    return UIScreen.mainScreen().bounds
-}
+//public var ScreenBounds : CGRect {
+//    return UIScreen.mainScreen().bounds
+//}
+
+public let ScreenBounds = UIScreen.mainScreen().bounds
 
 public var ScreenHeight : CGFloat {
     return ScreenBounds.size.height
