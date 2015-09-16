@@ -28,38 +28,7 @@
 		09BCDD8A1B9DD4BB0005359C /* UITableViewCell+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BCDD891B9DD4BB0005359C /* UITableViewCell+Halo.swift */; };
 		09BCDD8C1B9DD55C0005359C /* UIImageView+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BCDD8B1B9DD55C0005359C /* UIImageView+Halo.swift */; };
 		09DC29F51B989A410045615F /* Halo.h in Headers */ = {isa = PBXBuildFile; fileRef = 09DC29F41B989A410045615F /* Halo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09DC2A181B989BA30045615F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DC2A171B989BA30045615F /* AppDelegate.swift */; };
-		09DC2A1A1B989BA30045615F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DC2A191B989BA30045615F /* ViewController.swift */; };
-		09DC2A1D1B989BA30045615F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09DC2A1B1B989BA30045615F /* Main.storyboard */; };
-		09DC2A1F1B989BA30045615F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09DC2A1E1B989BA30045615F /* Images.xcassets */; };
-		09DC2A221B989BA30045615F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09DC2A201B989BA30045615F /* LaunchScreen.xib */; };
-		09DC2A351B989BB30045615F /* Halo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09DC29EF1B989A410045615F /* Halo.framework */; };
-		09DC2A361B989BB30045615F /* Halo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09DC29EF1B989A410045615F /* Halo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		09DC2A371B989BB30045615F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 09DC29E61B989A410045615F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 09DC29EE1B989A410045615F;
-			remoteInfo = Halo;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		09DC2A391B989BB30045615F /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				09DC2A361B989BB30045615F /* Halo.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		09BACC571B9C9E08001314A5 /* UIButton+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Halo.swift"; sourceTree = "<group>"; };
@@ -85,13 +54,6 @@
 		09DC29EF1B989A410045615F /* Halo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Halo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09DC29F31B989A410045615F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09DC29F41B989A410045615F /* Halo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Halo.h; sourceTree = "<group>"; };
-		09DC2A131B989BA30045615F /* HalowDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HalowDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		09DC2A161B989BA30045615F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		09DC2A171B989BA30045615F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		09DC2A191B989BA30045615F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		09DC2A1C1B989BA30045615F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		09DC2A1E1B989BA30045615F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		09DC2A211B989BA30045615F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,14 +61,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		09DC2A101B989BA30045615F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				09DC2A351B989BB30045615F /* Halo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +116,6 @@
 			children = (
 				09BACC4B1B9C9E08001314A5 /* Source */,
 				09DC29F11B989A410045615F /* Halo */,
-				09DC2A141B989BA30045615F /* HalowDemo */,
 				09DC29F01B989A410045615F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -171,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				09DC29EF1B989A410045615F /* Halo.framework */,
-				09DC2A131B989BA30045615F /* HalowDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -189,27 +141,6 @@
 			isa = PBXGroup;
 			children = (
 				09DC29F31B989A410045615F /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		09DC2A141B989BA30045615F /* HalowDemo */ = {
-			isa = PBXGroup;
-			children = (
-				09DC2A171B989BA30045615F /* AppDelegate.swift */,
-				09DC2A191B989BA30045615F /* ViewController.swift */,
-				09DC2A1B1B989BA30045615F /* Main.storyboard */,
-				09DC2A1E1B989BA30045615F /* Images.xcassets */,
-				09DC2A201B989BA30045615F /* LaunchScreen.xib */,
-				09DC2A151B989BA30045615F /* Supporting Files */,
-			);
-			path = HalowDemo;
-			sourceTree = "<group>";
-		};
-		09DC2A151B989BA30045615F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				09DC2A161B989BA30045615F /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -246,25 +177,6 @@
 			productReference = 09DC29EF1B989A410045615F /* Halo.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		09DC2A121B989BA30045615F /* HalowDemo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 09DC2A2F1B989BA30045615F /* Build configuration list for PBXNativeTarget "HalowDemo" */;
-			buildPhases = (
-				09DC2A0F1B989BA30045615F /* Sources */,
-				09DC2A101B989BA30045615F /* Frameworks */,
-				09DC2A111B989BA30045615F /* Resources */,
-				09DC2A391B989BB30045615F /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				09DC2A381B989BB30045615F /* PBXTargetDependency */,
-			);
-			name = HalowDemo;
-			productName = HalowDemo;
-			productReference = 09DC2A131B989BA30045615F /* HalowDemo.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -275,9 +187,6 @@
 				ORGANIZATIONNAME = WangCe;
 				TargetAttributes = {
 					09DC29EE1B989A410045615F = {
-						CreatedOnToolsVersion = 6.4;
-					};
-					09DC2A121B989BA30045615F = {
 						CreatedOnToolsVersion = 6.4;
 					};
 				};
@@ -296,7 +205,6 @@
 			projectRoot = "";
 			targets = (
 				09DC29EE1B989A410045615F /* Halo */,
-				09DC2A121B989BA30045615F /* HalowDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -306,16 +214,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		09DC2A111B989BA30045615F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				09DC2A1D1B989BA30045615F /* Main.storyboard in Resources */,
-				09DC2A221B989BA30045615F /* LaunchScreen.xib in Resources */,
-				09DC2A1F1B989BA30045615F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,43 +247,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		09DC2A0F1B989BA30045615F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				09DC2A1A1B989BA30045615F /* ViewController.swift in Sources */,
-				09DC2A181B989BA30045615F /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		09DC2A381B989BB30045615F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 09DC29EE1B989A410045615F /* Halo */;
-			targetProxy = 09DC2A371B989BB30045615F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		09DC2A1B1B989BA30045615F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				09DC2A1C1B989BA30045615F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		09DC2A201B989BA30045615F /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				09DC2A211B989BA30045615F /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		09DC2A031B989A410045615F /* Debug */ = {
@@ -512,30 +374,6 @@
 			};
 			name = Release;
 		};
-		09DC2A301B989BA30045615F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = HalowDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		09DC2A311B989BA30045615F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = HalowDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -553,15 +391,6 @@
 			buildConfigurations = (
 				09DC2A061B989A410045615F /* Debug */,
 				09DC2A071B989A410045615F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		09DC2A2F1B989BA30045615F /* Build configuration list for PBXNativeTarget "HalowDemo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				09DC2A301B989BA30045615F /* Debug */,
-				09DC2A311B989BA30045615F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
