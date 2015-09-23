@@ -33,11 +33,25 @@ public func *(lhs: Halo.CGFloatable, rhs: Halo.CGFloatable) -> CGFloat {
 
 public func ValueWithScreenWidth(_320 : Halo.CGFloatable, _375 : Halo.CGFloatable, _414 : Halo.CGFloatable) -> CGFloat {
     switch ScreenWidth {
-    case 375.f:
-        return _375.f
     case 414.f:
         return _414.f
-    default:
+    case 320.f:
         return _320.f
+    default:
+        return _375.f
     }
+}
+
+public func ValueWithScreenHeight(_480 : Halo.CGFloatable, _568: Halo.CGFloatable, _667: Halo.CGFloatable, _736: Halo.CGFloatable) -> CGFloat {
+	switch ScreenHeight {
+	case 480.f:
+		return _480.f
+	case 568.f:
+		return _568.f
+	case 736.f:
+		return _736.f
+	default:
+		return _667.f
+	}
+	
 }

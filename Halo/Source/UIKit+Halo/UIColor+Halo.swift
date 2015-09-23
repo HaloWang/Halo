@@ -39,7 +39,24 @@ public extension UIColor {
 	/**
 	使用 hex 色值初始化 UIColor
 	
-	:param: hexString 结构为 "#123456" 的字符串
+	传入的 hexString格式可以为：
+	
+	--- RGB ---
+	
+	- 12F
+	- #12F
+	
+	- 1234EF
+	- #1234EF
+	
+	--- RGBA ---
+	
+	- 123F
+	- #123F
+	
+	- 12345678
+	- #123456EF
+	
 	*/
 	convenience init(hexString: String) {
 		var red :  CGFloat = 0.0
