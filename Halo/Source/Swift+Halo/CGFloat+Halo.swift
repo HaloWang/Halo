@@ -27,10 +27,37 @@ extension CGFloat : Halo.CGFloatable {
     }
 }
 
+extension Double : Halo.CGFloatable {
+	public var f : CGFloat {
+		return CGFloat(self)
+	}
+}
+
+extension Float : Halo.CGFloatable {
+	public var f : CGFloat {
+		return CGFloat(self)
+	}
+}
+
+extension Int : Halo.CGFloatable {
+	public var f : CGFloat {
+		return CGFloat(self)
+	}
+}
+
+
 public func *(lhs: Halo.CGFloatable, rhs: Halo.CGFloatable) -> CGFloat {
     return lhs.f * rhs.f
 }
 
+/**
+根据屏幕宽度选择不同的值进行适配
+
+- parameter _320: 4s/5/5s
+- parameter _375: 6/6s
+- parameter _414: 6p/6sp
+
+*/
 public func ValueWithScreenWidth(_320 : Halo.CGFloatable, _375 : Halo.CGFloatable, _414 : Halo.CGFloatable) -> CGFloat {
     switch ScreenWidth {
     case 414.f:
@@ -42,6 +69,15 @@ public func ValueWithScreenWidth(_320 : Halo.CGFloatable, _375 : Halo.CGFloatabl
     }
 }
 
+/**
+根据屏幕高度分别选择不同的值进行适配
+
+- parameter _480: 4s
+- parameter _568: 5/5s
+- parameter _667: 6/6s
+- parameter _736: 6p/6sp
+
+*/
 public func ValueWithScreenHeight(_480 : Halo.CGFloatable, _568: Halo.CGFloatable, _667: Halo.CGFloatable, _736: Halo.CGFloatable) -> CGFloat {
 	switch ScreenHeight {
 	case 480.f:

@@ -1,6 +1,8 @@
 
 import UIKit
 
+// TODO: 应该让 UILabel/UITextField/UITextView 统一遵守某一协议
+
 public extension UILabel {
 	
 	public func text(text : String?) -> Self {
@@ -41,8 +43,14 @@ public extension UILabel {
 		}
 	}
 	
-	public func font(#systemFontOfSize:CGFloat) -> Self {
+	public func font(systemFontOfSize systemFontOfSize:CGFloat) -> Self {
 		return font(UIFont.systemFontOfSize(systemFontOfSize))
 	}
 	
+}
+
+public extension UIFont {
+	static var systemFontName : String {
+		return UIFont.systemFontOfSize(12).fontName
+	}
 }

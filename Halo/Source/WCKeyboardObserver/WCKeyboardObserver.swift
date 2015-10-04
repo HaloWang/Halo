@@ -6,8 +6,8 @@ import UIKit
 	/**
 	键盘在屏幕上展示的高度即将改变
 	
-	:param: height   键盘在屏幕上的显示高度
-	:param: duration 键盘动画延时
+	- parameter height:   键盘在屏幕上的显示高度
+	- parameter duration: 键盘动画延时
 	*/
 	func keyboardWillChangeToHeight(height:CGFloat, duration:NSTimeInterval)
 }
@@ -43,7 +43,7 @@ public class WCKeyboardObserver: NSObject {
 	
 	func keyboardFrameChange(notification : NSNotification) {
 		if let userInfo = notification.userInfo,
-			let keyboardY = userInfo[UIKeyboardFrameEndUserInfoKey]?.CGRectValue().origin.y,
+			let keyboardY = userInfo[UIKeyboardFrameEndUserInfoKey]?.CGRectValue.origin.y,
 			let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey]?.doubleValue {
 				let screenHeight = UIScreen.mainScreen().bounds.size.height
 				currentKeyboardHeight = screenHeight - keyboardY

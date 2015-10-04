@@ -14,7 +14,7 @@ public extension UIImageView {
         return self
     }
     
-    public func image(#named:String) -> Self {
+    public func image(named named:String) -> Self {
         self.image = UIImage(named: named)
         return self
     }

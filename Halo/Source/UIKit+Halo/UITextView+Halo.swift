@@ -38,6 +38,10 @@ public extension UITextView {
 		return self
 	}
 	
+	public func text(text: String? , textColor: UIColor) -> Self {
+		return self.text(text).textColor(textColor)
+	}
+	
 	public func editable(editable : Bool) -> Self {
 		self.editable = editable
 		return self

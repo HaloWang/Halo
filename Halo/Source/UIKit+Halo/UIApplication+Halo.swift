@@ -22,7 +22,7 @@ public var ScreenWidth : CGFloat {
     return ScreenBounds.size.width
 }
 
-public func CM(#y: CGFloat, #width: CGFloat, #height: CGFloat) -> CGRect {
+public func CM(y y: CGFloat, width: CGFloat, height: CGFloat) -> CGRect {
     return CGRect(x: (ScreenWidth - width)/2, y: y, width: width, height: height)
 }
 
@@ -30,6 +30,6 @@ public var CurrentSystemVersion : Float {
     return (UIDevice.currentDevice().systemVersion as NSString).floatValue
 }
 
-public func SetStatusBarStyle(style : UIStatusBarStyle, #animated: Bool) {
+public func SetStatusBarStyle(style : UIStatusBarStyle, animated: Bool) {
     UIApplication.sharedApplication().setStatusBarStyle(style, animated: animated)
 }

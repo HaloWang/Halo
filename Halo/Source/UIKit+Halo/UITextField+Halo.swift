@@ -4,7 +4,7 @@ import UIKit
 public extension UITextField {
 	
 	public var displaySize: CGSize {
-		return (self.text as NSString).boundingRectWithSize(CGSize(width: Double(MAXFLOAT), height: Double(MAXFLOAT)), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName:font], context: nil).size
+		return ((text ?? "") as NSString).boundingRectWithSize(CGSize(width: Double(MAXFLOAT), height: Double(MAXFLOAT)), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName:font ?? UIFont.systemFontName], context: nil).size
 	}
 	
 	public func text(text : String) -> Self {
@@ -43,7 +43,7 @@ public extension UITextField {
 		return self
 	}
 	
-	public func font(#systemFontOfSize:CGFloat) -> Self {
+	public func font(systemFontOfSize systemFontOfSize:CGFloat) -> Self {
 		return font(UIFont.systemFontOfSize(systemFontOfSize))
 	}
 	
@@ -53,7 +53,11 @@ public extension UITextField {
 	}
 	
 	public func fontSize(fontSize : CGFloat) -> Self {
-		font = UIFont(name: font.fontName, size: fontSize)
+		if font != nil {
+			font = UIFont(name: font!.fontName, size: fontSize)
+		} else {
+			font = UIFont.systemFontOfSize(fontSize)
+		}
 		return self
 	}
 	

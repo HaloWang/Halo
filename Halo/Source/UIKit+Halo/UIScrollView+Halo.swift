@@ -121,11 +121,6 @@ public extension UIScrollView {
 		return self
 	}
 	
-	public func delegate(delegate : protocol<UIScrollViewDelegate>) -> Self {
-		self.delegate = delegate
-		return self
-	}
-	
 	public func showsVerticalScrollIndicator(showsVerticalScrollIndicator:Bool) -> Self {
 		self.showsVerticalScrollIndicator = showsVerticalScrollIndicator
 		return self

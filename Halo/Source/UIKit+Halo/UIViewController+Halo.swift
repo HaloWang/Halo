@@ -6,9 +6,9 @@ public extension UIViewController {
 	/**
 	直接设置 self.view.backgroundColor
 	
-	:param: backgroundColor 背景颜色
+	- parameter backgroundColor: 背景颜色
 	
-	:returns: self
+	- returns: self
 	*/
 	public func backgroundColor(backgroundColor : UIColor) -> Self{
 		view.backgroundColor(backgroundColor)
@@ -17,9 +17,9 @@ public extension UIViewController {
 	/**
 	在 self.view 上添加 UIView
 	
-	:param: viewsSubview subView
+	- parameter viewsSubview: subView
 	
-	:returns: self
+	- returns: self
 	*/
 	public func addSubview(subviewForView : UIView) -> Self{
 		view.addSubview(subviewForView)

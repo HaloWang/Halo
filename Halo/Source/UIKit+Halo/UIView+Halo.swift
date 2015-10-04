@@ -1,14 +1,14 @@
 
 import UIKit
 
-public func AnimateWithDuration(duration: NSTimeInterval, @noescape animations: () -> Void) {
+public func AnimateWithDuration(duration: NSTimeInterval, @noescape _ animations: () -> Void) {
     UIView.beginAnimations(nil, context: nil)
     UIView.setAnimationDuration(duration)
     animations()
     UIView.commitAnimations()
 }
 
-public func AnimateWithDuration(duration: NSTimeInterval, animations: () -> Void, completion: (() -> Void)?) {
+public func AnimateWithDuration(duration: NSTimeInterval, _ animations: () -> Void, _ completion: (() -> Void)?) {
     let outCompletion = completion
     UIView.animateWithDuration(duration, animations: animations, completion: { (_) -> Void in
         outCompletion?()
@@ -26,8 +26,8 @@ public extension UIView {
     
     /**
     设置 view.superView
-    :param: superView 父视图
-    :returns: self
+    - parameter superView: 父视图
+    - returns: self
     */
     public func superView(superView : UIView) -> Self {
         superView.addSubview(self)
@@ -68,11 +68,11 @@ public extension UIView {
     /**
     设置圆角
     
-    :param: radius      圆角半径
-    :param: borderWidth 描边宽度
-    :param: borderColor 描边颜色
+    - parameter radius:      圆角半径
+    - parameter borderWidth: 描边宽度
+    - parameter borderColor: 描边颜色
     
-    :returns: self
+    - returns: self
     */
     public func cornerRadius(radius : CGFloat, borderWidth : CGFloat, borderColor : UIColor) -> Self {
         layer.cornerRadius = radius
@@ -85,8 +85,8 @@ public extension UIView {
     /**
     设置某几个角的属性为某个 radius 值
     
-    :param: radius  半径
-    :param: corners 哪些角
+    - parameter radius:  半径
+    - parameter corners: 哪些角
     
     */
     public func setCornerRadius(radius : CGFloat, forCorners corners : UIRectCorner) -> Self {

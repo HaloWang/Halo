@@ -6,8 +6,9 @@ public extension String {
         if let URL = NSURL(string: self) {
             return URL
         } else {
-            println("⚠️Halo.framework: \(self) is not a url!")
+			ccWarning("\(Halo.LogString): \(self) is not a url!")
             return NSURL(string: "https://github.com/HaloWang")!
         }
 	}
 }
+

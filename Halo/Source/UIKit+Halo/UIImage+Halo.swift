@@ -7,7 +7,7 @@ public func PNGNamed(name : String) -> UIImage {
 	if let imageResourceString = NSBundle.mainBundle().pathForResource(name, ofType: "png"), image = UIImage(contentsOfFile: imageResourceString) {
 		return image
 	} else {
-		println("⚠️Halo.framework: Can not find image named \"\(name).png\" in mainBundle")
+		print("⚠️Halo.framework: Can not find image named \"\(name).png\" in mainBundle")
 		return UIImage()
 	}
 	
@@ -16,7 +16,7 @@ public func PNGNamed(name : String) -> UIImage {
 public extension UIImage {
 	
     var pngData : NSData {
-		return UIImagePNGRepresentation(self)
+		return UIImagePNGRepresentation(self) ?? NSData()
 	}
 	
     var width : CGFloat {
