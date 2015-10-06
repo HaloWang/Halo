@@ -1,20 +1,39 @@
 
 import Foundation
 
-public func cc<T>(item:T) {
-	print(item, terminator: "\n")
+public func cc(items:Any...) {
+	print(items.halo_stringValue)
 }
 
-public func ccRight<T>(item:T) {
-	print("✅", item, terminator: "\n")
+// TODO: 到底怎样使用“多参数”呢？
+
+public func ccRight(items:Any...) {
+	print(items.halo_appendFirst("✅").halo_stringValue)
 }
 
-public func ccWarning<T>(item:T) {
-	print("⚠️", item, terminator: "\n")
+public func ccWarning(items:Any...) {
+	print(items.halo_appendFirst("⚠️").halo_stringValue)
 }
 
-public func ccError<T>(item:T) {
-	print("❌", item, terminator: "\n")
+public func ccError(items:Any...) {
+	print(items.halo_appendFirst("❌").halo_stringValue)
+}
+
+public func ccType(item:Any) {
+	print(item.dynamicType)
+}
+
+public extension Array {
+	// TODO: 不知道还有没有更优雅的方法？
+	// TODO: 用 reduce 怎么区分是不是最后一个 Element
+	/// 将数组中的每一个元素转化为字符串输出
+	var halo_stringValue : String {
+		var stringValue = ""
+		for i in 0 ..< count {
+			stringValue.appendContentsOf("\(self[i])" + ( i == count - 1 ? "" : " "))
+		}
+		return stringValue
+	}
 }
 
 public let LogString = "Halo.framework"

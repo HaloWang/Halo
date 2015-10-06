@@ -1,11 +1,19 @@
 
 import UIKit
 
-public let White = UIColor.whiteColor()
+public let White  = UIColor.whiteColor()
 
-public let Black = UIColor.blackColor()
+public let Black  = UIColor.blackColor()
 
-public let Clear = UIColor.clearColor()
+public let Clear  = UIColor.clearColor()
+
+public let Red    = UIColor.redColor()
+
+public let Yellow = UIColor.yellowColor()
+
+public let Green  = UIColor.greenColor()
+
+public let Blue   = UIColor.blueColor()
 
 /// 系统分割线颜色 -> RGB(200, 199, 204)
 public var SystemSeparatorColor : UIColor {
