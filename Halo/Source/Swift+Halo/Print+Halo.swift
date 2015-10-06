@@ -5,6 +5,10 @@ public func cc(items:Any...) {
 	print(items.halo_stringValue)
 }
 
+public func ccInfo(items:Any...) {
+	print(items.halo_stringValue)
+}
+
 // TODO: 到底怎样使用“多参数”呢？
 
 public func ccRight(items:Any...) {
