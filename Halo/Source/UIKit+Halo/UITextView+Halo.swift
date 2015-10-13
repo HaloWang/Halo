@@ -2,6 +2,15 @@
 import UIKit
 
 public extension UITextView {
+    
+    /// 获取该 UITextView 展示当前文字所需最小 height，当没有文字时，返回宽度为0，高度为font。lineHeight 的 height
+    public var displayHeight: CGFloat {
+        if let text = text {
+            return (text as NSString).boundingRectWithSize(CGSize(width: frame.size.width, height: CGFloat(MAXFLOAT)), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName:font ?? UIFont.systemFontOfSize(12)], context: nil).size.height
+        } else {
+            return font?.lineHeight ?? UIFont.systemFontOfSize(12).lineHeight
+        }
+    }
 	
 	public func returnKeyType(returnKeyType : UIReturnKeyType) -> Self {
 		self.returnKeyType = returnKeyType

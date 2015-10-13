@@ -34,12 +34,12 @@ public extension UILabel {
 		return self.text(text).textColor(textColor)
 	}
 	
-	/// 获取该label展示当前文字所需最小size，当没有文字时，返回宽度为0，高度为font。lineHeight的size
-	public var displaySize: CGSize {
+	/// 获取该 UILabel 展示当前文字所需最小 height，当没有文字时，返回宽度为0，高度为font。lineHeight 的 height
+	public var displayHeight: CGFloat {
 		if let text = text {
-			return (text as NSString).boundingRectWithSize(CGSize(width: Double(MAXFLOAT), height: Double(MAXFLOAT)), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName:font], context: nil).size
+			return (text as NSString).boundingRectWithSize(CGSize(width: frame.size.width, height: CGFloat(MAXFLOAT)), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName:font ?? UIFont.systemFontOfSize(17)], context: nil).size.height
 		} else {
-			return CGSize(width: 0, height: font.lineHeight)
+			return font?.lineHeight ?? UIFont.systemFontOfSize(17).lineHeight
 		}
 	}
 	
