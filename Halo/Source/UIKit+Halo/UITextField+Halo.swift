@@ -12,13 +12,19 @@ public extension UITextField {
         }
     }
 	
-	public func text(text : String) -> Self {
+	public func text(text : String?) -> Self {
 		self.text = text
 		return self
 	}
     
     public func textColor(color : UIColor) -> Self {
         self.textColor = color
+        return self
+    }
+    
+    public func text(text: String?, textColor: UIColor) -> Self {
+        self.text = text
+        self.textColor = textColor
         return self
     }
 	
