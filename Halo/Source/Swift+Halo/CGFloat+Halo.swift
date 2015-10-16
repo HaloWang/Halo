@@ -45,9 +45,20 @@ extension Int : Halo.CGFloatable {
 	}
 }
 
-
 public func *(lhs: Halo.CGFloatable, rhs: Halo.CGFloatable) -> CGFloat {
     return lhs.f * rhs.f
+}
+
+public func -(lhs: Halo.CGFloatable, rhs: Halo.CGFloatable) -> CGFloat {
+    return lhs.f - rhs.f
+}
+
+public func +(lhs: Halo.CGFloatable, rhs: Halo.CGFloatable) -> CGFloat {
+    return lhs.f + rhs.f
+}
+
+public func /(lhs: Halo.CGFloatable, rhs: Halo.CGFloatable) -> CGFloat {
+    return lhs.f / rhs.f
 }
 
 /**
