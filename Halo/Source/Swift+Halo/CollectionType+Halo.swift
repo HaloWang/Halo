@@ -3,7 +3,7 @@ import Foundation
 
 public extension RangeReplaceableCollectionType {
 	
-//	mutating func insert(newElement: Self.Generator.Element, atIndex i: Self.Index)
+    ///	mutating func insert(newElement: Self.Generator.Element, atIndex i: Self.Index)
 	
 	func halo_insert(newElement: Self.Generator.Element, atIndex i: Self.Index) -> Self {
 		var newCollection = self
@@ -19,7 +19,7 @@ public extension RangeReplaceableCollectionType {
 		return newCollection
 	}
 	
-//	mutating func append(x: Self.Generator.Element)
+    ///	mutating func append(x: Self.Generator.Element)
 	
 	func halo_append(x: Self.Generator.Element?) -> Self {
 		var newCollection = self
@@ -28,8 +28,4 @@ public extension RangeReplaceableCollectionType {
 		}
 		return self
 	}
-}
-
-public extension CollectionType {
-	
 }

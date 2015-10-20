@@ -2,10 +2,13 @@
 import Foundation
 
 /**
-最后执行某事，不阻碍 UI
+开启新线程，异步执行
+
+- parameter block: 做什么
 */
 public func Async(block:() -> Void) {
-	dispatch_async(dispatch_get_main_queue(), block)
+    let queue = dispatch_queue_create(LogString + ".Async", nil)
+    dispatch_async(queue, block)
 }
 
 /**
@@ -15,5 +18,17 @@ public func Async(block:() -> Void) {
 - parameter block:  做什么
 */
 public func After(second second : Double, _ block:()->Void) {
-	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(second * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), block)
+    let when = dispatch_time(DISPATCH_TIME_NOW, Int64(second * Double(NSEC_PER_SEC)))
+    let queue = dispatch_get_main_queue()
+	dispatch_after(when, queue, block)
+}
+
+/**
+最后执行某事，不阻碍 UI
+
+- parameter block: 做什么
+*/
+public func Last(block:() -> Void) {
+    let queue = dispatch_get_main_queue()
+    dispatch_async(queue, block)
 }

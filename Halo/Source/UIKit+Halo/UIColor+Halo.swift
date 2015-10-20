@@ -9,11 +9,15 @@ public let Clear  = UIColor.clearColor()
 
 public let Red    = UIColor.redColor()
 
+public let Orange = UIColor.orangeColor()
+
 public let Yellow = UIColor.yellowColor()
 
 public let Green  = UIColor.greenColor()
 
 public let Blue   = UIColor.blueColor()
+
+public let Purple = UIColor.purpleColor()
 
 /// 系统分割线颜色 -> RGB(200, 199, 204)
 public var SystemSeparatorColor : UIColor {

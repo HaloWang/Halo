@@ -59,6 +59,4 @@ public extension UIImage {
     var resizeableImage : UIImage {
         return resizableImageWithCapInsets(edgeInsetsToBubble, resizingMode: UIImageResizingMode.Stretch)
     }
-    
-    
 }

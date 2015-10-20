@@ -1,24 +1,12 @@
 
 import UIKit
 
+/**
+*  对 Int/Float/Double 的一个拓展，方便将数据展现在视图上
+*/
 public protocol CGFloatable {
+    /// 一个 CGFloat 值
     var f : CGFloat { get }
-}
-
-public extension CGFloat {
-	
-	public var size : CGSize {
-		return CGSize(width: self, height: self)
-	}
-	
-	public var origin : CGPoint {
-		return CGPoint(x: self, y: self)
-	}
-	
-	/// 很多时候需要设置 ×2 的属性
-	public var double : CGFloat {
-		return self * 2
-	}
 }
 
 extension CGFloat : Halo.CGFloatable {
@@ -28,21 +16,21 @@ extension CGFloat : Halo.CGFloatable {
 }
 
 extension Double : Halo.CGFloatable {
-	public var f : CGFloat {
-		return CGFloat(self)
-	}
+    public var f : CGFloat {
+        return CGFloat(self)
+    }
 }
 
 extension Float : Halo.CGFloatable {
-	public var f : CGFloat {
-		return CGFloat(self)
-	}
+    public var f : CGFloat {
+        return CGFloat(self)
+    }
 }
 
 extension Int : Halo.CGFloatable {
-	public var f : CGFloat {
-		return CGFloat(self)
-	}
+    public var f : CGFloat {
+        return CGFloat(self)
+    }
 }
 
 public func *(lhs: Halo.CGFloatable, rhs: Halo.CGFloatable) -> CGFloat {
@@ -69,7 +57,7 @@ public func /(lhs: Halo.CGFloatable, rhs: Halo.CGFloatable) -> CGFloat {
 - parameter _414: 6p/6sp
 
 */
-public func ValueWithScreenWidth(_320 : Halo.CGFloatable, _375 : Halo.CGFloatable, _414 : Halo.CGFloatable) -> CGFloat {
+public func ValueWithScreenWidth_320(_320 : Halo.CGFloatable, _375 : Halo.CGFloatable, _414 : Halo.CGFloatable) -> CGFloat {
     switch ScreenWidth {
     case 414.f:
         return _414.f
@@ -89,7 +77,7 @@ public func ValueWithScreenWidth(_320 : Halo.CGFloatable, _375 : Halo.CGFloatabl
 - parameter _736: 6p/6sp
 
 */
-public func ValueWithScreenHeight(_480 : Halo.CGFloatable, _568: Halo.CGFloatable, _667: Halo.CGFloatable, _736: Halo.CGFloatable) -> CGFloat {
+public func ValueWithScreenHeight_480(_480 : Halo.CGFloatable, _568: Halo.CGFloatable, _667: Halo.CGFloatable, _736: Halo.CGFloatable) -> CGFloat {
 	switch ScreenHeight {
 	case 480.f:
 		return _480.f
@@ -100,5 +88,26 @@ public func ValueWithScreenHeight(_480 : Halo.CGFloatable, _568: Halo.CGFloatabl
 	default:
 		return _667.f
 	}
-	
+}
+
+public extension CGFloatable {
+    
+    /// 返回一个宽和高都为自己的值
+    public var size : CGSize {
+        return CGSize(width: f, height: f)
+    }
+    
+    /// 返回一个宽和高都为自己的值
+    public var square : CGSize {
+        return size
+    }
+    /// 返回一个x和y都为自己的值
+    public var origin : CGPoint {
+        return CGPoint(x: f, y: f)
+    }
+    
+    /// 很多时候需要设置 ×2 的属性
+    public var double : CGFloat {
+        return self * 2
+    }
 }

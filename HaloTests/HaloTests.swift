@@ -23,13 +23,13 @@ class HaloTests: XCTestCase {
 	
 	func testPrint() {
 		
-		let a = "哈哈"
-		let b = "测试通过了"
-		
-		let normalResult = "\(a) \(b)"
-		let successResult = "✅ \(normalResult)"
-		let warningResult = "⚠️ \(normalResult)"
-		let errorResult = "❌ \(normalResult)"
+        let a             = "哈哈"
+        let b             = "测试通过了"
+
+        let normalResult  = "\(a) \(b)"
+        let successResult = "✅ \(normalResult)"
+        let warningResult = "⚠️ \(normalResult)"
+        let errorResult   = "❌ \(normalResult)"
 		
 
 		XCTAssertEqual([a,b].halo_appendFirst(nil).halo_stringValue, normalResult)
