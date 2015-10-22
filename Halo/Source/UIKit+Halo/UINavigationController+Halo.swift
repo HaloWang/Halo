@@ -1,10 +1,3 @@
-//
-//  aaaViewController.swift
-//  Halo
-//
-//  Created by 王策 on 15/10/20.
-//  Copyright © 2015年 WangCe. All rights reserved.
-//
 
 import UIKit
 
