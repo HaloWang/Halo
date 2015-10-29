@@ -43,6 +43,15 @@ class HaloTests: XCTestCase {
 		
 		XCTAssertEqual([a,b].halo_appendFirst("❌").halo_stringValue, errorResult)
 		ccError(a,b)
-		
-	}    
+	}
+    
+    func testHexColor() {
+        XCTAssertEqual(UIColor(hexString: "FF0000"), Red)
+        XCTAssertEqual(UIColor(hexString: "00000000"), Black.alpha(0))
+        XCTAssertEqual(UIColor(hexString: "FFFFFFFF"), White.alpha(1))
+        XCTAssertEqual(UIColor(hexString: "#0F0"), Green)
+        XCTAssertEqual(UIColor(hexString: "0F0F"), Green)
+        XCTAssertEqual(UIColor(hexString: "0F0"), Green)
+        XCTAssertEqual(UIColor(hexString: "#0F0F"), Green)
+    }
 }
