@@ -6,7 +6,7 @@ public extension String {
         if let URL = NSURL(string: self) {
             return URL
         } else {
-			ccWarning(Halo.LogString.stringAppend(" "), self, " is not a url!")
+            ccLogWarning(self, "is not a url!")
             return NSURL(string: "https://github.com/HaloWang")!
         }
 	}

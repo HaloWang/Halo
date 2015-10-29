@@ -33,6 +33,27 @@ extension Int : Halo.CGFloatable {
     }
 }
 
+public extension CGSize {
+    init(width:Halo.CGFloatable, height:Halo.CGFloatable) {
+        self.width = width.f
+        self.height = height.f
+    }
+}
+
+public extension CGPoint {
+    init(x:Halo.CGFloatable, y: Halo.CGFloatable) {
+        self.x = x.f
+        self.y = y.f
+    }
+}
+
+public extension CGRect {
+    init(x: Halo.CGFloatable, y: Halo.CGFloatable, width: Halo.CGFloatable, height: Halo.CGFloatable) {
+        self.origin = CGPoint(x: x, y: y)
+        self.size = CGSize(width: width, height: height)
+    }
+}
+
 public func *(lhs: Halo.CGFloatable, rhs: Halo.CGFloatable) -> CGFloat {
     return lhs.f * rhs.f
 }
@@ -50,7 +71,7 @@ public func /(lhs: Halo.CGFloatable, rhs: Halo.CGFloatable) -> CGFloat {
 }
 
 /**
-根据屏幕宽度选择不同的值进行适配
+根据屏幕宽度选择不同的值进行适配，针对其他尺寸默认返回 _375
 
 - parameter _320: 4s/5/5s
 - parameter _375: 6/6s
@@ -69,7 +90,7 @@ public func ValueWithScreenWidth_320(_320 : Halo.CGFloatable, _375 : Halo.CGFloa
 }
 
 /**
-根据屏幕高度分别选择不同的值进行适配
+根据屏幕高度分别选择不同的值进行适配，针对其他尺寸默认返回 _667
 
 - parameter _480: 4s
 - parameter _568: 5/5s

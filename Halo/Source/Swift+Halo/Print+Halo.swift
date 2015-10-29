@@ -23,6 +23,10 @@ public func ccError(items:Any...) {
 	print(items.halo_appendFirst("❌").halo_stringValue)
 }
 
+func ccLogWarning(items:Any...) {
+    ccWarning(items.halo_appendFirst(LogString))
+}
+
 public func ccType(item:Any) {
 	print(item.dynamicType)
 }

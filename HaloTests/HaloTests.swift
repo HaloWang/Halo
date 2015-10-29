@@ -44,6 +44,5 @@ class HaloTests: XCTestCase {
 		XCTAssertEqual([a,b].halo_appendFirst("❌").halo_stringValue, errorResult)
 		ccError(a,b)
 		
-	}
-    
+	}    
 }

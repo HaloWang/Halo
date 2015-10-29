@@ -15,7 +15,7 @@ public var ScreenWidth : CGFloat {
     return ScreenBounds.size.width
 }
 
-public func CM(y y: CGFloat, width: CGFloat, height: CGFloat) -> CGRect {
+public func CM(y y: CGFloatable, width: CGFloatable, height: CGFloatable) -> CGRect {
     return CGRect(x: (ScreenWidth - width)/2, y: y, width: width, height: height)
 }
 

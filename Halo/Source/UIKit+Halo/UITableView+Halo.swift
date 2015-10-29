@@ -31,4 +31,36 @@ public extension UITableView {
         return dequeueReusableCellWithIdentifier(T.reuseIdentifier) as! T
     }
     
+    func dataSourceAndDelegate(dataSourceAndDelegate:protocol<UITableViewDelegate, UITableViewDataSource>?) -> Self {
+        self.dataSource = dataSourceAndDelegate
+        (self as UITableView).delegate = dataSourceAndDelegate
+        return self
+    }
+    
+    var dataSourceAndDelegate : protocol<UITableViewDelegate, UITableViewDataSource>? {
+        get {
+            guard let dataSource = dataSource else {
+                ccLogWarning("DataSource is nil")
+                return nil
+            }
+            
+            guard let delegate = delegate else {
+                ccLogWarning("Delegate is nil")
+                return nil
+            }
+            
+            if dataSource.isEqual(delegate) {
+                return dataSource as? protocol<UITableViewDelegate, UITableViewDataSource>
+            } else {
+                ccLogWarning("DataSource is \(dataSource)\n", "Delegate is \(delegate)\n", "They are different")
+                return nil
+            }
+            
+        }
+        set {
+            self.dataSource = newValue
+            (self as UITableView).delegate = newValue
+        }
+    }
+    
 }

@@ -3,31 +3,6 @@ import UIKit
 
 public extension UITextField {
 	
-    /// 获取该 UITextField 展示当前文字所需最小 height，当没有文字时，返回宽度为0，高度为font。lineHeight 的 height
-    public var displayHeight: CGFloat {
-        if let text = text {
-            return (text as NSString).boundingRectWithSize(CGSize(width: frame.size.width, height: CGFloat(MAXFLOAT)), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName:font ?? UIFont.systemFontOfSize(12)], context: nil).size.height
-        } else {
-            return font?.lineHeight ?? UIFont.systemFontOfSize(12).lineHeight
-        }
-    }
-	
-	public func text(text : String?) -> Self {
-		self.text = text
-		return self
-	}
-    
-    public func textColor(color : UIColor) -> Self {
-        self.textColor = color
-        return self
-    }
-    
-    public func text(text: String?, textColor: UIColor) -> Self {
-        self.text = text
-        self.textColor = textColor
-        return self
-    }
-	
 	public func placeholder(placeholder : String) -> Self{
 		self.placeholder = placeholder
 		return self
@@ -36,11 +11,6 @@ public extension UITextField {
 	public func leftWidth(leftWidth : CGFloat) -> Self {
 		leftView = UIView(frame: CGRect(x: 0, y: 0, width: leftWidth, height: 5))
 		leftViewMode = UITextFieldViewMode.Always
-		return self
-	}
-	
-	public func textAlignment(textAlignment : NSTextAlignment) -> Self {
-		self.textAlignment = textAlignment
 		return self
 	}
 	
@@ -54,22 +24,44 @@ public extension UITextField {
 		return self
 	}
 	
-	public func font(systemFontOfSize systemFontOfSize:CGFloat) -> Self {
-		return font(UIFont.systemFontOfSize(systemFontOfSize))
-	}
-	
-	public func font(font : UIFont) -> Self {
-		self.font = font
-		return self
-	}
-	
-	public func fontSize(fontSize : CGFloat) -> Self {
-		if font != nil {
-			font = UIFont(name: font!.fontName, size: fontSize)
-		} else {
-			font = UIFont.systemFontOfSize(fontSize)
-		}
-		return self
-	}
-	
 }
+
+extension UITextField : HasText {
+    
+    var h_text : String {
+        get {
+            return text ?? ""
+        }
+        set {
+            text = newValue
+        }
+    }
+    
+    var h_textColor : UIColor {
+        get {
+            return textColor ?? Black
+        }
+        set {
+            textColor = newValue
+        }
+    }
+    
+    var h_font : UIFont {
+        get {
+            return font!
+        }
+        set {
+            font = newValue
+        }
+    }
+    
+    var h_textAlignment : NSTextAlignment {
+        get {
+            return textAlignment
+        }
+        set {
+            textAlignment = newValue
+        }
+    }
+}
+

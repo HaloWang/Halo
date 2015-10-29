@@ -65,6 +65,11 @@ public extension UIView {
         return self
     }
     
+    func contentModeCenter() -> Self {
+        self.contentMode = .Center
+        return self
+    }
+    
     /**
     设置圆角
     
