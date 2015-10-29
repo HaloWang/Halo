@@ -1,7 +1,7 @@
 
 import UIKit
 
-protocol HasText : class {
+public protocol HasText : class {
     var h_width : CGFloat { get }
     var h_text : String { get set }
     var h_textColor : UIColor { get set }
@@ -12,7 +12,7 @@ protocol HasText : class {
 
 extension HasText {
     
-    internal var h_width : CGFloat {
+    public var h_width : CGFloat {
         if self is UIView {
             return (self as! UIView).frame.size.width
         } else {
@@ -61,14 +61,10 @@ extension HasText {
         return self
     }
     
-    internal var displayHeight : CGFloat {
-        if h_text.isEmpty {
-            return 0
-        } else {
-            return (h_text as NSString).boundingRectWithSize(CGSize(width: h_width, height: CGFloat(MAXFLOAT)),
-                options: NSStringDrawingOptions.UsesLineFragmentOrigin,
-                attributes: [NSFontAttributeName:h_font], context: nil).size.height
-        }
+    public var displayHeight : CGFloat {
+        return (h_text as NSString).boundingRectWithSize(CGSize(width: h_width, height: CGFloat(MAXFLOAT)),
+            options: NSStringDrawingOptions.UsesLineFragmentOrigin,
+            attributes: [NSFontAttributeName:h_font], context: nil).size.height
     }
 }
 

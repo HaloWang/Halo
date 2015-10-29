@@ -17,7 +17,7 @@ public extension UILabel {
 
 extension UILabel : HasText {
     
-    var h_text : String {
+    public var h_text : String {
         get {
             return text ?? ""
         }
@@ -26,7 +26,7 @@ extension UILabel : HasText {
         }
     }
     
-    var h_textColor : UIColor {
+    public var h_textColor : UIColor {
         get {
             return textColor
         }
@@ -35,7 +35,7 @@ extension UILabel : HasText {
         }
     }
     
-    var h_font : UIFont {
+    public var h_font : UIFont {
         get {
             return font
         }
@@ -44,7 +44,7 @@ extension UILabel : HasText {
         }
     }
     
-    var h_textAlignment : NSTextAlignment {
+    public var h_textAlignment : NSTextAlignment {
         get {
             return textAlignment
         }

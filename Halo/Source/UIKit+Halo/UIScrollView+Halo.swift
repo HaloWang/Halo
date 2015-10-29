@@ -3,7 +3,7 @@ import UIKit
 
 public extension UIScrollView {
 	
-	public var offsetX : CGFloat {
+    var offsetX : CGFloat {
 		get {
 			return contentOffset.x
 		}
@@ -12,7 +12,7 @@ public extension UIScrollView {
 		}
 	}
 	
-	public var offsetY : CGFloat {
+	var offsetY : CGFloat {
 		get {
 			return contentOffset.y
 		}
@@ -39,7 +39,7 @@ public extension UIScrollView {
         }
     }
 	
-	public var insetTop : CGFloat {
+	var insetTop : CGFloat {
 		get {
 			return contentInset.top
 		}
@@ -49,7 +49,7 @@ public extension UIScrollView {
 		}
 	}
 	
-	public var insetBottom : CGFloat {
+	var insetBottom : CGFloat {
 		get {
 			return contentInset.bottom
 		}
@@ -59,74 +59,74 @@ public extension UIScrollView {
 		}
 	}
 	
-	public func insetBottom(bottom : CGFloat) -> Self {
+	func insetBottom(bottom : CGFloat) -> Self {
 		insetBottom = bottom
 		scrollIndicatorInsets.bottom = bottom
 		return self
 	}
 	
-	public func offsetX(offsetX:CGFloat) -> Self {
+	func offsetX(offsetX:CGFloat) -> Self {
 		self.offsetX = offsetX
 		return self
 	}
 	
-	public func offsetY(offsetY : CGFloat) -> Self {
+	func offsetY(offsetY : CGFloat) -> Self {
 		self.offsetY = offsetY
 		return self
 	}
 	
-	public func insetTop(top : CGFloat) -> Self {
+	func insetTop(top : CGFloat) -> Self {
 		insetTop = top
 		scrollIndicatorInsets.top = top
 		return self
 	}
 	
-	public func bounces(bounces : Bool) -> Self {
+	func bounces(bounces : Bool) -> Self {
 		self.bounces = bounces
 		return self
 	}
 	
-	public func contentSize(size : CGSize) -> Self {
+	func contentSize(size : CGSize) -> Self {
 		contentSize = size
 		return self
 	}
 	
-	public func contentInset(contentInset : UIEdgeInsets) -> Self {
+	func contentInset(contentInset : UIEdgeInsets) -> Self {
 		self.contentInset = contentInset
 		return self
 	}
 	
-	public func scrollIndicatorInsets(scrollIndicatorInsets : UIEdgeInsets) -> Self {
+	func scrollIndicatorInsets(scrollIndicatorInsets : UIEdgeInsets) -> Self {
 		self.scrollIndicatorInsets = scrollIndicatorInsets
 		return self
 	}
 	
-	public func contentOffset(contentOffset : CGPoint) -> Self {
+	func contentOffset(contentOffset : CGPoint) -> Self {
 		self.contentOffset = contentOffset
 		return self
 	}
 	
-	public func alwaysBounceVertical(alwaysBounceVertical : Bool) -> Self {
+	func alwaysBounceVertical(alwaysBounceVertical : Bool) -> Self {
 		self.alwaysBounceVertical = alwaysBounceVertical
 		return self
 	}
 	
-	public func scrollEnabled(scrollEnabled : Bool) -> Self {
+	func scrollEnabled(scrollEnabled : Bool) -> Self {
 		self.scrollEnabled = scrollEnabled
 		return self
 	}
 	
-	public func pagingEnabled(pagingEnabled : Bool) -> Self {
+	func pagingEnabled(pagingEnabled : Bool) -> Self {
 		self.pagingEnabled = pagingEnabled
 		return self
 	}
 	
-	public func showsVerticalScrollIndicator(showsVerticalScrollIndicator:Bool) -> Self {
+	func showsVerticalScrollIndicator(showsVerticalScrollIndicator:Bool) -> Self {
 		self.showsVerticalScrollIndicator = showsVerticalScrollIndicator
 		return self
 	}
 	
-	public func showsHorizontalScrollIndicator(showsHorizontalScrollIndicator: Bool) -> Self {
+	func showsHorizontalScrollIndicator(showsHorizontalScrollIndicator: Bool) -> Self {
 		self.showsHorizontalScrollIndicator = showsHorizontalScrollIndicator
 		return self
 	}

@@ -3,23 +3,23 @@ import UIKit
 
 public extension UITextField {
 	
-	public func placeholder(placeholder : String) -> Self{
+    func placeholder(placeholder : String) -> Self{
 		self.placeholder = placeholder
 		return self
 	}
 	
-	public func leftWidth(leftWidth : CGFloat) -> Self {
+    func leftWidth(leftWidth : CGFloat) -> Self {
 		leftView = UIView(frame: CGRect(x: 0, y: 0, width: leftWidth, height: 5))
 		leftViewMode = UITextFieldViewMode.Always
 		return self
 	}
 	
-	public func keyboardType(keyboardType : UIKeyboardType) -> Self {
+    func keyboardType(keyboardType : UIKeyboardType) -> Self {
 		self.keyboardType = keyboardType
 		return self
 	}
 	
-	public func secureTextEntry(secureTextEntry : Bool) -> Self {
+    func secureTextEntry(secureTextEntry : Bool) -> Self {
 		self.secureTextEntry = secureTextEntry
 		return self
 	}
@@ -28,7 +28,7 @@ public extension UITextField {
 
 extension UITextField : HasText {
     
-    var h_text : String {
+    public var h_text : String {
         get {
             return text ?? ""
         }
@@ -37,7 +37,7 @@ extension UITextField : HasText {
         }
     }
     
-    var h_textColor : UIColor {
+    public var h_textColor : UIColor {
         get {
             return textColor ?? Black
         }
@@ -46,7 +46,7 @@ extension UITextField : HasText {
         }
     }
     
-    var h_font : UIFont {
+    public var h_font : UIFont {
         get {
             return font!
         }
@@ -55,7 +55,7 @@ extension UITextField : HasText {
         }
     }
     
-    var h_textAlignment : NSTextAlignment {
+    public var h_textAlignment : NSTextAlignment {
         get {
             return textAlignment
         }

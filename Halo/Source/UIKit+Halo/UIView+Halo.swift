@@ -29,38 +29,38 @@ public extension UIView {
     - parameter superView: 父视图
     - returns: self
     */
-    public func superView(superView : UIView) -> Self {
+    func superView(superView : UIView) -> Self {
         superView.addSubview(self)
         return self
     }
     
-    public func userInteractionEnabled(userInteractionEnabled : Bool) -> Self {
+    func userInteractionEnabled(userInteractionEnabled : Bool) -> Self {
         self.userInteractionEnabled = userInteractionEnabled
         return self
     }
     
-    public func backgroundColor(backgroundColor : UIColor) -> Self {
+    func backgroundColor(backgroundColor : UIColor) -> Self {
         self.backgroundColor = backgroundColor
         return self
     }
     
-    public func cornerRadius(radius : CGFloat) -> Self {
+    func cornerRadius(radius : CGFloat) -> Self {
         layer.cornerRadius = radius
         layer.masksToBounds = true
         return self
     }
     
-    public func alpha(alpha: CGFloat) -> Self {
+    func alpha(alpha: CGFloat) -> Self {
         self.alpha = alpha
         return self
     }
     
-    public func frame(frame:CGRect) -> Self {
+    func frame(frame:CGRect) -> Self {
         self.frame = frame
         return self
     }
     
-    public func contentMode(contentMode : UIViewContentMode) -> Self {
+    func contentMode(contentMode : UIViewContentMode) -> Self {
         self.contentMode = contentMode
         return self
     }
@@ -79,7 +79,7 @@ public extension UIView {
     
     - returns: self
     */
-    public func cornerRadius(radius : CGFloat, borderWidth : CGFloat, borderColor : UIColor) -> Self {
+    func cornerRadius(radius : CGFloat, borderWidth : CGFloat, borderColor : UIColor) -> Self {
         layer.cornerRadius = radius
         layer.masksToBounds = true
         layer.borderWidth = borderWidth
@@ -94,7 +94,7 @@ public extension UIView {
     - parameter corners: 哪些角
     
     */
-    public func setCornerRadius(radius : CGFloat, forCorners corners : UIRectCorner) -> Self {
+    func setCornerRadius(radius : CGFloat, forCorners corners : UIRectCorner) -> Self {
         let maskPath = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: radius.size)
         let shapeLayer = CAShapeLayer()
         shapeLayer.frame = bounds

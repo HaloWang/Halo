@@ -3,32 +3,32 @@ import UIKit
 
 public extension UITextView {
     
-	public func returnKeyType(returnKeyType : UIReturnKeyType) -> Self {
+    func returnKeyType(returnKeyType : UIReturnKeyType) -> Self {
 		self.returnKeyType = returnKeyType
 		return self
 	}
 	
-	public func keyboardType(keyboardType : UIKeyboardType) -> Self {
+    func keyboardType(keyboardType : UIKeyboardType) -> Self {
 		self.keyboardType = keyboardType
 		return self
 	}
 	
-	public func secureTextEntry(secureTextEntry : Bool) -> Self {
+    func secureTextEntry(secureTextEntry : Bool) -> Self {
 		self.secureTextEntry = secureTextEntry
 		return self
 	}
 	
-	public func editable(editable : Bool) -> Self {
+    func editable(editable : Bool) -> Self {
 		self.editable = editable
 		return self
 	}
 	
-	public func selectable(selectable : Bool) -> Self {
+    func selectable(selectable : Bool) -> Self {
 		self.selectable = selectable
 		return self
 	}
 	
-	public func textContainerInset(textContainerInset : UIEdgeInsets) -> Self {
+    func textContainerInset(textContainerInset : UIEdgeInsets) -> Self {
 		self.textContainerInset = textContainerInset
 		return self
 	}
@@ -36,7 +36,7 @@ public extension UITextView {
 
 extension UITextView : HasText {
     
-    var h_text : String {
+    public var h_text : String {
         get {
             return text ?? ""
         }
@@ -45,7 +45,7 @@ extension UITextView : HasText {
         }
     }
     
-    var h_textColor : UIColor {
+    public var h_textColor : UIColor {
         get {
             return textColor ?? Black
         }
@@ -54,7 +54,7 @@ extension UITextView : HasText {
         }
     }
     
-    var h_font : UIFont {
+    public var h_font : UIFont {
         get {
             return font ?? UIFont.systemFontOfSize(12)
         }
@@ -63,7 +63,7 @@ extension UITextView : HasText {
         }
     }
     
-    var h_textAlignment : NSTextAlignment {
+    public var h_textAlignment : NSTextAlignment {
         get {
             return textAlignment
         }
