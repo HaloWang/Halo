@@ -1,6 +1,10 @@
 
 import UIKit
 
+//  Such code will make compiler crazy!!!
+//  let height = ((ScreenHeight - 64 - 44 - WCKeyboardObserver.currentKeyboardHeight) / 55) * 55.f
+
+
 /**
 *  对 Int/Float/Double 的一个拓展，方便将数据展现在视图上
 */

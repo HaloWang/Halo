@@ -10,7 +10,7 @@ public protocol HasText : class {
     var displayHeight : CGFloat { get }
 }
 
-extension HasText {
+public extension HasText {
     
     public var h_width : CGFloat {
         if self is UIView {
