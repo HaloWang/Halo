@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0935E24D1BF0AC1500734EDA /* FangYuan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0935E24C1BF0AC1500734EDA /* FangYuan.swift */; };
 		094CB4051BDB5FA9004FD310 /* UICollectionView+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CB4041BDB5FA9004FD310 /* UICollectionView+Halo.swift */; };
 		094CB4071BDB5FEC004FD310 /* UICollectionViewCell+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CB4061BDB5FEC004FD310 /* UICollectionViewCell+Halo.swift */; };
 		097C39911BC385A400FD4AF2 /* CollectionType+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097C39901BC385A400FD4AF2 /* CollectionType+Halo.swift */; };
@@ -69,6 +70,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0935E24C1BF0AC1500734EDA /* FangYuan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FangYuan.swift; sourceTree = "<group>"; };
 		094CB4041BDB5FA9004FD310 /* UICollectionView+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Halo.swift"; sourceTree = "<group>"; };
 		094CB4061BDB5FEC004FD310 /* UICollectionViewCell+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Halo.swift"; sourceTree = "<group>"; };
 		097C39901BC385A400FD4AF2 /* CollectionType+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CollectionType+Halo.swift"; sourceTree = "<group>"; };
@@ -128,6 +130,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0935E24E1BF0AC1800734EDA /* FangYuan */ = {
+			isa = PBXGroup;
+			children = (
+				0935E24C1BF0AC1500734EDA /* FangYuan.swift */,
+			);
+			name = FangYuan;
+			sourceTree = "<group>";
+		};
 		097C39971BC3991500FD4AF2 /* HaloTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +153,7 @@
 				09BACC4C1B9C9E08001314A5 /* Swift+Halo */,
 				09BACC561B9C9E08001314A5 /* UIKit+Halo */,
 				09C36E131BAA844100324421 /* WCKeyboardObserver */,
+				0935E24E1BF0AC1800734EDA /* FangYuan */,
 			);
 			name = Source;
 			path = Halo/Source;
@@ -402,6 +413,7 @@
 				09BCDD8A1B9DD4BB0005359C /* UITableViewCell+Halo.swift in Sources */,
 				09BACC711B9C9E08001314A5 /* UIViewController+Halo.swift in Sources */,
 				09BACC6F1B9C9E08001314A5 /* UITextView+Halo.swift in Sources */,
+				0935E24D1BF0AC1500734EDA /* FangYuan.swift in Sources */,
 				09BCDD8C1B9DD55C0005359C /* UIImageView+Halo.swift in Sources */,
 				09BCDD801B9DD1A00005359C /* UITableView+Halo.swift in Sources */,
 				09BACC7A1B9C9E53001314A5 /* CGFloatable.swift in Sources */,
@@ -630,6 +642,7 @@
 				09A3337E1BE1E69A00199F05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09DC29E91B989A410045615F /* Build configuration list for PBXProject "Halo" */ = {
 			isa = XCConfigurationList;
