@@ -12,3 +12,4 @@ Use Swift 2.1
 - [x] HexColor
 - [x] UITableViewCell identifier
 - [x] ccInfo/ccWarning/ccError
+- [x] FangYuan(方圆), a lightweight frame based layout framework
