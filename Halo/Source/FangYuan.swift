@@ -60,49 +60,6 @@ private class FangYuan {
     }
 }
 
-private extension CGRect {
-    
-    var x: CGFloat {
-        get {
-            return origin.x
-        }
-        set {
-            origin.x = newValue
-        }
-    }
-    var y: CGFloat {
-        get {
-            return origin.y
-        }
-        set {
-            origin.y = newValue
-        }
-    }
-    var width: CGFloat {
-        get {
-            return size.width
-        }
-        set {
-            size.width = newValue
-        }
-    }
-    var height: CGFloat {
-        get {
-            return size.height
-        }
-        set {
-            size.height = newValue
-        }
-    }
-    var chainRight: CGFloat {
-        return x + width
-    }
-    var chainBottom: CGFloat {
-        return y + height
-    }
-    
-}
-
 private var X: Int8 = 0
 private var Y: Int8 = 0
 
@@ -119,16 +76,6 @@ public extension UIView {
             objc_setAssociatedObject(self, &Y, FangYuan(), .OBJC_ASSOCIATION_RETAIN)
         }
         return objc_getAssociatedObject(self, &Y) as! FangYuan
-    }
-    
-    func x(x:CGFloat) -> Self {
-        self.x = x
-        return self
-    }
-    
-    func y(y:CGFloat) -> Self {
-        self.y = y
-        return self
     }
     
     func left(left:CGFloat) -> Self {
@@ -196,28 +143,19 @@ public extension UIView {
         print("⚠️FangYuan: You must set superView before use FangYuan!")
     }
     
-    private var x: CGFloat {
+    var left: CGFloat {
         get {
-            return frame.x
+            return frame.origin.x
         }
         set {
             if hasNoSuperView {
                 return
             }
-            frame.x = newValue
+            frame.origin.x = newValue
             fangYuanX.x = newValue
             if fangYuanX.z != nil {
-                frame.width = superview!.width - x - fangYuanX.z!
+                frame.size.width = superview!.width - left - fangYuanX.z!
             }
-        }
-    }
-    
-    var left: CGFloat {
-        get {
-            return x
-        }
-        set {
-            x = newValue
         }
     }
     
@@ -230,16 +168,16 @@ public extension UIView {
     
     var width: CGFloat {
         get {
-            return frame.width
+            return frame.size.width
         }
         set {
             if hasNoSuperView {
                 return
             }
-            frame.width = newValue
+            frame.size.width = newValue
             fangYuanX.y = newValue
             if fangYuanX.z != nil {
-                frame.x = superview!.width - width - fangYuanX.z!
+                frame.origin.x = superview!.width - width - fangYuanX.z!
             }
         }
     }
@@ -257,54 +195,45 @@ public extension UIView {
             }
             fangYuanX.z = newValue
             if fangYuanX.x != nil {
-                frame.width = superview!.width - x - fangYuanX.z!
+                frame.size.width = superview!.width - left - fangYuanX.z!
             } else {
-                frame.x = superview!.width - width - fangYuanX.z!
+                frame.origin.x = superview!.width - width - fangYuanX.z!
             }
         }
     }
     
     var chainRight: CGFloat {
-        return x + width
+        return left + width
     }
     
-    private var y: CGFloat {
+    var top: CGFloat {
         get {
-            return frame.y
+            return frame.origin.y
         }
         set {
             if hasNoSuperView {
                 return
             }
-            frame.y = newValue
+            frame.origin.y = newValue
             fangYuanY.x = newValue
             if fangYuanY.z != nil {
-                frame.height = superview!.height - y - fangYuanY.z!
+                frame.size.height = superview!.height - top - fangYuanY.z!
             }
-        }
-    }
-    
-    var top: CGFloat {
-        get {
-            return y
-        }
-        set {
-            y = newValue
         }
     }
     
     var height: CGFloat {
         get {
-            return frame.height
+            return frame.size.height
         }
         set {
             if hasNoSuperView {
                 return
             }
-            frame.height = newValue
+            frame.size.height = newValue
             fangYuanY.y = newValue
             if fangYuanY.z != nil {
-                frame.y = superview!.height - height - fangYuanY.z!
+                frame.origin.y = superview!.height - height - fangYuanY.z!
             }
         }
     }
@@ -322,22 +251,22 @@ public extension UIView {
             }
             fangYuanY.z = newValue
             if fangYuanY.x != nil {
-                frame.height = superview!.height - y - fangYuanY.z!
+                frame.size.height = superview!.height - top - fangYuanY.z!
             } else {
-                frame.y = superview!.height - height - fangYuanY.z!
+                frame.origin.y = superview!.height - height - fangYuanY.z!
             }
         }
     }
     
     var chainBottom: CGFloat {
-        return y + height
+        return top + height
     }
     
     var chainTop : CGFloat {
         if hasNoSuperView {
             return 0
         }
-        return superview!.height - y
+        return superview!.height - top
     }
     
     var origin: CGPoint {
@@ -345,8 +274,8 @@ public extension UIView {
             return frame.origin
         }
         set {
-            x = newValue.x
-            y = newValue.y
+            left = newValue.x
+            top = newValue.y
         }
     }
     
@@ -370,21 +299,6 @@ public extension UIView {
         }
     }
     
-    func centerVertically() -> Self {
-        if hasNoSuperView {
-            return self
-        }
-        y = ((superview!.height - height)/2)
-        return self
-    }
-    
-    func centerHorizontally() -> Self {
-        if hasNoSuperView {
-            return self
-        }
-        x = ((superview!.width - width)/2)
-        return self
-    }
 }
 
 
