@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0935E24D1BF0AC1500734EDA /* FangYuan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0935E24C1BF0AC1500734EDA /* FangYuan.swift */; };
+		092571DB1BF5BDE900687A08 /* FangYuan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092571DA1BF5BDE900687A08 /* FangYuan.swift */; };
+		092571DE1BF5BE8400687A08 /* ChineseDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092571DD1BF5BE8400687A08 /* ChineseDate.swift */; };
 		094CB4051BDB5FA9004FD310 /* UICollectionView+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CB4041BDB5FA9004FD310 /* UICollectionView+Halo.swift */; };
 		094CB4071BDB5FEC004FD310 /* UICollectionViewCell+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CB4061BDB5FEC004FD310 /* UICollectionViewCell+Halo.swift */; };
 		097C39911BC385A400FD4AF2 /* CollectionType+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097C39901BC385A400FD4AF2 /* CollectionType+Halo.swift */; };
 		097C39991BC3991500FD4AF2 /* HaloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097C39981BC3991500FD4AF2 /* HaloTests.swift */; };
 		097C399B1BC3991500FD4AF2 /* Halo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09DC29EF1B989A410045615F /* Halo.framework */; };
+		097DDB741BF48D8500B02E30 /* UIView+FangYuan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097DDB731BF48D8500B02E30 /* UIView+FangYuan.swift */; };
 		0981337E1BDF666400038EAE /* UILabel+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0981337D1BDF666400038EAE /* UILabel+Halo.swift */; };
 		098274B31BD5EFA400195B3B /* UINavigationController+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098274B21BD5EFA400195B3B /* UINavigationController+Halo.swift */; };
 		0982C8481BF1BD3300B9A31F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0982C8471BF1BD3300B9A31F /* AppDelegate.swift */; };
@@ -75,13 +77,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0935E24C1BF0AC1500734EDA /* FangYuan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FangYuan.swift; sourceTree = "<group>"; };
+		092571DA1BF5BDE900687A08 /* FangYuan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FangYuan.swift; path = FangYuan/FangYuan.swift; sourceTree = "<group>"; };
+		092571DD1BF5BE8400687A08 /* ChineseDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChineseDate.swift; sourceTree = "<group>"; };
 		094CB4041BDB5FA9004FD310 /* UICollectionView+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Halo.swift"; sourceTree = "<group>"; };
 		094CB4061BDB5FEC004FD310 /* UICollectionViewCell+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Halo.swift"; sourceTree = "<group>"; };
 		097C39901BC385A400FD4AF2 /* CollectionType+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CollectionType+Halo.swift"; sourceTree = "<group>"; };
 		097C39961BC3991500FD4AF2 /* HaloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HaloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		097C39981BC3991500FD4AF2 /* HaloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaloTests.swift; sourceTree = "<group>"; };
 		097C399A1BC3991500FD4AF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		097DDB731BF48D8500B02E30 /* UIView+FangYuan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+FangYuan.swift"; path = "FangYuan/UIView+FangYuan.swift"; sourceTree = "<group>"; };
 		0981337D1BDF666400038EAE /* UILabel+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Halo.swift"; sourceTree = "<group>"; };
 		098274B21BD5EFA400195B3B /* UINavigationController+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Halo.swift"; sourceTree = "<group>"; };
 		0982C8451BF1BD3300B9A31F /* HaloDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HaloDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,10 +145,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		092571DC1BF5BE7C00687A08 /* ChineseDate */ = {
+			isa = PBXGroup;
+			children = (
+				092571DD1BF5BE8400687A08 /* ChineseDate.swift */,
+			);
+			path = ChineseDate;
+			sourceTree = "<group>";
+		};
 		0935E24E1BF0AC1800734EDA /* FangYuan */ = {
 			isa = PBXGroup;
 			children = (
-				0935E24C1BF0AC1500734EDA /* FangYuan.swift */,
+				092571DA1BF5BDE900687A08 /* FangYuan.swift */,
+				097DDB731BF48D8500B02E30 /* UIView+FangYuan.swift */,
 			);
 			name = FangYuan;
 			sourceTree = "<group>";
@@ -177,6 +190,7 @@
 				09BACC4C1B9C9E08001314A5 /* Swift+Halo */,
 				09BACC561B9C9E08001314A5 /* UIKit+Halo */,
 				09C36E131BAA844100324421 /* WCKeyboardObserver */,
+				092571DC1BF5BE7C00687A08 /* ChineseDate */,
 				0935E24E1BF0AC1800734EDA /* FangYuan */,
 			);
 			name = Source;
@@ -434,16 +448,18 @@
 				09BACC6B1B9C9E08001314A5 /* UIImage+Halo.swift in Sources */,
 				09BCDD7C1B9DCDA60005359C /* UIApplication+Halo.swift in Sources */,
 				0981337E1BDF666400038EAE /* UILabel+Halo.swift in Sources */,
+				092571DE1BF5BE8400687A08 /* ChineseDate.swift in Sources */,
 				09BACC7F1B9C9E53001314A5 /* GCD+Halo.swift in Sources */,
 				098274B31BD5EFA400195B3B /* UINavigationController+Halo.swift in Sources */,
 				094CB4071BDB5FEC004FD310 /* UICollectionViewCell+Halo.swift in Sources */,
+				097DDB741BF48D8500B02E30 /* UIView+FangYuan.swift in Sources */,
 				09BACC691B9C9E08001314A5 /* UIButton+Halo.swift in Sources */,
+				092571DB1BF5BDE900687A08 /* FangYuan.swift in Sources */,
 				09BACC6E1B9C9E08001314A5 /* UITextField+Halo.swift in Sources */,
 				09BACC811B9C9E53001314A5 /* String+Halo.swift in Sources */,
 				09BCDD8A1B9DD4BB0005359C /* UITableViewCell+Halo.swift in Sources */,
 				09BACC711B9C9E08001314A5 /* UIViewController+Halo.swift in Sources */,
 				09BACC6F1B9C9E08001314A5 /* UITextView+Halo.swift in Sources */,
-				0935E24D1BF0AC1500734EDA /* FangYuan.swift in Sources */,
 				09BCDD8C1B9DD55C0005359C /* UIImageView+Halo.swift in Sources */,
 				09BCDD801B9DD1A00005359C /* UITableView+Halo.swift in Sources */,
 				09BACC7A1B9C9E53001314A5 /* CGFloatable.swift in Sources */,

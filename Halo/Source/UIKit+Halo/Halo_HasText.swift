@@ -63,8 +63,14 @@ public extension HasText {
     
     public var displayHeight : CGFloat {
         return (h_text as NSString).boundingRectWithSize(CGSize(width: h_width, height: CGFloat(MAXFLOAT)),
-            options: NSStringDrawingOptions.UsesLineFragmentOrigin,
+            options: .UsesLineFragmentOrigin,
             attributes: [NSFontAttributeName:h_font], context: nil).size.height
+    }
+    
+    public var singleLineDisplayWidth : CGFloat {
+        return (h_text as NSString).boundingRectWithSize(CGSize(width: CGFloat(MAXFLOAT), height: h_font.lineHeight),
+            options: .UsesLineFragmentOrigin,
+            attributes: [NSFontAttributeName:h_font], context: nil).size.width
     }
 }
 

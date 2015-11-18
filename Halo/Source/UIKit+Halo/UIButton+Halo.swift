@@ -34,6 +34,14 @@ public extension UIButton {
         setTitleColor(titleColor, forState: .Normal)
         return self
     }
+    func titleFontSize(titleFontSize: CGFloat) -> Self {
+        titleLabel?.fontSize(titleFontSize)
+        return self
+    }
+    func titleSystemFontOfSize(titleSystemFontOfSize: CGFloat) -> Self {
+        titleLabel?.font(systemFontOfSize: titleSystemFontOfSize)
+        return self
+    }
     func enabled(enabled: Bool) -> Self {
         self.enabled = enabled
         return self

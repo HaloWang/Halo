@@ -20,8 +20,10 @@ public extension UINavigationController {
         
         navigationBar.setBackgroundImage(image, forBarMetrics: UIBarMetrics.Default)
         navigationBar.tintColor = tintColor
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : tintColor]
         navigationBar.shadowImage = image
         
         return self
+        
     }
 }

@@ -1,70 +1,75 @@
+//
+//  UIView+FangYuan.swift
+//  Halo
+//
+//  Created by 王策 on 15/11/12.
+//  Copyright © 2015年 WangCe. All rights reserved.
+//
 
-import UIKit
-
-private class FangYuan {
-    
-    enum ConstraintDimension {
-        case X
-        case Y
-        case Z
-    }
-    
-    var last : ConstraintDimension?
-    
-    var x : CGFloat? {
-        didSet {
-            guard x != nil else {
-                return
-            }
-            if let last = last {
-                if last == .Y {
-                    z = nil
-                } else if last == .Z {
-                    y = nil
-                }
-            }
-            last = .X
-        }
-    }
-    
-    var y : CGFloat? {
-        didSet {
-            guard y != nil else {
-                return
-            }
-            if let last = last {
-                if last == .X {
-                    z = nil
-                } else if last == .Z {
-                    x = nil
-                }
-            }
-            last = .Y
-        }
-    }
-
-    var z : CGFloat? {
-        didSet {
-            guard z != nil else {
-                return
-            }
-            if let last = last {
-                if last == .Y {
-                    x = nil
-                } else if last == .X {
-                    y = nil
-                }
-            }
-            last = .Z
-        }
-    }
-}
+import Foundation
 
 private var X: Int8 = 0
 private var Y: Int8 = 0
 
+// MARK: - Chainable getter
 public extension UIView {
+    var chainLeft : CGFloat {
+        if hasNoSuperView {
+            return 0
+        }
+        return superview!.width - left
+    }
     
+    var chainRight: CGFloat {
+        return left + width
+    }
+    
+    var chainBottom: CGFloat {
+        return top + height
+    }
+    
+    var chainTop : CGFloat {
+        if hasNoSuperView {
+            return 0
+        }
+        return superview!.height - top
+    }
+}
+
+// MARK: - Chainable setMethods
+
+//public enum FangYuanDimension {
+//    case Left(CGFloatable)
+//    case Right(CGFloatable)
+//    case Top(CGFloatable)
+//    case Bottom(CGFloatable)
+//    case Width(CGFloatable)
+//    case Height(CGFloatable)
+//}
+//
+//infix operator |> {
+//    associativity left
+//}
+//
+//public func |><T:UIView>(view:T, dimension:Halo.FangYuanDimension) -> T {
+//    switch dimension {
+//    case .Left(let value):
+//        return view.left(value.f)
+//    case .Right(let value):
+//        return view.right(value.f)
+//    case .Top(let value):
+//        return view.top(value.f)
+//    case .Bottom(let value):
+//        return view.bottom(value.f)
+//    case .Width(let value):
+//        return view.width(value.f)
+//    case  .Height(let value):
+//        return view.height(value.f)
+//    }
+//}
+
+public extension UIView {
+
     private var fangYuanX: FangYuan {
         if objc_getAssociatedObject(self, &X) == nil {
             objc_setAssociatedObject(self, &X, FangYuan(), .OBJC_ASSOCIATION_RETAIN)
@@ -131,6 +136,14 @@ public extension UIView {
         return self
     }
     
+    func edge(edge:UIEdgeInsets) -> Self {
+        top = edge.top
+        bottom = edge.bottom
+        left = edge.left
+        right = edge.right
+        return self
+    }
+    
     private var hasNoSuperView : Bool {
         let noSuperView = superview == nil
         if  noSuperView {
@@ -143,7 +156,7 @@ public extension UIView {
         print("⚠️FangYuan: You must set superView before use FangYuan!")
     }
     
-    var left: CGFloat {
+    private(set) var left: CGFloat {
         get {
             return frame.origin.x
         }
@@ -159,14 +172,7 @@ public extension UIView {
         }
     }
     
-    var chainLeft : CGFloat {
-        if hasNoSuperView {
-            return 0
-        }
-        return superview!.width - left
-    }
-    
-    var width: CGFloat {
+    private(set) var width: CGFloat {
         get {
             return frame.size.width
         }
@@ -182,7 +188,7 @@ public extension UIView {
         }
     }
     
-    var right: CGFloat {
+    private(set) var right: CGFloat {
         get {
             if hasNoSuperView {
                 return 0
@@ -202,11 +208,7 @@ public extension UIView {
         }
     }
     
-    var chainRight: CGFloat {
-        return left + width
-    }
-    
-    var top: CGFloat {
+    private(set) var top: CGFloat {
         get {
             return frame.origin.y
         }
@@ -222,7 +224,7 @@ public extension UIView {
         }
     }
     
-    var height: CGFloat {
+    private(set) var height: CGFloat {
         get {
             return frame.size.height
         }
@@ -238,7 +240,7 @@ public extension UIView {
         }
     }
     
-    var bottom: CGFloat {
+    private(set) var bottom: CGFloat {
         get {
             if hasNoSuperView {
                 return 0
@@ -258,18 +260,7 @@ public extension UIView {
         }
     }
     
-    var chainBottom: CGFloat {
-        return top + height
-    }
-    
-    var chainTop : CGFloat {
-        if hasNoSuperView {
-            return 0
-        }
-        return superview!.height - top
-    }
-    
-    var origin: CGPoint {
+    private(set) var origin: CGPoint {
         get {
             return frame.origin
         }
@@ -279,7 +270,7 @@ public extension UIView {
         }
     }
     
-    var size: CGSize {
+    private(set) var size: CGSize {
         get {
             return frame.size
         }
@@ -289,7 +280,7 @@ public extension UIView {
         }
     }
     
-    var reOrigin: CGPoint {
+    private(set) var reOrigin: CGPoint {
         get {
             return CGPoint(x: right, y: bottom)
         }
@@ -299,7 +290,5 @@ public extension UIView {
         }
     }
     
+    
 }
-
-
-

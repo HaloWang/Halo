@@ -14,11 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UIView()
-            .superView(view)
-            .backgroundColor(Red)
-        
-        // Do any additional setup after loading the view, typically from a nib.
+        let _ = "2015-11-13 15:27:00"
     }
 
     override func didReceiveMemoryWarning() {

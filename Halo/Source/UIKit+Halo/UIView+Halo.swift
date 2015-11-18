@@ -60,6 +60,16 @@ public extension UIView {
         return self
     }
     
+    func cm(y y: CGFloatable, width: CGFloatable, height: CGFloatable) -> Self {
+        self.frame = CM(y: y, width: width, height: height)
+        return self
+    }
+    
+    func swcm(y y: CGFloatable, height: CGFloatable) -> Self {
+        self.frame = SWCM(y: y, height: height)
+        return self
+    }
+    
     func contentMode(contentMode : UIViewContentMode) -> Self {
         self.contentMode = contentMode
         return self
