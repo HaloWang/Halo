@@ -127,7 +127,20 @@ public extension UIView {
                 screen_Y -= (tempView as! UIScrollView).contentOffset.y
             }
         }
+        
         return CGRect(x: screen_X, y: screen_Y, width: self.frame.size.width, height: self.frame.size.height)
     }
+}
 
+extension UIVisualEffectView {
+    /**
+     快速创建模糊视图
+     
+     - parameter style: UIBlurEffectStyle
+     
+     - returns: 模糊视图
+     */
+    convenience init(style:UIBlurEffectStyle) {
+        self.init(effect: UIBlurEffect(style: style))
+    }
 }
