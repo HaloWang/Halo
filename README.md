@@ -13,3 +13,13 @@ Use Swift 2.1
 - [x] UITableViewCell identifier
 - [x] ccInfo/ccWarning/ccError
 - [x] FangYuan(方圆), a lightweight frame based layout framework
+
+## Feature requests
+
+#### Framework Level
+- ReactiveUI
+- Quick call method
+
+#### UIControls Level
+- Personal scrollView
+- Static tableView by code
