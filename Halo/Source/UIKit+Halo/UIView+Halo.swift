@@ -60,11 +60,13 @@ public extension UIView {
         return self
     }
     
+    /// 参考 CM
     func cm(y y: CGFloatable, width: CGFloatable, height: CGFloatable) -> Self {
         self.frame = CM(y: y, width: width, height: height)
         return self
     }
     
+    /// 参考 SWCM
     func swcm(y y: CGFloatable, height: CGFloatable) -> Self {
         self.frame = SWCM(y: y, height: height)
         return self
@@ -74,7 +76,8 @@ public extension UIView {
         self.contentMode = contentMode
         return self
     }
-    
+
+    /// 设置 contentMode 为 .Center
     func contentModeCenter() -> Self {
         self.contentMode = .Center
         return self

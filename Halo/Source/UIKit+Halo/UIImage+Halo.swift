@@ -61,11 +61,17 @@ public extension UIImage {
         return resizableImageWithCapInsets(edgeInsetsToBubble, resizingMode: UIImageResizingMode.Stretch)
     }
     
+    func blurredImageAsync(radius: CGFloat, iterations: Int, ratio: CGFloat, blendColor: UIColor? = nil, finish: UIImage! -> Void) {
+        Last {
+            finish(self.blurredImage(radius, iterations: iterations, ratio: ratio, blendColor: blendColor))
+        }
+    }
+    
     /**
      This method is write by other people...
      
      */
-    func blurredImage(radius: CGFloat, iterations: Int, ratio: CGFloat, blendColor: UIColor?) -> UIImage! {
+    func blurredImage(radius: CGFloat, iterations: Int, ratio: CGFloat, blendColor: UIColor? = nil) -> UIImage! {
         if floorf(Float(size.width)) * floorf(Float(size.height)) <= 0.0 || radius <= 0 {
             return self
         }
@@ -127,4 +133,6 @@ public extension UIImage {
         
         return nil
     }
+    
+    
 }
