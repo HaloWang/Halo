@@ -27,22 +27,8 @@ public extension UIImage {
     var height : CGFloat {
 		return size.height
 	}
-	
-	class public func pngImageWithColor(color:UIColor, size: CGSize) -> UIImage {
-		UIGraphicsBeginImageContext(size)
-		let context = UIGraphicsGetCurrentContext()
-		CGContextSetFillColorWithColor(context, color.CGColor)
-		CGContextFillRect(context, CGRect(x: 0, y: 0, width: size.width, height: size.height))
-		let pureColorImage = UIGraphicsGetImageFromCurrentImageContext()
-		UIGraphicsEndImageContext()
-		return pureColorImage
-	}
     
-    convenience init(pngWithColor:UIColor, size:CGSize) {
-        self.init()
-    }
-    
-    class func imageWithColor(color:UIColor, size: CGSize) -> UIImage {
+    class func imageWithColor(color:UIColor, size: CGSize = CGSize(width: 1, height: 1)) -> UIImage {
         UIGraphicsBeginImageContext(size)
         let context = UIGraphicsGetCurrentContext()
         CGContextSetFillColorWithColor(context, color.CGColor)
