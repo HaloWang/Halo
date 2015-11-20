@@ -24,7 +24,7 @@ public func After(second second : Double, _ block:()->Void) {
 }
 
 /**
-最后执行某事，不阻碍 UI
+最后执行某事，不阻碍 UI，在主线程中执行
 
 - parameter block: 做什么
 */

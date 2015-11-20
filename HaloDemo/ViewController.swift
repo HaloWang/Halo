@@ -15,6 +15,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let _ = "2015-11-13 15:27:00"
+        
+        Async {
+            print("⚠️")
+            Last {
+                print("✅")
+            }
+        }
+        
+        dispatch_async(dispatch_queue_create("", nil)) {
+            print("⚠️")
+            dispatch_async(dispatch_get_main_queue()) {
+                print("✅")
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

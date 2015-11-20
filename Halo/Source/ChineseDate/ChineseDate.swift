@@ -1,12 +1,7 @@
-//
-//  ChineseDate.swift
-//  Halo
-//
-//  Created by 王策 on 15/11/13.
-//  Copyright © 2015年 WangCe. All rights reserved.
-//
 
 import Foundation
+
+// TODO: UnFinish!
 
 private extension NSDate {
     

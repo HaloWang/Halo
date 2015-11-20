@@ -2,11 +2,6 @@
 import UIKit
 
 public extension UITableView {
-	
-    func register(cellClass cellClass: AnyClass, reuseIdentifier: String) -> Self {
-        registerClass(cellClass, forCellReuseIdentifier: reuseIdentifier)
-        return self
-    }
     
     func rowHeight(rowHeight: CGFloat) -> Self {
         self.rowHeight = rowHeight
@@ -22,13 +17,13 @@ public extension UITableView {
     
     /// 为 UITableView 绑定某种类型的 UITableViewCell
     func registerCellClass<T:UITableViewCell>(cellClass:T.Type) -> Self {
-        registerClass(cellClass, forCellReuseIdentifier: cellClass.reuseIdentifier)
+        registerClass(cellClass, forCellReuseIdentifier: cellClass.halo_reuseIdentifier)
         return self
     }
     
     /// 取某种类型的 UITableViewCell
     func dequeueCell<T:UITableViewCell>(cell: T.Type) -> T {
-        return dequeueReusableCellWithIdentifier(T.reuseIdentifier) as! T
+        return dequeueReusableCellWithIdentifier(T.halo_reuseIdentifier) as! T
     }
     
     func dataSourceAndDelegate(dataSourceAndDelegate:protocol<UITableViewDelegate, UITableViewDataSource>?) -> Self {
@@ -62,5 +57,11 @@ public extension UITableView {
             (self as UITableView).delegate = newValue
         }
     }
-    
+}
+
+extension UITableViewCell {
+    /// 返回 "Halo.ReuseIdentifier.YOUR_CLASS_NAME"
+    static var halo_reuseIdentifier : String {
+        return "Halo.ReuseIdentifier." + NSStringFromClass(self)
+    }
 }
