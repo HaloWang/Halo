@@ -31,7 +31,7 @@ public extension UIViewController {
         return self
     }
 	
-    func title(title : String) -> Self {
+    func title(title : String?) -> Self {
 		self.title = title
 		return self
 	}
