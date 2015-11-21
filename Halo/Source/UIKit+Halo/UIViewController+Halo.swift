@@ -14,6 +14,11 @@ public extension UIViewController {
 		view.backgroundColor(backgroundColor)
 		return self
 	}
+    
+    func whiteBackground() -> Self {
+        view.whiteBackground()
+        return self
+    }
 	/**
 	在 self.view 上添加 UIView
 	
@@ -26,7 +31,7 @@ public extension UIViewController {
 		return self
 	}
     
-    public func addSubviews(subviewsForView : [UIView]) -> Self {
+    func addSubviews(subviewsForView : [UIView]) -> Self {
         view.addSubviews(subviewsForView)
         return self
     }
