@@ -23,9 +23,10 @@ public extension UITableView {
     
     /// 取某种类型的 UITableViewCell
     func dequeueCell<T:UITableViewCell>(cell: T.Type) -> T {
-        return dequeueReusableCellWithIdentifier(T.halo_reuseIdentifier) as! T
+        return dequeueReusableCellWithIdentifier(cell.halo_reuseIdentifier) as! T
     }
     
+    /// 同时设置 dataSource 和 delegate
     func dataSourceAndDelegate(dataSourceAndDelegate:protocol<UITableViewDelegate, UITableViewDataSource>?) -> Self {
         self.dataSource = dataSourceAndDelegate
         (self as UITableView).delegate = dataSourceAndDelegate
