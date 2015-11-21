@@ -14,11 +14,6 @@ public extension UIViewController {
 		view.backgroundColor(backgroundColor)
 		return self
 	}
-    
-    func whiteBackground() -> Self {
-        view.whiteBackground()
-        return self
-    }
 	/**
 	在 self.view 上添加 UIView
 	

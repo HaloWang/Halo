@@ -44,11 +44,6 @@ public extension UIView {
         return self
     }
     
-    func whiteBackground() -> Self {
-        backgroundColor = White
-        return self
-    }
-    
     func cornerRadius(radius : CGFloat) -> Self {
         layer.cornerRadius = radius
         layer.masksToBounds = true
