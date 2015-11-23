@@ -34,3 +34,8 @@ public extension String {
 	}
 }
 
+public extension Bool {
+    var NO : Bool {
+        return !self
+    }
+}

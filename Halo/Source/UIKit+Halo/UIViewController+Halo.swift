@@ -2,6 +2,11 @@
 import UIKit
 
 public extension UIViewController {
+    
+    func hidesBottomBarWhenPushed(hidesBottomBarWhenPushed:Bool) -> Self {
+        self.hidesBottomBarWhenPushed = hidesBottomBarWhenPushed
+        return self
+    }
 	
 	/**
 	直接设置 self.view.backgroundColor
