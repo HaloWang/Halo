@@ -60,6 +60,10 @@ public extension UIView {
         return self
     }
     
+    func frame(x x: CGFloatable, y: CGFloatable, width: CGFloatable, height: CGFloatable) -> Self {
+        return frame(CGRect(x: x.f, y: y.f, width: width.f, height: height.f))
+    }
+    
     /// 参考 CM
     func cm(y y: CGFloatable, width: CGFloatable, height: CGFloatable) -> Self {
         self.frame = CM(y: y, width: width, height: height)
@@ -117,7 +121,7 @@ public extension UIView {
     }
     
     /// 返回某个 UIView 相对于当前屏幕的 rect
-    public var relativeFrameToWindow: CGRect {
+    var relativeFrameToWindow: CGRect {
         var screen_X: CGFloat = 0
         var screen_Y: CGFloat = 0
         var tempView = self
@@ -135,15 +139,15 @@ public extension UIView {
     }
 }
 
-extension UIVisualEffectView {
+public extension UIVisualEffectView {
     /**
      快速创建模糊视图
      
-     - parameter style: UIBlurEffectStyle
+     - parameter blur: UIBlurEffectStyle
      
      - returns: 模糊视图
      */
-    convenience init(style:UIBlurEffectStyle) {
-        self.init(effect: UIBlurEffect(style: style))
+    convenience init(blur:UIBlurEffectStyle) {
+        self.init(effect: UIBlurEffect(style: blur))
     }
 }
