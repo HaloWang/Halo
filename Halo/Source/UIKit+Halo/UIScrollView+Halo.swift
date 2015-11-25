@@ -58,6 +58,11 @@ public extension UIScrollView {
 			scrollIndicatorInsets.bottom = newValue
 		}
 	}
+    
+    func delegate(delegate: UIScrollViewDelegate) -> Self {
+        self.delegate = delegate
+        return self
+    }
 	
 	func insetBottom(bottom : CGFloat) -> Self {
 		insetBottom = bottom

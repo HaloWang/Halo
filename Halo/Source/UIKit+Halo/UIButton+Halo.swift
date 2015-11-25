@@ -26,7 +26,7 @@ public extension UIButton {
         setImage(image, forState: .Normal)
         return self
     }
-    func title(title : String) -> Self {
+    func title(title : String?) -> Self {
         setTitle(title, forState: .Normal)
         return self
     }
@@ -52,7 +52,7 @@ public extension UIButton {
     - parameter titleColor: 标题文本颜色
     - returns: self
     */
-    func title(title: String, titleColor: UIColor) -> Self {
+    func title(title: String?, titleColor: UIColor) -> Self {
         return self.title(title).titleColor(titleColor)
     }
     func titleFont(font:UIFont) -> Self {
