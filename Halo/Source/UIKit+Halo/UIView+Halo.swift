@@ -87,6 +87,11 @@ public extension UIView {
         return self
     }
     
+    func clipsToBounds(clipsToBounds:Bool) -> Self {
+        self.clipsToBounds = clipsToBounds
+        return self
+    }
+    
     /**
     设置圆角
     
