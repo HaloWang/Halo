@@ -22,4 +22,27 @@ public extension UITableViewCell {
         accessoryType = .DisclosureIndicator
         return self
     }
+    
+    func text(text:String?) -> Self {
+        self.textLabel?.text = text
+        return self
+    }
+    
+    func detail(detail:String?) -> Self {
+        self.detailTextLabel?.text = detail
+        return self
+    }
+    
+}
+
+
+public class WCValue1TableViewCell: UITableViewCell {
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: UITableViewCellStyle.Value1, reuseIdentifier: reuseIdentifier)
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

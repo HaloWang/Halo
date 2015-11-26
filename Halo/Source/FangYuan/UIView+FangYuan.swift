@@ -161,10 +161,10 @@ public extension UIView {
             return frame.origin.x
         }
         set {
+            frame.origin.x = newValue
             if hasNoSuperView {
                 return
             }
-            frame.origin.x = newValue
             fangYuanX.x = newValue
             if fangYuanX.z != nil {
                 frame.size.width = superview!.width - left - fangYuanX.z!
@@ -177,10 +177,10 @@ public extension UIView {
             return frame.size.width
         }
         set {
+            frame.size.width = newValue
             if hasNoSuperView {
                 return
             }
-            frame.size.width = newValue
             fangYuanX.y = newValue
             if fangYuanX.z != nil {
                 frame.origin.x = superview!.width - width - fangYuanX.z!
@@ -213,10 +213,10 @@ public extension UIView {
             return frame.origin.y
         }
         set {
+            frame.origin.y = newValue
             if hasNoSuperView {
                 return
             }
-            frame.origin.y = newValue
             fangYuanY.x = newValue
             if fangYuanY.z != nil {
                 frame.size.height = superview!.height - top - fangYuanY.z!
@@ -229,10 +229,10 @@ public extension UIView {
             return frame.size.height
         }
         set {
+            frame.size.height = newValue
             if hasNoSuperView {
                 return
             }
-            frame.size.height = newValue
             fangYuanY.y = newValue
             if fangYuanY.z != nil {
                 frame.origin.y = superview!.height - height - fangYuanY.z!

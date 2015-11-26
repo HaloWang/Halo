@@ -3,6 +3,11 @@ import UIKit
 
 public extension UITableView {
     
+    func separatorStyle(separatorStyle:UITableViewCellSeparatorStyle) -> Self {
+        self.separatorStyle = separatorStyle
+        return self
+    }
+    
     func rowHeight(rowHeight: CGFloat) -> Self {
         self.rowHeight = rowHeight
         return self

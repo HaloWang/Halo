@@ -63,6 +63,26 @@ public extension UIScrollView {
         self.delegate = delegate
         return self
     }
+    
+    func contentInsetTop(top:CGFloat) -> Self {
+        insetTop = top
+        return self
+    }
+    
+    func contentInsetBottom(bottom:CGFloat) -> Self {
+        insetBottom = bottom
+        return self
+    }
+    
+    func contentInsetLeft(left:CGFloat) -> Self {
+        self.contentInset.left = left
+        return self
+    }
+    
+    func contentInsetRight(right:CGFloat) -> Self {
+        self.contentInset.right = right
+        return self
+    }
 	
 	func insetBottom(bottom : CGFloat) -> Self {
 		insetBottom = bottom

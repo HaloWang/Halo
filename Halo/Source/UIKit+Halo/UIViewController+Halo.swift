@@ -3,6 +3,19 @@ import UIKit
 
 public extension UIViewController {
     
+    /// navigationController?.pushViewController(vc, animated: animated)
+    func push(vc:UIViewController, animated:Bool = true) {
+        navigationController?.pushViewController(vc, animated: animated)
+    }
+    
+    func rightBarButtonItemTitle(title:String?, targetSelfAction action:Selector) {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: title, style: UIBarButtonItemStyle.Plain, target: self, action: action)
+    }
+    
+    func leftBarButtonItemTitle(title:String?, targetSelfAction action:Selector) {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: title, style: UIBarButtonItemStyle.Plain, target: self, action: action)
+    }
+    
     func hidesBottomBarWhenPushed(hidesBottomBarWhenPushed:Bool) -> Self {
         self.hidesBottomBarWhenPushed = hidesBottomBarWhenPushed
         return self
