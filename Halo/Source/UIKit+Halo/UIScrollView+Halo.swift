@@ -115,6 +115,11 @@ public extension UIScrollView {
 		contentSize = size
 		return self
 	}
+    
+    func contentSize(width:CGFloat, height:CGFloat) -> Self {
+        contentSize = CGSize(width: width, height: height)
+        return self
+    }
 	
 	func contentInset(contentInset : UIEdgeInsets) -> Self {
 		self.contentInset = contentInset

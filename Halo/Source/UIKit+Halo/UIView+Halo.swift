@@ -142,6 +142,23 @@ public extension UIView {
         
         return CGRect(x: screen_X, y: screen_Y, width: self.frame.size.width, height: self.frame.size.height)
     }
+    
+    var screenshot : UIImage? {
+        UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.mainScreen().scale)
+        layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+    
+    func screenshot(finish:UIImage? -> Void) {
+        Async {
+            let image = self.screenshot
+            Last {
+                finish(image)
+            }
+        }
+    }
 }
 
 public extension UIVisualEffectView {

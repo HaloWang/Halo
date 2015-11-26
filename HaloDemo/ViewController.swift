@@ -29,6 +29,20 @@ class ViewController: UIViewController {
                 print("✅")
             }
         }
+        
+        UIImageView()
+            .superView(view)
+            .frame(x: 50, y: 50, width: 100, height: 100)
+            .image(named: "Icon")
+        
+        let iv = UIImageView()
+            .superView(view)
+            .frame(x: 160, y: 160, width: 375/4, height: 667/4)
+        
+        view.screenshot {
+            iv.image($0)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
