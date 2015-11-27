@@ -135,6 +135,11 @@ public extension UIScrollView {
 		self.contentOffset = contentOffset
 		return self
 	}
+    
+    func alwaysBounceHorizontal(alwaysBounceHorizontal : Bool) -> Self {
+        self.alwaysBounceHorizontal = alwaysBounceHorizontal
+        return self
+    }
 	
 	func alwaysBounceVertical(alwaysBounceVertical : Bool) -> Self {
 		self.alwaysBounceVertical = alwaysBounceVertical
