@@ -23,6 +23,11 @@ class ViewController: UIViewController {
             }
         }
         
+        After(second: 2) {
+            
+        }
+        
+        
         dispatch_async(dispatch_queue_create("", nil)) {
             print("⚠️")
             dispatch_async(dispatch_get_main_queue()) {
@@ -42,14 +47,6 @@ class ViewController: UIViewController {
         view.screenshot {
             iv.image($0)
         }
-        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

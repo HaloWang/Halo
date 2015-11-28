@@ -32,3 +32,10 @@ public func Last(block:() -> Void) {
     let queue = dispatch_get_main_queue()
     dispatch_async(queue, block)
 }
+
+/**
+ 仅仅是为了快速调用 after
+ */
+@warn_unused_result
+public func After(second second : Double) { }
+
