@@ -1,6 +1,69 @@
 
 import UIKit
 
+public class HaloApplication {
+    /// 获取缓存容量
+    public static func GetCacheCapacity(result:(MB:Double, cachesFilePath:String?) -> Void) {
+        /// 缓存文件大小
+        var folderSize : Double = 0
+        
+        let _MB : Double = 1024 * 1024
+        
+        let manager = NSFileManager.defaultManager()
+        
+        guard let cachesPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true).first else {
+            result(MB: folderSize, cachesFilePath: nil)
+            return
+        }
+        
+        let _fileNameS = manager.subpathsAtPath(cachesPath)
+        
+        guard let fileNameS = _fileNameS else {
+            result(MB: folderSize, cachesFilePath: cachesPath)
+            return
+        }
+        
+        for fileName in fileNameS {
+            let filePath = cachesPath + "/" + fileName
+            let sizeNumber = try! manager.attributesOfItemAtPath(filePath)["NSFileSize"] as! NSNumber
+            folderSize += sizeNumber.doubleValue
+        }
+        
+        result(MB: folderSize / _MB, cachesFilePath: cachesPath)
+    }
+    /// 清空缓存
+    public static func CleanCache(finish : (success:Bool) -> Void) {
+        let manager = NSFileManager.defaultManager()
+        guard let cachesPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true).first else {
+            finish(success: false)
+            return
+        }
+        
+        let files = manager.subpathsAtPath(cachesPath)
+        guard let fileNames = files else {
+            finish(success: true)
+            return
+        }
+        
+        for fileName in fileNames {
+            let filePath = cachesPath + "/" + fileName
+            do {
+                try manager.removeItemAtPath(filePath)
+            } catch {
+                
+            }
+        }
+        finish(success: true)
+    }
+    /// 设置状态栏颜色
+    public static func SetStatusBarStyle(style : UIStatusBarStyle, animated: Bool) {
+        guard UIApplication.sharedApplication().statusBarStyle != style else {
+            return
+        }
+        UIApplication.sharedApplication().setStatusBarStyle(style, animated: animated)
+    }
+}
+
 //public var ScreenBounds : CGRect {
 //    return UIScreen.mainScreen().bounds
 //}
@@ -40,11 +103,4 @@ public func SWCM(y y: CGFloatable, height: CGFloatable) -> CGRect {
 
 public var CurrentSystemVersion : Float {
     return (UIDevice.currentDevice().systemVersion as NSString).floatValue
-}
-
-public func SetStatusBarStyle(style : UIStatusBarStyle, animated: Bool) {
-    guard UIApplication.sharedApplication().statusBarStyle != style else {
-        return
-    }
-    UIApplication.sharedApplication().setStatusBarStyle(style, animated: animated)
 }
