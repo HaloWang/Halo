@@ -14,6 +14,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.barUseColor(Red, tintColor: White, shadowColor: Clear)
+        
+        title("(๑•̀ㅂ•́)و✧")
+        
         let _ = "2015-11-13 15:27:00"
         
         Async {

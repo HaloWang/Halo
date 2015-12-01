@@ -2,7 +2,15 @@
 import UIKit
 
 public extension UINavigationController {
-    func barUseColor(color:UIColor, tintColor:UIColor = UIColor.whiteColor()) -> Self {
+    
+    /**
+     设置 navigationBar 为纯色
+     
+     - parameter color:       要设置的纯色
+     - parameter tintColor:   tintColor，默认为白色
+     - parameter shadowColor: shadowColor，默认为要设置的纯色
+     */
+    func barUseColor(color:UIColor, tintColor:UIColor = UIColor.whiteColor(), shadowColor:UIColor? = nil) -> Self {
         //	1×1图片画布
         UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
         //	获取上下文
@@ -21,7 +29,12 @@ public extension UINavigationController {
         navigationBar.setBackgroundImage(image, forBarMetrics: UIBarMetrics.Default)
         navigationBar.tintColor = tintColor
         navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : tintColor]
-        navigationBar.shadowImage = image
+        
+        if let shadowColor = shadowColor {
+            navigationBar.shadowImage = UIImage.imageWithColor(shadowColor)
+        } else {
+            navigationBar.shadowImage = image
+        }
         
         return self
         
