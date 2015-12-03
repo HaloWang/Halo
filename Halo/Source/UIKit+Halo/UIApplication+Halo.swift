@@ -62,6 +62,42 @@ public class HaloApplication {
         }
         UIApplication.sharedApplication().setStatusBarStyle(style, animated: animated)
     }
+    
+    
+    /// 当前应用版本号
+    public static var Version : String {
+        
+        let unknownValue = "Unknown"
+        
+        guard let dictionary = NSBundle.mainBundle().infoDictionary else {
+            ccLogWarning("Can not find Info.plist")
+            return unknownValue
+        }
+        
+        guard let versionString = dictionary["CFBundleShortVersionString"] as? String else {
+            ccLogWarning("CFBundleShortVersionString is not String")
+            return unknownValue
+        }
+        
+        return versionString
+    }
+    
+    /// 当前应用编译号
+    public static var Build : String {
+        let unknownValue = "00001"
+        
+        guard let dictionary = NSBundle.mainBundle().infoDictionary else {
+            ccLogWarning("Can not find Info.plist")
+            return unknownValue
+        }
+        
+        guard let buildString = dictionary["CFBundleVersion"] as? String else {
+            ccLogWarning("CFBundleVersion is not String")
+            return unknownValue
+        }
+        
+        return buildString
+    }
 }
 
 //public var ScreenBounds : CGRect {
