@@ -123,6 +123,17 @@ public var ScreenWidth : CGFloat {
     return ScreenBounds.size.width
 }
 
+/// 返回一个高度为 （屏幕高度 - 导航栏高度） 的 rect 值
+public var OpaqueBarsBounds : CGRect {
+    return CGRect(x: ScreenBounds.origin.x, y: ScreenBounds.origin.y, width: ScreenWidth, height: ScreenHeight - NavigationBarHeight)
+}
+
+/// 64
+public var NavigationBarHeight : CGFloat = 64
+
+/// 49
+public var TabBarHeight : CGFloat = 49
+
 /**
  - returns: 返回一个相对于 ScreenWidth 水平居中的 CGRect
  */

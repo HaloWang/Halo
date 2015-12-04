@@ -31,7 +31,6 @@ class ViewController: UIViewController {
             
         }
         
-        
         dispatch_async(dispatch_queue_create("", nil)) {
             print("⚠️")
             dispatch_async(dispatch_get_main_queue()) {
