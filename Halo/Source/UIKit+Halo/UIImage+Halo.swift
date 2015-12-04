@@ -15,6 +15,35 @@ public func PNGNamed(name : String) -> UIImage {
 }
 
 public extension UIImage {
+    
+    /**
+     将该图片缩放到指定宽度
+     
+     - parameter _width: 指定的宽度
+     
+     - returns: 已经被所放的 UIImage
+     */
+    func scaleToWidth(_width:CGFloat) -> UIImage {
+        
+        let scaledSize = CGSize(width: _width, height: (height / width) * _width )
+        UIGraphicsBeginImageContext(scaledSize)
+        drawInRect(CGRect(x: 0, y: 0, width: _width, height: scaledSize.height))
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return scaledImage
+    }
+    
+    // TODO: ⚠️ 该方法还未经过测试！
+    private func compressToMaxSize(maxSize : Int) -> UIImage {
+        var compression = 0.9.f
+        let maxCompression = 0.1.f
+        var data = UIImageJPEGRepresentation(self, compression)!
+        while data.length > maxSize && compression > maxCompression {
+            compression -= 0.1.f
+            data = UIImageJPEGRepresentation(self, compression)!
+        }
+        return UIImage(data: data)!
+    }
 	
     var pngData : NSData {
 		return UIImagePNGRepresentation(self) ?? NSData()

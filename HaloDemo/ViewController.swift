@@ -1,55 +1,63 @@
-//
-//  ViewController.swift
-//  HaloDemo
-//
-//  Created by 王策 on 15/11/10.
-//  Copyright © 2015年 WangCe. All rights reserved.
-//
 
 import UIKit
 import Halo
 
+// MARK: - Properties & Init
 class ViewController: UIViewController {
+    
+}
 
+// MARK: - Lifecycle
+extension ViewController {
+    
+    override func loadView() {
+        super.loadView()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.barUseColor(Red, tintColor: White, shadowColor: Clear)
+        let originImage = UIImage(named: "Icon")!
         
-        title("(๑•̀ㅂ•́)و✧")
+        ccRight("originImage:\n" , originImage)
         
-        let _ = "2015-11-13 15:27:00"
+        let scaledImage = originImage.scaleToWidth(256)
         
-        Async {
-            print("⚠️")
-            Last {
-                print("✅")
-            }
-        }
+        ccRight("scaledImage:\n", scaledImage)
+        
+        let iv = UIImageView(image: originImage)
+            .superView(view)
+            .swcm(y: NavigationBarHeight, height: ScreenWidth)
+            .contentMode(.Center)
         
         After(second: 2) {
-            
+            iv.image(scaledImage)
         }
         
-        dispatch_async(dispatch_queue_create("", nil)) {
-            print("⚠️")
-            dispatch_async(dispatch_get_main_queue()) {
-                print("✅")
-            }
-        }
-        
-        UIImageView()
-            .superView(view)
-            .frame(x: 50, y: 50, width: 100, height: 100)
-            .image(named: "Icon")
-        
-        let iv = UIImageView()
-            .superView(view)
-            .frame(x: 160, y: 160, width: 375/4, height: 667/4)
-        
-        view.screenshot {
-            iv.image($0)
-        }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
     }
 }
 
+// MARK: - Methods
+extension ViewController {
+    
+}

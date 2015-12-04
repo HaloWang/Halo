@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Halo
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        window = UIWindow(frame: ScreenBounds)
+        window?.rootViewController = ViewController()
+            .title("Halo Demo").navigationed.barUseColor(RGB(20, 72, 140), tintColor: White, shadowColor: Clear).backgroundColor(White)
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
