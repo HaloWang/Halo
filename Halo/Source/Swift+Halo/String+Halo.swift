@@ -39,3 +39,9 @@ public extension Bool {
         return !self
     }
 }
+
+public extension Int {
+    var string : String {
+        return "\(self)"
+    }
+}
