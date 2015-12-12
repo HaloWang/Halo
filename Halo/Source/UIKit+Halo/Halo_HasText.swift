@@ -46,7 +46,7 @@ public extension HasText {
         return self
     }
     
-    func text(text : String, textColor : UIColor) -> Self {
+    func text(text : String?, textColor : UIColor) -> Self {
         return self.text(text).textColor(textColor)
     }
     

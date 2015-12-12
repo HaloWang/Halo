@@ -42,6 +42,12 @@ public extension Bool {
 
 public extension Int {
     var string : String {
-        return "\(self)"
+        return String(self)
+    }
+}
+
+public extension Double {
+    var string : String {
+        return String(self)
     }
 }

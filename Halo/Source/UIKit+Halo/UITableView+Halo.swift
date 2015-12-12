@@ -65,6 +65,13 @@ public extension UITableView {
     }
 }
 
+public extension NSIndexPath {
+    /// 返回一个元组，组成为：(indexPath.section, indexPath.row)
+    var sectionAndRow : (Int, Int) {
+        return (section, row)
+    }
+}
+
 extension UITableViewCell {
     /// 返回 "Halo.ReuseIdentifier.YOUR_CLASS_NAME"
     static var halo_reuseIdentifier : String {

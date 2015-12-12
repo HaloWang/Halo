@@ -23,7 +23,16 @@ public extension UITextField {
 		self.secureTextEntry = secureTextEntry
 		return self
 	}
-	
+    
+    func returnKeyType(returnKeyType: UIReturnKeyType) -> Self {
+        self.returnKeyType = returnKeyType
+        return self
+    }
+    
+    func delegate(delegate:UITextFieldDelegate) -> Self {
+        self.delegate = delegate
+        return self
+    }
 }
 
 extension UITextField : HasText {
