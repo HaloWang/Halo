@@ -3,6 +3,8 @@ import Foundation
 
 // TODO: ⚠️ UnFinish!
 
+// TODO: 准确的知道一个 NSDate 应该转成多少天前，多少小时前，多少小时后，多少天后！
+
 private extension NSDate {
     
     private static var parser : NSDateFormatter! = nil
