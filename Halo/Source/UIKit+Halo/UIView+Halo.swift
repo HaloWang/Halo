@@ -92,6 +92,11 @@ public extension UIView {
         return self
     }
     
+    func hidden(hidden:Bool) -> Self {
+        self.hidden = hidden
+        return self
+    }
+    
     /**
     设置圆角
     
