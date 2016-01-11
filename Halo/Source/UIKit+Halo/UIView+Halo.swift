@@ -34,6 +34,11 @@ public extension UIView {
         return self
     }
     
+    func superview(superView : UIView) -> Self {
+        superView.addSubview(self)
+        return self
+    }
+    
     func userInteractionEnabled(userInteractionEnabled : Bool) -> Self {
         self.userInteractionEnabled = userInteractionEnabled
         return self

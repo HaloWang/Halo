@@ -17,22 +17,20 @@ extension ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let originImage = UIImage(named: "Icon")!
+        let date = NSDate()
+        ccRight(date)
         
-        ccRight("originImage:\n" , originImage)
+        let dateFormatter = NSDateFormatter()
         
-        let scaledImage = originImage.scaleToWidth(256)
+        ccRight(dateFormatter.dateFormat)
         
-        ccRight("scaledImage:\n", scaledImage)
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
         
-        let iv = UIImageView(image: originImage)
-            .superView(view)
-            .swcm(y: NavigationBarHeight, height: ScreenWidth)
-            .contentMode(.Center)
+        ccRight(dateFormatter.timeZone)
         
-        After(second: 2) {
-            iv.image(scaledImage)
-        }
+        ccRight(dateFormatter.stringFromDate(date))
+
+        ccRight(dateFormatter.dateFromString(date.description) ?? "⚠️nil")
         
     }
     
@@ -50,10 +48,6 @@ extension ViewController {
     
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
-    }
-    
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
     }
 }
 
