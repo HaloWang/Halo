@@ -1,12 +1,12 @@
 
-extension NSDateFormatter {
+public extension NSDateFormatter {
     convenience init(dateFormat:String) {
         self.init()
         self.dateFormat = dateFormat
     }
 }
 
-extension Int {
+public extension Int {
     
     /// 直接转化成 NSDate
     var date : NSDate {
