@@ -8,6 +8,7 @@ public extension UITextField {
 		return self
 	}
 	
+    /// 设定文本距离左侧的距离
     func leftWidth(leftWidth : CGFloat) -> Self {
 		leftView = UIView(frame: CGRect(x: 0, y: 0, width: leftWidth, height: 5))
 		leftViewMode = UITextFieldViewMode.Always

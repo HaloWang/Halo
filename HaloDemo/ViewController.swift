@@ -16,22 +16,6 @@ extension ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let date = NSDate()
-        ccRight(date)
-        
-        let dateFormatter = NSDateFormatter()
-        
-        ccRight(dateFormatter.dateFormat)
-        
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
-        
-        ccRight(dateFormatter.timeZone)
-        
-        ccRight(dateFormatter.stringFromDate(date))
-
-        ccRight(dateFormatter.dateFromString(date.description) ?? "⚠️nil")
-        
     }
     
     override func viewWillAppear(animated: Bool) {

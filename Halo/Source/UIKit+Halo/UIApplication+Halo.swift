@@ -104,23 +104,30 @@ public class HaloApplication {
 //    return UIScreen.mainScreen().bounds
 //}
 
-/// ScreenBounds
+/// ### ScreenBounds
 ///
 /// Only support portrait
 public let ScreenBounds = UIScreen.mainScreen().bounds
 
-/// ScreenHeight
+/// ### ScreenHeight
 ///
 /// Only support portrait
 public var ScreenHeight : CGFloat {
     return ScreenBounds.size.height
 }
 
-/// ScreenWidth
+/// ### ScreenWidth
 ///
 /// Only support portrait
 public var ScreenWidth : CGFloat {
     return ScreenBounds.size.width
+}
+
+/// 用于 navigationController.navigationBar.opaque = true 的，含有 UITableView 的 UIViewController
+///
+/// CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight - NavigationBarHeight)
+public var OpaqueNaviListHeight : CGRect {
+    return CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight - NavigationBarHeight)
 }
 
 /// 返回一个高度为 （屏幕高度 - 导航栏高度） 的 rect 值

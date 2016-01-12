@@ -13,6 +13,11 @@ public extension UITableView {
         return self
     }
     
+    func tableFooterViewAdded() -> Self {
+        tableFooterView = UIView()
+        return self
+    }
+    
     func separatorColor(separatorColor: UIColor) -> Self {
         self.separatorColor = separatorColor
         return self
@@ -33,12 +38,11 @@ public extension UITableView {
     
     /// 同时设置 dataSource 和 delegate
     func dataSourceAndDelegate(dataSourceAndDelegate:protocol<UITableViewDelegate, UITableViewDataSource>?) -> Self {
-        self.dataSource = dataSourceAndDelegate
-        (self as UITableView).delegate = dataSourceAndDelegate
+        self.dataSourceAndDelegate = dataSourceAndDelegate
         return self
     }
     
-    var dataSourceAndDelegate : protocol<UITableViewDelegate, UITableViewDataSource>? {
+    private(set) var dataSourceAndDelegate : protocol<UITableViewDelegate, UITableViewDataSource>? {
         get {
             guard let dataSource = dataSource else {
                 ccLogWarning("DataSource is nil")

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		092571DB1BF5BDE900687A08 /* FangYuan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092571DA1BF5BDE900687A08 /* FangYuan.swift */; };
-		092571DE1BF5BE8400687A08 /* ChineseDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092571DD1BF5BE8400687A08 /* ChineseDate.swift */; };
 		094CB4051BDB5FA9004FD310 /* UICollectionView+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CB4041BDB5FA9004FD310 /* UICollectionView+Halo.swift */; };
 		094CB4071BDB5FEC004FD310 /* UICollectionViewCell+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CB4061BDB5FEC004FD310 /* UICollectionViewCell+Halo.swift */; };
 		097C39911BC385A400FD4AF2 /* CollectionType+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097C39901BC385A400FD4AF2 /* CollectionType+Halo.swift */; };
@@ -23,6 +22,7 @@
 		0982C8521BF1BD3300B9A31F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0982C8501BF1BD3300B9A31F /* LaunchScreen.storyboard */; };
 		0982C8571BF1BD6600B9A31F /* Halo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09DC29EF1B989A410045615F /* Halo.framework */; };
 		0982C8581BF1BD6600B9A31F /* Halo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09DC29EF1B989A410045615F /* Halo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		09A12A5C1C44D33300C611FE /* NSDate+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A12A5B1C44D33300C611FE /* NSDate+Halo.swift */; };
 		09BACC691B9C9E08001314A5 /* UIButton+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BACC571B9C9E08001314A5 /* UIButton+Halo.swift */; };
 		09BACC6A1B9C9E08001314A5 /* UIColor+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BACC581B9C9E08001314A5 /* UIColor+Halo.swift */; };
 		09BACC6B1B9C9E08001314A5 /* UIImage+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BACC591B9C9E08001314A5 /* UIImage+Halo.swift */; };
@@ -77,7 +77,6 @@
 
 /* Begin PBXFileReference section */
 		092571DA1BF5BDE900687A08 /* FangYuan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FangYuan.swift; path = FangYuan/FangYuan.swift; sourceTree = "<group>"; };
-		092571DD1BF5BE8400687A08 /* ChineseDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChineseDate.swift; sourceTree = "<group>"; };
 		094CB4041BDB5FA9004FD310 /* UICollectionView+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Halo.swift"; sourceTree = "<group>"; };
 		094CB4061BDB5FEC004FD310 /* UICollectionViewCell+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Halo.swift"; sourceTree = "<group>"; };
 		097C39901BC385A400FD4AF2 /* CollectionType+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CollectionType+Halo.swift"; sourceTree = "<group>"; };
@@ -93,6 +92,7 @@
 		0982C84E1BF1BD3300B9A31F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0982C8511BF1BD3300B9A31F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0982C8531BF1BD3300B9A31F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09A12A5B1C44D33300C611FE /* NSDate+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Halo.swift"; sourceTree = "<group>"; };
 		09BACC571B9C9E08001314A5 /* UIButton+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Halo.swift"; sourceTree = "<group>"; };
 		09BACC581B9C9E08001314A5 /* UIColor+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Halo.swift"; sourceTree = "<group>"; };
 		09BACC591B9C9E08001314A5 /* UIImage+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Halo.swift"; sourceTree = "<group>"; };
@@ -143,14 +143,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		092571DC1BF5BE7C00687A08 /* ChineseDate */ = {
-			isa = PBXGroup;
-			children = (
-				092571DD1BF5BE8400687A08 /* ChineseDate.swift */,
-			);
-			path = ChineseDate;
-			sourceTree = "<group>";
-		};
 		0935E24E1BF0AC1800734EDA /* FangYuan */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,7 +179,6 @@
 				09BACC4C1B9C9E08001314A5 /* Swift+Halo */,
 				09BACC561B9C9E08001314A5 /* UIKit+Halo */,
 				09C36E131BAA844100324421 /* WCKeyboardObserver */,
-				092571DC1BF5BE7C00687A08 /* ChineseDate */,
 				0935E24E1BF0AC1800734EDA /* FangYuan */,
 			);
 			name = Source;
@@ -198,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				09BACC721B9C9E53001314A5 /* CGFloatable.swift */,
+				09A12A5B1C44D33300C611FE /* NSDate+Halo.swift */,
 				09BACC771B9C9E53001314A5 /* GCD+Halo.swift */,
 				09BACC791B9C9E53001314A5 /* String+Halo.swift */,
 				09FEA3BD1BC0E4EA00848413 /* Print+Halo.swift */,
@@ -443,8 +435,8 @@
 				09BACC701B9C9E08001314A5 /* UIView+Halo.swift in Sources */,
 				09BACC6B1B9C9E08001314A5 /* UIImage+Halo.swift in Sources */,
 				09BCDD7C1B9DCDA60005359C /* UIApplication+Halo.swift in Sources */,
+				09A12A5C1C44D33300C611FE /* NSDate+Halo.swift in Sources */,
 				0981337E1BDF666400038EAE /* UILabel+Halo.swift in Sources */,
-				092571DE1BF5BE8400687A08 /* ChineseDate.swift in Sources */,
 				09BACC7F1B9C9E53001314A5 /* GCD+Halo.swift in Sources */,
 				098274B31BD5EFA400195B3B /* UINavigationController+Halo.swift in Sources */,
 				094CB4071BDB5FEC004FD310 /* UICollectionViewCell+Halo.swift in Sources */,
