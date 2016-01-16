@@ -47,29 +47,13 @@ public extension UIColor {
         getRed(&_red, green: &_green, blue: &_blue, alpha: &_alpha)
         return UIColor(red: _red, green: _green, blue: _blue, alpha: alpha.f)
     }
-	
-	/**
-	使用 hex 色值初始化 UIColor
-	
-	传入的 hexString格式可以为：
-	
-	--- RGB ---
-	
-	- 12F
-	- #12F
-	
-	- 1234EF
-	- #1234EF
-	
-	--- RGBA ---
-	
-	- 123F
-	- #123F
-	
-	- 12345678
-	- #123456EF
-	
-	*/
+    
+     /**
+     使用 hex 色值初始化 UIColor
+     
+     - parameter hexString: 色值，格式为 "1234EF"
+     
+     */
 	convenience init(hexString: String) {
 		var red :  CGFloat = 0.0
 		var green: CGFloat = 0.0
