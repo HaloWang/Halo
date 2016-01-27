@@ -5,8 +5,10 @@ public class Alert {
     
     var title : String?
     var message : String?
+    
     var style = UIAlertControllerStyle.Alert
     var actions = [UIAlertAction]()
+    
     weak var alertController : UIAlertController?
     
     public class func showIn(vc:UIViewController) -> Alert {
@@ -25,21 +27,25 @@ public class Alert {
         return alert
     }
     
+    /// Set title
     public func title(title:String?) -> Self {
         self.title = title
         return self
     }
     
+    /// Set message
     public func message(message:String?) -> Self {
         self.message = message
         return self
     }
     
+    /// Set style
     public func style(style:UIAlertControllerStyle) -> Self {
         self.style = style
         return self
     }
     
+    /// Add a button
     public func addAction(title: String?, style: UIAlertActionStyle = UIAlertActionStyle.Default, handler: ((UIAlertAction) -> Void)?) -> Self {
         let action = UIAlertAction(title: title, style: style) { [weak self] in
             handler?($0)

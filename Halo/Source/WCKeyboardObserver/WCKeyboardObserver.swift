@@ -2,7 +2,7 @@
 
 import UIKit
 
-@objc public protocol WCKeyboardObserverDelegate : NSObjectProtocol {
+@objc public protocol KeyboardObserverDelegate : NSObjectProtocol {
 	/**
 	键盘在屏幕上展示的高度即将改变
 	
@@ -12,12 +12,12 @@ import UIKit
 	func keyboardWillChangeToHeight(height:CGFloat, duration:NSTimeInterval)
 }
 
-public class WCKeyboardObserver: NSObject {
+public class KeyboardObserver: NSObject {
 	
-	private static let sharedInstance = WCKeyboardObserver()
+	private static let sharedInstance = KeyboardObserver()
 	
 	/// set delegate
-	public static var delegate : WCKeyboardObserverDelegate? {
+	public static var delegate : KeyboardObserverDelegate? {
 		get {
 			return self.sharedInstance.delegate
 		}
@@ -34,7 +34,7 @@ public class WCKeyboardObserver: NSObject {
 	/// 当前键盘显示高度
 	private var currentKeyboardHeight : CGFloat	= 0
 	
-	private weak var delegate : WCKeyboardObserverDelegate?
+	private weak var delegate : KeyboardObserverDelegate?
 
 	private override init() {
 		super.init()

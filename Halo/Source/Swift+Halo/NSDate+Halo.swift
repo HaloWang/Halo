@@ -1,5 +1,6 @@
 
 public extension NSDateFormatter {
+    /// 直接使用 dateFormat 初始化一个 NSDateFormatter
     convenience init(dateFormat:String) {
         self.init()
         self.dateFormat = dateFormat

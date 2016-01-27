@@ -123,7 +123,7 @@ public var ScreenWidth : CGFloat {
     return ScreenBounds.size.width
 }
 
-/// 用于 navigationController.navigationBar.opaque = true 的，含有 UITableView 的 UIViewController
+/// 用于 navigationController.navigationBar.opaque = true 的，含有 UITableView 的 UIViewController 的 UIScrollView
 ///
 /// CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight - NavigationBarHeight)
 public var OpaqueNaviListHeight : CGRect {
@@ -155,6 +155,7 @@ public func SWCM(y y: CGFloatable, height: CGFloatable) -> CGRect {
     return CGRect(x: 0, y: y, width: ScreenWidth, height: height)
 }
 
+/// 当前系统版本
 public var CurrentSystemVersion : Float {
     return (UIDevice.currentDevice().systemVersion as NSString).floatValue
 }
