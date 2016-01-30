@@ -79,6 +79,6 @@ public extension NSIndexPath {
 extension UITableViewCell {
     /// 返回 "Halo.ReuseIdentifier.YOUR_CLASS_NAME"
     static var halo_reuseIdentifier : String {
-        return "Halo.ReuseIdentifier." + NSStringFromClass(self)
+        return "Halo.ReuseIdentifier." + String(self)
     }
 }

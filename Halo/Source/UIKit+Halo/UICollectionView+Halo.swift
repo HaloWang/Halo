@@ -56,6 +56,6 @@ public extension UICollectionView {
 extension UICollectionViewCell {
     /// 返回 "Halo.ReuseIdentifier.YOUR_CLASS_NAME"
     static var reuseIdentifier : String {
-        return "Halo.ReuseIdentifier." + NSStringFromClass(self)
+        return "Halo.ReuseIdentifier." + String(self)
     }
 }
