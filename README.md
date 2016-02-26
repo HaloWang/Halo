@@ -2,7 +2,7 @@
 
 My own iOS development kit.
 
-Use Swift 2.1
+Use Swift 2.2
 
 ## Features
 

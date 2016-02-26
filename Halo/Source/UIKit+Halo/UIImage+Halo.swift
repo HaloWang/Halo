@@ -48,6 +48,18 @@ public extension UIImage {
     var pngData : NSData {
 		return UIImagePNGRepresentation(self) ?? NSData()
 	}
+    
+    var jpegData : NSData {
+        return UIImageJPEGRepresentation(self, 1) ?? NSData()
+    }
+    
+    var jpegImage : UIImage? {
+        return UIImage(data: jpegData)
+    }
+    
+    var pngImage : UIImage? {
+        return UIImage(data: pngData)
+    }
 	
     var width : CGFloat {
 		return size.width
@@ -76,6 +88,10 @@ public extension UIImage {
         return resizableImageWithCapInsets(edgeInsetsToBubble, resizingMode: UIImageResizingMode.Stretch)
     }
     
+    /**
+     ⚠️ PNG Image can not use this method, transform PNG image to jpeg/jpg image before use this method!
+     
+     */
     func blurredImageAsync(radius: CGFloat, iterations: Int, ratio: CGFloat, blendColor: UIColor? = nil, finish: UIImage! -> Void) {
         Last {
             finish(self.blurredImage(radius, iterations: iterations, ratio: ratio, blendColor: blendColor))
@@ -84,8 +100,9 @@ public extension UIImage {
     
     /**
      This method is write by other people...
-     
+     ⚠️ PNG Image can not use this method, transform PNG image to jpeg/jpg image before use this method!
      */
+    
     func blurredImage(radius: CGFloat, iterations: Int, ratio: CGFloat, blendColor: UIColor? = nil) -> UIImage! {
         if floorf(Float(size.width)) * floorf(Float(size.height)) <= 0.0 || radius <= 0 {
             return self
