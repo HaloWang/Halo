@@ -2,6 +2,7 @@
 import UIKit
 
 public class HaloApplication {
+    
     /// 获取缓存容量
     public static func GetCacheCapacity(result:(MB:Double, cachesFilePath:String?) -> Void) {
         /// 缓存文件大小
@@ -31,6 +32,7 @@ public class HaloApplication {
         
         result(MB: folderSize / _MB, cachesFilePath: cachesPath)
     }
+    
     /// 清空缓存
     public static func CleanCache(finish : (success:Bool) -> Void) {
         let manager = NSFileManager.defaultManager()
@@ -55,6 +57,7 @@ public class HaloApplication {
         }
         finish(success: true)
     }
+    
     /// 设置状态栏颜色
     public static func SetStatusBarStyle(style : UIStatusBarStyle, animated: Bool) {
         guard UIApplication.sharedApplication().statusBarStyle != style else {
@@ -62,7 +65,6 @@ public class HaloApplication {
         }
         UIApplication.sharedApplication().setStatusBarStyle(style, animated: animated)
     }
-    
     
     /// 当前应用版本号
     public static var Version : String {

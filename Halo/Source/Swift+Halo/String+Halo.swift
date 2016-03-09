@@ -35,18 +35,21 @@ public extension String {
 }
 
 public extension Bool {
+    /// return !self
     var NO : Bool {
         return !self
     }
 }
 
 public extension Int {
+    /// return String(self)
     var string : String {
         return String(self)
     }
 }
 
 public extension Double {
+    /// return String(self)
     var string : String {
         return String(self)
     }
