@@ -28,7 +28,7 @@ public extension String {
         return characters.count
     }
     
-	/// whether this String is all space or isEmoy
+	/// whether this String is all space or isEmpty
 	var isAllSpace : Bool {
 		return Array(characters).filter{ $0 == " " }.count == characters.count
 	}

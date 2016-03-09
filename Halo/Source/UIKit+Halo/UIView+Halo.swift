@@ -153,6 +153,7 @@ public extension UIView {
         return CGRect(x: screen_X, y: screen_Y, width: self.frame.size.width, height: self.frame.size.height)
     }
     
+    /// UIView 自己的截图
     var screenshot : UIImage? {
         UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.mainScreen().scale)
         layer.renderInContext(UIGraphicsGetCurrentContext()!)
@@ -161,6 +162,7 @@ public extension UIView {
         return image
     }
     
+    /// 异步获取截图
     func screenshot(finish:UIImage? -> Void) {
         Async {
             let image = self.screenshot

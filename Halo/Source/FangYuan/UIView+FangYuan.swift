@@ -137,10 +137,10 @@ public extension UIView {
     }
     
     func edge(edge:UIEdgeInsets) -> Self {
-        top = edge.top
+        top    = edge.top
         bottom = edge.bottom
-        left = edge.left
-        right = edge.right
+        left   = edge.left
+        right  = edge.right
         return self
     }
     

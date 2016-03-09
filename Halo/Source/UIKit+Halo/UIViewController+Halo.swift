@@ -54,7 +54,7 @@ public extension UIViewController {
 		return self
 	}
 	
-	//  设置成true的话，表示即便UIViewController的navigationBar是不透明的，也会讲view上的scrollView的frame拓展到navigationBar下面。这样就使scrollView.frame在拥有透明或非透明的navigationBar中表现一致了。
+	//  设置成true的话，表示即便UIViewController的navigationBar是不透明的，也会将 view 上的 scrollView 的 frame 拓展到 navigationBar 下面。这样就使 scrollView.frame 在拥有透明或非透明的 navigationBar 中表现一致了。
 	//  不过，这也许不是一个好办法。
     func extendedLayoutIncludesOpaqueBars(extendedLayoutIncludesOpaqueBars : Bool) -> Self {
 		self.extendedLayoutIncludesOpaqueBars = extendedLayoutIncludesOpaqueBars

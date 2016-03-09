@@ -61,6 +61,7 @@ public extension HasText {
         return self
     }
     
+    /// 在宽度确定时，该 UIView 在固定宽度下展示完全部文字所需的高度
     public var displayHeight : CGFloat {
         return (h_text as NSString).boundingRectWithSize(CGSize(width: h_width, height: CGFloat(MAXFLOAT)),
             options: .UsesLineFragmentOrigin,
