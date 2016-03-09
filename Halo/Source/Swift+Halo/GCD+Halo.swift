@@ -12,14 +12,14 @@ public func Async(block:() -> Void) {
 }
 
 /**
-延迟执行
+延迟若干秒后，在主线程执行
 
 - parameter second: 多少秒
+- parameter queue:  执行线程，默认为主线程
 - parameter block:  做什么
 */
-public func After(second second : Double, _ block:()->Void) {
+public func After(second second : Double, queue:dispatch_queue_t = dispatch_get_main_queue(), _ block:()->Void) {
     let when = dispatch_time(DISPATCH_TIME_NOW, Int64(second * Double(NSEC_PER_SEC)))
-    let queue = dispatch_get_main_queue()
 	dispatch_after(when, queue, block)
 }
 
