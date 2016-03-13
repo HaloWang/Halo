@@ -8,8 +8,8 @@
 
 import Foundation
 
-private var X: Int8 = 0
-private var Y: Int8 = 0
+private var X : Any?
+private var Y : Any?
 
 // MARK: - Chainable getter
 public extension UIView {

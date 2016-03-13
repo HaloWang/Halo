@@ -4,7 +4,7 @@ import Halo
 
 // MARK: - Properties & Init
 class ViewController: UIViewController {
-    
+    let v = UIView()
 }
 
 // MARK: - Lifecycle
@@ -12,6 +12,19 @@ extension ViewController {
     
     override func loadView() {
         super.loadView()
+        
+        v.superView(view)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        v
+            .backgroundColor(Red)
+            .left(50)
+            .top(50)
+            .bottom(50)
+            .right(50)
     }
     
     override func viewDidLoad() {
