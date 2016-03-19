@@ -34,6 +34,21 @@ public func Last(block:() -> Void) {
 }
 
 /**
+ 开启新线程执行任务，执行任务完成后，回到 UI 线程
+ 
+ - parameter block:  新线程需要执行的任务
+ - parameter finish: 主线程需要执行的任务
+ */
+public func Async(block:() -> Void, finish:()->Void) {
+    let asyncQueue = dispatch_queue_create(LogString + ".Async", nil)
+    let mainQueue = dispatch_get_main_queue()
+    dispatch_async(asyncQueue) { () -> Void in
+        block();
+        dispatch_async(mainQueue, finish)
+    }
+}
+
+/**
  仅仅是为了快速调用 after
  */
 @warn_unused_result
