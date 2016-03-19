@@ -13,14 +13,16 @@ extension ViewController {
     override func loadView() {
         super.loadView()
         
-        v.superView(view)
+        v
+            .superView(view)
+            .backgroundColor(Red)
+            .cornerRadius(5, borderWidth: 1, borderColor: Red.alpha(0.5))
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
         v
-            .backgroundColor(Red)
             .left(50)
             .top(50)
             .bottom(50)
