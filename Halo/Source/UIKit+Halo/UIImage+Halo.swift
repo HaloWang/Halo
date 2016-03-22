@@ -111,7 +111,7 @@ public extension UIImage {
         let imageRef = CGImage
         var boxSize = UInt32(radius * scale * ratio)
         if boxSize % 2 == 0 {
-            boxSize++
+            boxSize += 1
         }
         
         let height = CGImageGetHeight(imageRef)

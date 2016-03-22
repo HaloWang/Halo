@@ -38,7 +38,7 @@ public class KeyboardObserver: NSObject {
 
 	private override init() {
 		super.init()
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardFrameChange:", name: UIKeyboardWillChangeFrameNotification, object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(KeyboardObserver.keyboardFrameChange(_:)), name: UIKeyboardWillChangeFrameNotification, object: nil)
 	}
 	
 	func keyboardFrameChange(notification : NSNotification) {
