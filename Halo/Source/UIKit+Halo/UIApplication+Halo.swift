@@ -125,6 +125,47 @@ public var ScreenWidth : CGFloat {
     return ScreenBounds.size.width
 }
 
+/**
+ 根据屏幕宽度选择不同的值进行适配，针对其他尺寸默认返回 _375
+ 
+ - parameter _320: 4s/5/5s
+ - parameter _375: 6/6s
+ - parameter _414: 6p/6sp
+ 
+ */
+public func ValueWithScreenWidth_320(_320 : Halo.CGFloatable, _375 : Halo.CGFloatable, _414 : Halo.CGFloatable) -> CGFloat {
+    switch ScreenWidth {
+    case 414.f:
+        return _414.f
+    case 320.f:
+        return _320.f
+    default:
+        return _375.f
+    }
+}
+
+/**
+ 根据屏幕高度分别选择不同的值进行适配，针对其他尺寸默认返回 _667
+ 
+ - parameter _480: 4s
+ - parameter _568: 5/5s
+ - parameter _667: 6/6s
+ - parameter _736: 6p/6sp
+ 
+ */
+public func ValueWithScreenHeight_480(_480 : Halo.CGFloatable, _568: Halo.CGFloatable, _667: Halo.CGFloatable, _736: Halo.CGFloatable) -> CGFloat {
+    switch ScreenHeight {
+    case 480.f:
+        return _480.f
+    case 568.f:
+        return _568.f
+    case 736.f:
+        return _736.f
+    default:
+        return _667.f
+    }
+}
+
 /// 用于 navigationController.navigationBar.opaque = true 的，含有 UITableView 的 UIViewController 的 UIScrollView
 ///
 /// CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight - NavigationBarHeight)
