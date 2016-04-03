@@ -40,15 +40,16 @@ public class Alert {
     }
     
     /// Set style
-    public func style(style:UIAlertControllerStyle) -> Self {
+    public func preferredStyle(style:UIAlertControllerStyle) -> Self {
         self.style = style
         return self
     }
     
     /// Add a button
-    public func addAction(title: String?, style: UIAlertActionStyle = UIAlertActionStyle.Default, handler: ((UIAlertAction) -> Void)?) -> Self {
+    public func addAction(title: String?, style: UIAlertActionStyle, handler: ((UIAlertAction) -> Void)?) -> Self {
         let action = UIAlertAction(title: title, style: style) { [weak self] in
             handler?($0)
+            
             self?.alertController?.dismissViewControllerAnimated(true, completion: nil)
         }
         actions.append(action)

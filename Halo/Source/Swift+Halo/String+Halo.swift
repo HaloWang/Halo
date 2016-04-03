@@ -14,7 +14,7 @@ public extension String {
         } else {
             ccLogWarning(self, "is not a url!")
             ccLogWarning(self, "Can not use NSUTF8StringEncoding")
-            return NSURL(string: "https://github.com/HaloWang")!
+            return NSURL(string: "http://www.google.com")!
         }
 	}
     
