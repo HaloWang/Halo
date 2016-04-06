@@ -1,5 +1,7 @@
 # Halo
 
+[![Travis CI](https://travis-ci.org/HaloWang/Halo.svg?branch=master)](https://travis-ci.org/HaloWang/Halo)
+
 ## Update
 
 我已经将方圆分离成了新的 [repo](https://github.com/HaloWang/FangYuan)
