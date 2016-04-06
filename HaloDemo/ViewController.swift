@@ -21,12 +21,6 @@ extension ViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        
-        v
-            .left(50)
-            .top(50)
-            .bottom(50)
-            .right(50)
     }
     
     override func viewDidLoad() {

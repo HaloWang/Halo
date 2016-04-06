@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		092571DB1BF5BDE900687A08 /* FangYuan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092571DA1BF5BDE900687A08 /* FangYuan.swift */; };
+		0932F1E81CB504D8009596F6 /* GCD+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0932F1E71CB504D8009596F6 /* GCD+Halo.swift */; };
 		094CB4051BDB5FA9004FD310 /* UICollectionView+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CB4041BDB5FA9004FD310 /* UICollectionView+Halo.swift */; };
 		094CB4071BDB5FEC004FD310 /* UICollectionViewCell+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CB4061BDB5FEC004FD310 /* UICollectionViewCell+Halo.swift */; };
 		0973AC491C44E08A00ABBB00 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0973AC481C44E08A00ABBB00 /* Alert.swift */; };
 		097C39911BC385A400FD4AF2 /* CollectionType+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097C39901BC385A400FD4AF2 /* CollectionType+Halo.swift */; };
 		097C39991BC3991500FD4AF2 /* HaloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097C39981BC3991500FD4AF2 /* HaloTests.swift */; };
 		097C399B1BC3991500FD4AF2 /* Halo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09DC29EF1B989A410045615F /* Halo.framework */; };
-		097DDB741BF48D8500B02E30 /* UIView+FangYuan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097DDB731BF48D8500B02E30 /* UIView+FangYuan.swift */; };
 		0981337E1BDF666400038EAE /* UILabel+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0981337D1BDF666400038EAE /* UILabel+Halo.swift */; };
 		098274B31BD5EFA400195B3B /* UINavigationController+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098274B21BD5EFA400195B3B /* UINavigationController+Halo.swift */; };
 		0982C8481BF1BD3300B9A31F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0982C8471BF1BD3300B9A31F /* AppDelegate.swift */; };
@@ -34,7 +33,6 @@
 		09BACC701B9C9E08001314A5 /* UIView+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BACC5E1B9C9E08001314A5 /* UIView+Halo.swift */; };
 		09BACC711B9C9E08001314A5 /* UIViewController+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BACC5F1B9C9E08001314A5 /* UIViewController+Halo.swift */; };
 		09BACC7A1B9C9E53001314A5 /* CGFloatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BACC721B9C9E53001314A5 /* CGFloatable.swift */; };
-		09BACC7F1B9C9E53001314A5 /* GCD+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BACC771B9C9E53001314A5 /* GCD+Halo.swift */; };
 		09BACC811B9C9E53001314A5 /* String+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BACC791B9C9E53001314A5 /* String+Halo.swift */; };
 		09BCDD7C1B9DCDA60005359C /* UIApplication+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BCDD7B1B9DCDA60005359C /* UIApplication+Halo.swift */; };
 		09BCDD801B9DD1A00005359C /* UITableView+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BCDD7F1B9DD1A00005359C /* UITableView+Halo.swift */; };
@@ -77,7 +75,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		092571DA1BF5BDE900687A08 /* FangYuan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FangYuan.swift; path = FangYuan/FangYuan.swift; sourceTree = "<group>"; };
+		0932F1E71CB504D8009596F6 /* GCD+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GCD+Halo.swift"; sourceTree = "<group>"; };
 		094CB4041BDB5FA9004FD310 /* UICollectionView+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Halo.swift"; sourceTree = "<group>"; };
 		094CB4061BDB5FEC004FD310 /* UICollectionViewCell+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Halo.swift"; sourceTree = "<group>"; };
 		0973AC481C44E08A00ABBB00 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -85,7 +83,6 @@
 		097C39961BC3991500FD4AF2 /* HaloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HaloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		097C39981BC3991500FD4AF2 /* HaloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaloTests.swift; sourceTree = "<group>"; };
 		097C399A1BC3991500FD4AF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		097DDB731BF48D8500B02E30 /* UIView+FangYuan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+FangYuan.swift"; path = "FangYuan/UIView+FangYuan.swift"; sourceTree = "<group>"; };
 		0981337D1BDF666400038EAE /* UILabel+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Halo.swift"; sourceTree = "<group>"; };
 		098274B21BD5EFA400195B3B /* UINavigationController+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Halo.swift"; sourceTree = "<group>"; };
 		0982C8451BF1BD3300B9A31F /* HaloDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HaloDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,7 +102,6 @@
 		09BACC5E1B9C9E08001314A5 /* UIView+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Halo.swift"; sourceTree = "<group>"; };
 		09BACC5F1B9C9E08001314A5 /* UIViewController+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Halo.swift"; sourceTree = "<group>"; };
 		09BACC721B9C9E53001314A5 /* CGFloatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatable.swift; sourceTree = "<group>"; };
-		09BACC771B9C9E53001314A5 /* GCD+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GCD+Halo.swift"; sourceTree = "<group>"; };
 		09BACC791B9C9E53001314A5 /* String+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Halo.swift"; sourceTree = "<group>"; };
 		09BCDD7B1B9DCDA60005359C /* UIApplication+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Halo.swift"; sourceTree = "<group>"; };
 		09BCDD7F1B9DD1A00005359C /* UITableView+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Halo.swift"; sourceTree = "<group>"; };
@@ -145,15 +141,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0935E24E1BF0AC1800734EDA /* FangYuan */ = {
-			isa = PBXGroup;
-			children = (
-				092571DA1BF5BDE900687A08 /* FangYuan.swift */,
-				097DDB731BF48D8500B02E30 /* UIView+FangYuan.swift */,
-			);
-			name = FangYuan;
-			sourceTree = "<group>";
-		};
 		097C39971BC3991500FD4AF2 /* HaloTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,7 +168,6 @@
 				09BACC4C1B9C9E08001314A5 /* Swift+Halo */,
 				09BACC561B9C9E08001314A5 /* UIKit+Halo */,
 				09C36E131BAA844100324421 /* KeyboardObserver */,
-				0935E24E1BF0AC1800734EDA /* FangYuan */,
 			);
 			name = Source;
 			path = Halo/Source;
@@ -192,7 +178,7 @@
 			children = (
 				09BACC721B9C9E53001314A5 /* CGFloatable.swift */,
 				09A12A5B1C44D33300C611FE /* NSDate+Halo.swift */,
-				09BACC771B9C9E53001314A5 /* GCD+Halo.swift */,
+				0932F1E71CB504D8009596F6 /* GCD+Halo.swift */,
 				09BACC791B9C9E53001314A5 /* String+Halo.swift */,
 				09FEA3BD1BC0E4EA00848413 /* Print+Halo.swift */,
 				097C39901BC385A400FD4AF2 /* CollectionType+Halo.swift */,
@@ -438,17 +424,15 @@
 				09BACC6D1B9C9E08001314A5 /* UIScrollView+Halo.swift in Sources */,
 				09FEA3BE1BC0E4EA00848413 /* Print+Halo.swift in Sources */,
 				09BACC701B9C9E08001314A5 /* UIView+Halo.swift in Sources */,
+				0932F1E81CB504D8009596F6 /* GCD+Halo.swift in Sources */,
 				09BACC6B1B9C9E08001314A5 /* UIImage+Halo.swift in Sources */,
 				09BCDD7C1B9DCDA60005359C /* UIApplication+Halo.swift in Sources */,
 				09A12A5C1C44D33300C611FE /* NSDate+Halo.swift in Sources */,
 				0973AC491C44E08A00ABBB00 /* Alert.swift in Sources */,
 				0981337E1BDF666400038EAE /* UILabel+Halo.swift in Sources */,
-				09BACC7F1B9C9E53001314A5 /* GCD+Halo.swift in Sources */,
 				098274B31BD5EFA400195B3B /* UINavigationController+Halo.swift in Sources */,
 				094CB4071BDB5FEC004FD310 /* UICollectionViewCell+Halo.swift in Sources */,
-				097DDB741BF48D8500B02E30 /* UIView+FangYuan.swift in Sources */,
 				09BACC691B9C9E08001314A5 /* UIButton+Halo.swift in Sources */,
-				092571DB1BF5BDE900687A08 /* FangYuan.swift in Sources */,
 				09BACC6E1B9C9E08001314A5 /* UITextField+Halo.swift in Sources */,
 				09BACC811B9C9E53001314A5 /* String+Halo.swift in Sources */,
 				09BCDD8A1B9DD4BB0005359C /* UITableViewCell+Halo.swift in Sources */,

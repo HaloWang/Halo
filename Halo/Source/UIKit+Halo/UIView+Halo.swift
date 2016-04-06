@@ -155,7 +155,7 @@ public extension UIView {
     
     /// UIView 自己的截图
     var screenshot : UIImage? {
-        UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.mainScreen().scale)
+        UIGraphicsBeginImageContextWithOptions(frame.size, false, UIScreen.mainScreen().scale)
         layer.renderInContext(UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
