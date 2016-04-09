@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0932F1E81CB504D8009596F6 /* GCD+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0932F1E71CB504D8009596F6 /* GCD+Halo.swift */; };
 		094CB4051BDB5FA9004FD310 /* UICollectionView+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CB4041BDB5FA9004FD310 /* UICollectionView+Halo.swift */; };
 		094CB4071BDB5FEC004FD310 /* UICollectionViewCell+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CB4061BDB5FEC004FD310 /* UICollectionViewCell+Halo.swift */; };
 		0973AC491C44E08A00ABBB00 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0973AC481C44E08A00ABBB00 /* Alert.swift */; };
@@ -75,7 +74,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0932F1E71CB504D8009596F6 /* GCD+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GCD+Halo.swift"; sourceTree = "<group>"; };
 		094CB4041BDB5FA9004FD310 /* UICollectionView+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Halo.swift"; sourceTree = "<group>"; };
 		094CB4061BDB5FEC004FD310 /* UICollectionViewCell+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Halo.swift"; sourceTree = "<group>"; };
 		0973AC481C44E08A00ABBB00 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 			children = (
 				09BACC721B9C9E53001314A5 /* CGFloatable.swift */,
 				09A12A5B1C44D33300C611FE /* NSDate+Halo.swift */,
-				0932F1E71CB504D8009596F6 /* GCD+Halo.swift */,
 				09BACC791B9C9E53001314A5 /* String+Halo.swift */,
 				09FEA3BD1BC0E4EA00848413 /* Print+Halo.swift */,
 				097C39901BC385A400FD4AF2 /* CollectionType+Halo.swift */,
@@ -424,7 +421,6 @@
 				09BACC6D1B9C9E08001314A5 /* UIScrollView+Halo.swift in Sources */,
 				09FEA3BE1BC0E4EA00848413 /* Print+Halo.swift in Sources */,
 				09BACC701B9C9E08001314A5 /* UIView+Halo.swift in Sources */,
-				0932F1E81CB504D8009596F6 /* GCD+Halo.swift in Sources */,
 				09BACC6B1B9C9E08001314A5 /* UIImage+Halo.swift in Sources */,
 				09BCDD7C1B9DCDA60005359C /* UIApplication+Halo.swift in Sources */,
 				09A12A5C1C44D33300C611FE /* NSDate+Halo.swift in Sources */,
