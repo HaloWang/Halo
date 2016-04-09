@@ -93,7 +93,7 @@ public extension UIImage {
      
      */
     func blurredImageAsync(radius: CGFloat, iterations: Int, ratio: CGFloat, blendColor: UIColor? = nil, finish: UIImage! -> Void) {
-        Last {
+        dispatch_async(dispatch_get_main_queue()) {
             finish(self.blurredImage(radius, iterations: iterations, ratio: ratio, blendColor: blendColor))
         }
     }

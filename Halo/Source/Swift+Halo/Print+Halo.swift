@@ -1,6 +1,8 @@
 
 import Foundation
 
+internal let LogString = "Halo.framework"
+
 public func cc(items:Any...) {
 	print(items.halo_stringValue)
 }
@@ -43,5 +45,3 @@ public extension Array {
 		return stringValue
 	}
 }
-
-public let LogString = "Halo.framework"

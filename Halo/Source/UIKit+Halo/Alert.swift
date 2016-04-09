@@ -15,7 +15,7 @@ public class Alert {
         
         let alert = Alert()
         
-        Last {
+        dispatch_async(dispatch_get_main_queue()) {
             let alertController = UIAlertController(title: alert.title, message: alert.message, preferredStyle: alert.style)
             alert.alertController = alertController
             for action in alert.actions {

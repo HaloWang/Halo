@@ -135,7 +135,7 @@ public extension UIView {
         return self
     }
     
-    /// 返回某个 UIView 相对于当前屏幕的 rect
+    /// 返回某个 UIView 相对于其所处 UIWindow 的 rect（一般情况下该 Rect 等于该 UIView 相对于屏幕的 Rect）
     var relativeFrameToWindow: CGRect {
         var screen_X: CGFloat = 0
         var screen_Y: CGFloat = 0
@@ -164,9 +164,9 @@ public extension UIView {
     
     /// 异步获取截图
     func screenshot(finish:UIImage? -> Void) {
-        Async {
+        dispatch_async(dispatch_queue_create(LogString + ".Async", nil)) {
             let image = self.screenshot
-            Last {
+            dispatch_async(dispatch_get_main_queue()) {
                 finish(image)
             }
         }
