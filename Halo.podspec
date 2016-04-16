@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.subspec 'Foundation' do |ss|
-    ss.source_files = "Halo/Source/Swift+Halo/&.{swift}"
+    ss.source_files = "Halo/Source/Swift+Halo/*.{swift}"
   end
 
 end
