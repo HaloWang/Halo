@@ -17,6 +17,7 @@ extension ViewController {
             .superView(view)
             .backgroundColor(Red)
             .cornerRadius(5, borderWidth: 1, borderColor: Red.alpha(0.5))
+            .frame(x: 100, y: 100, width: 100, height: 100)
     }
     
     override func viewWillLayoutSubviews() {
