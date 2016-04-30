@@ -9,15 +9,15 @@
 import Foundation
 
 public extension UILabel {
-    public func numberOfLines(numberOfLines : Int) -> Self {
+    public func numberOfLines(numberOfLines: Int) -> Self {
         self.numberOfLines = numberOfLines
         return self
     }
 }
 
 extension UILabel : HasText {
-    
-    public var h_text : String {
+
+    public var h_text: String {
         get {
             return text ?? ""
         }
@@ -25,8 +25,8 @@ extension UILabel : HasText {
             text = newValue
         }
     }
-    
-    public var h_textColor : UIColor {
+
+    public var h_textColor: UIColor {
         get {
             return textColor
         }
@@ -34,8 +34,8 @@ extension UILabel : HasText {
             textColor = newValue
         }
     }
-    
-    public var h_font : UIFont {
+
+    public var h_font: UIFont {
         get {
             return font
         }
@@ -43,8 +43,8 @@ extension UILabel : HasText {
             font = newValue
         }
     }
-    
-    public var h_textAlignment : NSTextAlignment {
+
+    public var h_textAlignment: NSTextAlignment {
         get {
             return textAlignment
         }
@@ -53,5 +53,3 @@ extension UILabel : HasText {
         }
     }
 }
-
-

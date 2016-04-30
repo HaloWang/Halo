@@ -20,26 +20,26 @@ public let Blue   = UIColor.blueColor()
 public let Purple = UIColor.purpleColor()
 
 /// 系统分割线颜色 -> RGB(200, 199, 204)
-public var SystemSeparatorColor : UIColor {
+public var SystemSeparatorColor: UIColor {
 	return UIColor(red: 200/255, green: 199/255, blue: 204/255, alpha: 1)
 }
 
-public func RGB(red:CGFloat, _ green:CGFloat, _ blue:CGFloat) -> UIColor {
+public func RGB(red: CGFloat, _ green: CGFloat, _ blue: CGFloat) -> UIColor {
 	return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
 }
 
-public func RGBA(red:CGFloat, _ green:CGFloat, _ blue:CGFloat, _ alpha:CGFloat) -> UIColor {
+public func RGBA(red: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> UIColor {
 	return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: alpha)
 }
 
 /// "RRGGBBAA"
-public func HEX(hexString:String) -> UIColor {
+public func HEX(hexString: String) -> UIColor {
     return UIColor(hexString: hexString)
 }
 
 public extension UIColor {
-    
-    func alpha(alpha:Halo.CGFloatable) -> UIColor {
+
+    func alpha(alpha: Halo.CGFloatable) -> UIColor {
         var _red   = 0.f
         var _green = 0.f
         var _blue  = 0.f
@@ -47,21 +47,21 @@ public extension UIColor {
         getRed(&_red, green: &_green, blue: &_blue, alpha: &_alpha)
         return UIColor(red: _red, green: _green, blue: _blue, alpha: alpha.f)
     }
-    
+
      /**
      使用 hex 色值初始化 UIColor
-     
+
      - parameter hexString: 色值，格式为 "1234EF"
-     
+
      */
 	convenience init(hexString: String) {
-		var red :  CGFloat = 0.0
+		var red: CGFloat = 0.0
 		var green: CGFloat = 0.0
-		var blue : CGFloat = 0.0
+		var blue: CGFloat = 0.0
 		var alpha: CGFloat = 1.0
-        
+
         let _hexString = hexString.hasPrefix("#") ? hexString : "#\(hexString)"
-        
+
         let index   = _hexString.startIndex.advancedBy(1)
         let hex     = _hexString.substringFromIndex(index)
         let scanner = NSScanner(string: hex)
@@ -92,7 +92,7 @@ public extension UIColor {
         } else {
             ccLogWarning("Scan hex error")
         }
-        
+
 		self.init(red:red, green:green, blue:blue, alpha:alpha)
 	}
 }

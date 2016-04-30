@@ -2,72 +2,72 @@
 import UIKit
 
 public extension UIViewController {
-    
+
     /// navigationController?.pushViewController(vc, animated: animated)
-    func push(vc:UIViewController, animated:Bool = true) {
+    func push(vc: UIViewController, animated: Bool = true) {
         navigationController?.pushViewController(vc, animated: animated)
     }
-    
-    func rightBarButtonItemTitle(title:String?, targetSelfAction action:Selector) {
+
+    func rightBarButtonItemTitle(title: String?, targetSelfAction action: Selector) {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: title, style: UIBarButtonItemStyle.Plain, target: self, action: action)
     }
-    
-    func leftBarButtonItemTitle(title:String?, targetSelfAction action:Selector) {
+
+    func leftBarButtonItemTitle(title: String?, targetSelfAction action: Selector) {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: title, style: UIBarButtonItemStyle.Plain, target: self, action: action)
     }
-    
-    func hidesBottomBarWhenPushed(hidesBottomBarWhenPushed:Bool) -> Self {
+
+    func hidesBottomBarWhenPushed(hidesBottomBarWhenPushed: Bool) -> Self {
         self.hidesBottomBarWhenPushed = hidesBottomBarWhenPushed
         return self
     }
-	
+
 	/**
 	直接设置 self.view.backgroundColor
-	
+
 	- parameter backgroundColor: 背景颜色
-	
+
 	- returns: self
 	*/
-    func backgroundColor(backgroundColor : UIColor) -> Self{
+    func backgroundColor(backgroundColor: UIColor) -> Self {
 		view.backgroundColor(backgroundColor)
 		return self
 	}
 	/**
 	在 self.view 上添加 UIView
-	
+
 	- parameter viewsSubview: subView
-	
+
 	- returns: self
 	*/
-    func addSubview(subviewForView : UIView) -> Self{
+    func addSubview(subviewForView: UIView) -> Self {
 		view.addSubview(subviewForView)
 		return self
 	}
-    
-    func addSubviews(subviewsForView : [UIView]) -> Self {
+
+    func addSubviews(subviewsForView: [UIView]) -> Self {
         view.addSubviews(subviewsForView)
         return self
     }
-	
-    func title(title : String?) -> Self {
+
+    func title(title: String?) -> Self {
 		self.title = title
 		return self
 	}
-	
+
 	//  设置成true的话，表示即便UIViewController的navigationBar是不透明的，也会将 view 上的 scrollView 的 frame 拓展到 navigationBar 下面。这样就使 scrollView.frame 在拥有透明或非透明的 navigationBar 中表现一致了。
 	//  不过，这也许不是一个好办法。
-    func extendedLayoutIncludesOpaqueBars(extendedLayoutIncludesOpaqueBars : Bool) -> Self {
+    func extendedLayoutIncludesOpaqueBars(extendedLayoutIncludesOpaqueBars: Bool) -> Self {
 		self.extendedLayoutIncludesOpaqueBars = extendedLayoutIncludesOpaqueBars
 		return self
 	}
-	
-    func automaticallyAdjustsScrollViewInsets(automaticallyAdjustsScrollViewInsets : Bool) -> Self {
+
+    func automaticallyAdjustsScrollViewInsets(automaticallyAdjustsScrollViewInsets: Bool) -> Self {
 		self.automaticallyAdjustsScrollViewInsets = automaticallyAdjustsScrollViewInsets
 		return self
 	}
-    
-    var navigationed : UINavigationController {
+
+    var navigationed: UINavigationController {
         return UINavigationController(rootViewController: self)
     }
-	
+
 }

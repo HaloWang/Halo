@@ -2,43 +2,43 @@
 import UIKit
 
 public extension UITextField {
-	
-    func placeholder(placeholder : String) -> Self{
+
+    func placeholder(placeholder: String) -> Self {
 		self.placeholder = placeholder
 		return self
 	}
-	
+
     /// 设定文本距离左侧的距离
-    func leftWidth(leftWidth : CGFloat) -> Self {
+    func leftWidth(leftWidth: CGFloat) -> Self {
 		leftView = UIView(frame: CGRect(x: 0, y: 0, width: leftWidth, height: 5))
 		leftViewMode = UITextFieldViewMode.Always
 		return self
 	}
-	
-    func keyboardType(keyboardType : UIKeyboardType) -> Self {
+
+    func keyboardType(keyboardType: UIKeyboardType) -> Self {
 		self.keyboardType = keyboardType
 		return self
 	}
-	
-    func secureTextEntry(secureTextEntry : Bool) -> Self {
+
+    func secureTextEntry(secureTextEntry: Bool) -> Self {
 		self.secureTextEntry = secureTextEntry
 		return self
 	}
-    
+
     func returnKeyType(returnKeyType: UIReturnKeyType) -> Self {
         self.returnKeyType = returnKeyType
         return self
     }
-    
-    func delegate(delegate:UITextFieldDelegate) -> Self {
+
+    func delegate(delegate: UITextFieldDelegate) -> Self {
         self.delegate = delegate
         return self
     }
 }
 
 extension UITextField : HasText {
-    
-    public var h_text : String {
+
+    public var h_text: String {
         get {
             return text ?? ""
         }
@@ -46,8 +46,8 @@ extension UITextField : HasText {
             text = newValue
         }
     }
-    
-    public var h_textColor : UIColor {
+
+    public var h_textColor: UIColor {
         get {
             return textColor ?? Black
         }
@@ -55,8 +55,8 @@ extension UITextField : HasText {
             textColor = newValue
         }
     }
-    
-    public var h_font : UIFont {
+
+    public var h_font: UIFont {
         get {
             return font!
         }
@@ -64,8 +64,8 @@ extension UITextField : HasText {
             font = newValue
         }
     }
-    
-    public var h_textAlignment : NSTextAlignment {
+
+    public var h_textAlignment: NSTextAlignment {
         get {
             return textAlignment
         }
@@ -74,4 +74,3 @@ extension UITextField : HasText {
         }
     }
 }
-

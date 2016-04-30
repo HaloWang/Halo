@@ -3,42 +3,42 @@ import UIKit
 
 // MARK: - Properties
 public extension UIScrollView {
-    func alwaysBounceHorizontal(alwaysBounceHorizontal : Bool) -> Self {
+    func alwaysBounceHorizontal(alwaysBounceHorizontal: Bool) -> Self {
         self.alwaysBounceHorizontal = alwaysBounceHorizontal
         return self
     }
-    
-    func alwaysBounceVertical(alwaysBounceVertical : Bool) -> Self {
+
+    func alwaysBounceVertical(alwaysBounceVertical: Bool) -> Self {
         self.alwaysBounceVertical = alwaysBounceVertical
         return self
     }
-    
-    func scrollEnabled(scrollEnabled : Bool) -> Self {
+
+    func scrollEnabled(scrollEnabled: Bool) -> Self {
         self.scrollEnabled = scrollEnabled
         return self
     }
-    
-    func pagingEnabled(pagingEnabled : Bool) -> Self {
+
+    func pagingEnabled(pagingEnabled: Bool) -> Self {
         self.pagingEnabled = pagingEnabled
         return self
     }
-    
-    func showsVerticalScrollIndicator(showsVerticalScrollIndicator:Bool) -> Self {
+
+    func showsVerticalScrollIndicator(showsVerticalScrollIndicator: Bool) -> Self {
         self.showsVerticalScrollIndicator = showsVerticalScrollIndicator
         return self
     }
-    
+
     func showsHorizontalScrollIndicator(showsHorizontalScrollIndicator: Bool) -> Self {
         self.showsHorizontalScrollIndicator = showsHorizontalScrollIndicator
         return self
     }
-    
+
     func delegate(delegate: UIScrollViewDelegate) -> Self {
         self.delegate = delegate
         return self
     }
-    
-    func bounces(bounces : Bool) -> Self {
+
+    func bounces(bounces: Bool) -> Self {
         self.bounces = bounces
         return self
     }
@@ -46,8 +46,8 @@ public extension UIScrollView {
 
 // MARK: - ContentLayout
 public extension UIScrollView {
-	
-    var offsetX : CGFloat {
+
+    var offsetX: CGFloat {
 		get {
 			return contentOffset.x
 		}
@@ -55,8 +55,8 @@ public extension UIScrollView {
 			contentOffset.x = newValue
 		}
 	}
-	
-	var offsetY : CGFloat {
+
+	var offsetY: CGFloat {
 		get {
 			return contentOffset.y
 		}
@@ -64,8 +64,8 @@ public extension UIScrollView {
 			contentOffset.y = newValue
 		}
 	}
-    
-    var contentSizeHeight : CGFloat  {
+
+    var contentSizeHeight: CGFloat {
         get {
             return contentSize.height
         }
@@ -73,8 +73,8 @@ public extension UIScrollView {
             contentSize.height = newValue
         }
     }
-    
-    var contentSizeWidth : CGFloat {
+
+    var contentSizeWidth: CGFloat {
         get {
             return contentSize.width
         }
@@ -82,8 +82,8 @@ public extension UIScrollView {
             contentSize.width = newValue
         }
     }
-	
-	private(set) var insetTop : CGFloat {
+
+	private(set) var insetTop: CGFloat {
 		get {
 			return contentInset.top
 		}
@@ -91,8 +91,8 @@ public extension UIScrollView {
 			contentInset.top = newValue
 		}
 	}
-	
-	private(set) var insetBottom : CGFloat {
+
+	private(set) var insetBottom: CGFloat {
 		get {
 			return contentInset.bottom
 		}
@@ -101,73 +101,72 @@ public extension UIScrollView {
 		}
 	}
 
-    
-    func contentInsetTop(top:CGFloat) -> Self {
+
+    func contentInsetTop(top: CGFloat) -> Self {
         contentInset.top = top
         return self
     }
-    
-    func contentInsetBottom(bottom:CGFloat) -> Self {
+
+    func contentInsetBottom(bottom: CGFloat) -> Self {
         contentInset.bottom = bottom
         return self
     }
-    
-    func contentInsetLeft(left:CGFloat) -> Self {
+
+    func contentInsetLeft(left: CGFloat) -> Self {
         contentInset.left = left
         return self
     }
-    
-    func contentInsetRight(right:CGFloat) -> Self {
+
+    func contentInsetRight(right: CGFloat) -> Self {
         contentInset.right = right
         return self
     }
-    
-	func insetBottom(bottom : CGFloat) -> Self {
+
+	func insetBottom(bottom: CGFloat) -> Self {
 		contentInset.bottom = bottom
 		scrollIndicatorInsets.bottom = bottom
 		return self
 	}
-	
-	func offsetX(offsetX:CGFloat) -> Self {
+
+	func offsetX(offsetX: CGFloat) -> Self {
 		contentOffset.x = offsetX
 		return self
 	}
-	
-	func offsetY(offsetY : CGFloat) -> Self {
+
+	func offsetY(offsetY: CGFloat) -> Self {
 		contentOffset.y = offsetY
 		return self
 	}
-	
-	func insetTop(top : CGFloat) -> Self {
+
+	func insetTop(top: CGFloat) -> Self {
 		contentInset.top = top
 		scrollIndicatorInsets.top = top
 		return self
 	}
-	
-	func contentSize(size : CGSize) -> Self {
+
+	func contentSize(size: CGSize) -> Self {
 		contentSize = size
 		return self
 	}
-    
-    func contentSize(width:CGFloat, height:CGFloat) -> Self {
+
+    func contentSize(width: CGFloat, height: CGFloat) -> Self {
         contentSize = CGSize(width: width, height: height)
         return self
     }
-	
-	func contentInset(contentInset : UIEdgeInsets) -> Self {
+
+	func contentInset(contentInset: UIEdgeInsets) -> Self {
 		self.contentInset = contentInset
 		return self
 	}
-	
-	func scrollIndicatorInsets(scrollIndicatorInsets : UIEdgeInsets) -> Self {
+
+	func scrollIndicatorInsets(scrollIndicatorInsets: UIEdgeInsets) -> Self {
 		self.scrollIndicatorInsets = scrollIndicatorInsets
 		return self
 	}
-	
-	func contentOffset(contentOffset : CGPoint) -> Self {
+
+	func contentOffset(contentOffset: CGPoint) -> Self {
 		self.contentOffset = contentOffset
 		return self
 	}
-	
-}
 
+}
