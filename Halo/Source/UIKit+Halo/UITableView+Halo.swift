@@ -54,13 +54,12 @@ public extension UITableView {
                 return nil
             }
 
-            if dataSource.isEqual(delegate) {
-                return dataSource as? protocol<UITableViewDelegate, UITableViewDataSource>
-            } else {
+            guard dataSource.isEqual(delegate) else {
                 ccLogWarning("DataSource is \(dataSource)\n", "Delegate is \(delegate)\n", "They are different")
                 return nil
             }
 
+            return dataSource as? protocol<UITableViewDelegate, UITableViewDataSource>
         }
         set {
             self.dataSource = newValue
