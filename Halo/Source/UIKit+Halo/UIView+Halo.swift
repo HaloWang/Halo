@@ -51,7 +51,6 @@ public extension UIView {
 
     func cornerRadius(radius: CGFloat) -> Self {
         layer.cornerRadius = radius
-        layer.masksToBounds = true
         return self
     }
 
@@ -113,7 +112,6 @@ public extension UIView {
     */
     func cornerRadius(radius: CGFloat, borderWidth: CGFloat, borderColor: UIColor) -> Self {
         layer.cornerRadius = radius
-        layer.masksToBounds = true
         layer.borderWidth = borderWidth
         layer.borderColor = borderColor.CGColor
         return self
