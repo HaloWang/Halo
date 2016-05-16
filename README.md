@@ -61,6 +61,7 @@ Halo.framework 工程目录如下图：
 #### Print+Halo.swift
 通过`ccRight`、`ccWarning`、`ccError`输出表情符号方便调试
 之后我们可以在控制台输出像这样的东西：
+
 ![](./imageRes/log.png)
 
 ### UIKit+Halo
