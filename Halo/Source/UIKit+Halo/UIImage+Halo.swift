@@ -44,6 +44,37 @@ public extension UIImage {
         }
         return UIImage(data: data)!
     }
+    
+    /// 创建一张图片的纯色图片，经典实用场景是不同颜色的气泡
+    ///
+    /// 来自于: [JSQMessageViewController](https://github.com/jessesquires/JSQMessagesViewController)
+    func hl_mask(color:UIColor) -> UIImage {
+        let imageRect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        UIGraphicsBeginImageContextWithOptions(imageRect.size, false, scale)
+        let context = UIGraphicsGetCurrentContext();
+        CGContextScaleCTM(context, 1.0, -1.0);
+        CGContextTranslateCTM(context, 0.0, -imageRect.size.height)
+        CGContextClipToMask(context, imageRect, CGImage)
+        CGContextSetFillColorWithColor(context, color.CGColor)
+        CGContextFillRect(context, imageRect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+    
+    /// 获取一张图片的圆角图片
+    ///
+    /// 来自于: [JSQMessageViewController](https://github.com/jessesquires/JSQMessagesViewController)
+    var hl_circularImage : UIImage {
+        let frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        UIGraphicsBeginImageContextWithOptions(frame.size, false, scale)
+        let imgPath = UIBezierPath(ovalInRect: frame)
+        imgPath.addClip()
+        drawInRect(frame)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
+    }
 
     var pngData: NSData {
 		return UIImagePNGRepresentation(self) ?? NSData()
