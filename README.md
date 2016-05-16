@@ -52,6 +52,7 @@ Halo 中很多方法都是为了实现链式语法，或者带有链式语法的
 
 Halo.framework 工程目录如下图：
 ![](./imageRes/proj.png)
+
 接下来的时间，我会介绍一下 Source 目录下各个文件实现的主要功能
 ### Swift+Halo
 #### CGFloatable.swift
