@@ -10,6 +10,15 @@ Halo 使用 Swift 编写，目前仅支持 iOS 平台
 
 你还可以在我的[博客](http://halowang.github.io/)上找到关于 Halo 的[较早期的介绍](http://halowang.github.io/2016/03/09/introduction-of-Halo/)
 
+## 集成 Halo
+
+在 `Podfile` 中
+
+```
+use_frameworks!
+pod 'Halo'
+```
+
 ## 链式语法
 
 Halo 中很多方法都是为了实现链式语法
@@ -51,7 +60,7 @@ extension Class {
 }
 ```
 
-## 将来可能会处理的事情
+## 要处理的事情
 
 ### Chainable Method Generator（链式方法生成器）
 
