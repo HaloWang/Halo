@@ -28,7 +28,9 @@ public extension UINavigationController {
 
         navigationBar.setBackgroundImage(image, forBarMetrics: UIBarMetrics.Default)
         navigationBar.tintColor = tintColor
-        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : tintColor]
+        var newAttributes = navigationBar.titleTextAttributes ?? Dictionary()
+        newAttributes[NSForegroundColorAttributeName] = tintColor
+        navigationBar.titleTextAttributes = newAttributes
 
         if let shadowColor = shadowColor {
             navigationBar.shadowImage = UIImage.imageWithColor(shadowColor)
