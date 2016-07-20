@@ -14,7 +14,7 @@ Halo 使用 Swift 编写，目前仅支持 iOS 平台
 
 在 `Podfile` 中
 
-```
+``` ruby
 use_frameworks!
 pod 'Halo'
 ```
@@ -24,19 +24,21 @@ pod 'Halo'
 Halo 中很多方法都是为了实现链式语法
 
 非链式语法：
-
-	object.propertyA = valueA
-	object.propertyB = valueB
-	object.propertyC = valueC
-	object.propertyD = valueD
+``` swfit
+    object.propertyA = valueA
+    object.propertyB = valueB
+    object.propertyC = valueC
+    object.propertyD = valueD
+```
 
 链式语法：
-
-	object
-		.propertyA(valueA)
-		.propertyB(valueB)
-		.propertyC(valueC)
-		.propertyD(valueD)
+``` swift
+object
+    .propertyA(valueA)
+    .propertyB(valueB)
+    .propertyC(valueC)
+    .propertyD(valueD)
+```
 		
 效果图：
 
@@ -50,13 +52,13 @@ Halo 中很多方法都是为了实现链式语法
 
 这种方法的基本实现为：
 
-```
+``` swift
 extension Class {
-	//	Chainable method of property
-	func property(property: propertyType) -> Self {
-		self.property = property
-		return self
-	}
+    //  Chainable method of property
+    func property(property: propertyType) -> Self {
+        self.property = property
+        return self
+    }
 }
 ```
 
@@ -70,10 +72,10 @@ extension Class {
 
 比如下面
 
-```
+``` swift
 UILabel()
-	.superView(view)
-	.text("YOUR_TEXT")
+    .superView(view)
+    .text("YOUR_TEXT")
 ```
 
 虽说 `superView` 方法返回的是 `Self`，但是有时候调用 `text(:)` 的时候就是没有自动补全（智能提示）
