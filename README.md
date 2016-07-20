@@ -15,8 +15,11 @@ Halo 使用 Swift 编写，目前仅支持 iOS 平台
 在 `Podfile` 中
 
 ``` ruby
+platform :ios, '8.0'
 use_frameworks!
-pod 'Halo'
+target '<Your Target Name>' do
+    pod 'Halo'
+end
 ```
 
 ## 链式语法
