@@ -24,11 +24,11 @@ pod 'Halo'
 Halo 中很多方法都是为了实现链式语法
 
 非链式语法：
-``` swfit
-    object.propertyA = valueA
-    object.propertyB = valueB
-    object.propertyC = valueC
-    object.propertyD = valueD
+``` swift
+object.propertyA = valueA
+object.propertyB = valueB
+object.propertyC = valueC
+object.propertyD = valueD
 ```
 
 链式语法：
