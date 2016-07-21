@@ -8,7 +8,7 @@ Halo 的名字取自一款叫做 [HALO](https://www.halowaypoint.com/en-us) 的�
 
 Halo 使用 Swift 编写，目前仅支持 iOS 平台
 
-你还可以在我的[博客](http://halowang.github.io/)上找到关于 Halo 的[较早期的介绍](http://halowang.github.io/2016/03/09/introduction-of-Halo/)
+你还可以在我的[博客](http://halowang.github.io/)上找到[关于 Halo 的介绍](http://halowang.github.io/2016/03/09/introduction-of-Halo/)
 
 ## 集成 Halo
 
