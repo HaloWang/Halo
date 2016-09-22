@@ -2,12 +2,12 @@
 import UIKit
 
 public extension UIImageView {
-    func image(image: UIImage?) -> Self {
+    func image(_ image: UIImage?) -> Self {
         self.image = image
         return self
     }
 
-    func image(named named: String) -> Self {
+    func image(named: String) -> Self {
         self.image = UIImage(named: named)
         return self
     }

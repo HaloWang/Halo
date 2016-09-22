@@ -3,12 +3,12 @@ import UIKit
 
 public extension UITableView {
 
-    func separatorStyle(separatorStyle: UITableViewCellSeparatorStyle) -> Self {
+    func separatorStyle(_ separatorStyle: UITableViewCellSeparatorStyle) -> Self {
         self.separatorStyle = separatorStyle
         return self
     }
 
-    func rowHeight(rowHeight: CGFloat) -> Self {
+    func rowHeight(_ rowHeight: CGFloat) -> Self {
         self.rowHeight = rowHeight
         return self
     }
@@ -18,7 +18,7 @@ public extension UITableView {
         return self
     }
 
-    func separatorColor(separatorColor: UIColor) -> Self {
+    func separatorColor(_ separatorColor: UIColor) -> Self {
         self.separatorColor = separatorColor
         return self
     }
@@ -26,23 +26,23 @@ public extension UITableView {
     //  受 http://blog.callmewhy.com/2015/10/21/extension-in-yoapp/ 启发
 
     /// 为 UITableView 绑定某种类型的 UITableViewCell
-    func registerCellClass<T: UITableViewCell>(cellClass: T.Type) -> Self {
-        registerClass(cellClass, forCellReuseIdentifier: cellClass.halo_reuseIdentifier)
+    func registerCellClass<T: UITableViewCell>(_ cellClass: T.Type) -> Self {
+        register(cellClass, forCellReuseIdentifier: cellClass.halo_reuseIdentifier)
         return self
     }
 
     /// 取某种类型的 UITableViewCell
-    func dequeueCell<T: UITableViewCell>(cell: T.Type) -> T {
-        return dequeueReusableCellWithIdentifier(cell.halo_reuseIdentifier) as! T
+    func dequeueCell<T: UITableViewCell>(_ cell: T.Type) -> T {
+        return dequeueReusableCell(withIdentifier: cell.halo_reuseIdentifier) as! T
     }
 
     /// 同时设置 dataSource 和 delegate
-    func dataSourceAndDelegate(dataSourceAndDelegate:protocol<UITableViewDelegate, UITableViewDataSource>?) -> Self {
+    func dataSourceAndDelegate(_ dataSourceAndDelegate:UITableViewDelegate & UITableViewDataSource) -> Self {
         self.dataSourceAndDelegate = dataSourceAndDelegate
         return self
     }
 
-    private(set) var dataSourceAndDelegate : protocol<UITableViewDelegate, UITableViewDataSource>? {
+    fileprivate(set) var dataSourceAndDelegate : (UITableViewDelegate & UITableViewDataSource)? {
         get {
             guard let dataSource = dataSource else {
                 ccLogWarning("DataSource is nil")
@@ -59,7 +59,7 @@ public extension UITableView {
                 return nil
             }
 
-            return dataSource as? protocol<UITableViewDelegate, UITableViewDataSource>
+            return (dataSource as? UITableViewDelegate & UITableViewDataSource)!
         }
         set {
             self.dataSource = newValue
@@ -68,7 +68,7 @@ public extension UITableView {
     }
 }
 
-public extension NSIndexPath {
+public extension IndexPath {
     /// 返回一个元组，组成为：(indexPath.section, indexPath.row)
     var sectionAndRow: (Int, Int) {
         return (section, row)
@@ -78,6 +78,6 @@ public extension NSIndexPath {
 extension UITableViewCell {
     /// 返回 "Halo.ReuseIdentifier.YOUR_CLASS_NAME"
     static var halo_reuseIdentifier: String {
-        return "Halo.ReuseIdentifier." + String(self)
+        return "Halo.ReuseIdentifier." + String(describing: self)
     }
 }

@@ -1,77 +1,78 @@
 
 import UIKit
 
-public class HaloApplication {
+open class HaloApplication {
 
     /// 获取缓存容量
-    public static func GetCacheCapacity(result:(MB: Double, cachesFilePath: String?) -> Void) {
+    open static func GetCacheCapacity(_ result:(_ MB: Double, _ cachesFilePath: String?) -> Void) {
         /// 缓存文件大小
         var folderSize: Double = 0
 
         let _MB: Double = 1024 * 1024
 
-        let manager = NSFileManager.defaultManager()
+        let manager = FileManager.default
 
-        guard let cachesPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true).first else {
-            result(MB: folderSize, cachesFilePath: nil)
+        guard let cachesPath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).first else {
+            result(folderSize, nil)
             return
         }
 
-        let _fileNameS = manager.subpathsAtPath(cachesPath)
+        let _fileNameS = manager.subpaths(atPath: cachesPath)
 
         guard let fileNameS = _fileNameS else {
-            result(MB: folderSize, cachesFilePath: cachesPath)
+            result(folderSize, cachesPath)
             return
         }
 
         for fileName in fileNameS {
             let filePath = cachesPath + "/" + fileName
-            let sizeNumber = try! manager.attributesOfItemAtPath(filePath)["NSFileSize"] as! NSNumber
+            let attributes = try! manager.attributesOfItem(atPath: filePath)
+            let sizeNumber = attributes[FileAttributeKey.size] as! NSNumber
             folderSize += sizeNumber.doubleValue
         }
 
-        result(MB: folderSize / _MB, cachesFilePath: cachesPath)
+        result(folderSize / _MB, cachesPath)
     }
 
     /// 清空缓存
-    public static func CleanCache(finish : (success: Bool) -> Void) {
-        let manager = NSFileManager.defaultManager()
-        guard let cachesPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true).first else {
-            finish(success: false)
+    open static func CleanCache(_ finish : (_ success: Bool) -> Void) {
+        let manager = FileManager.default
+        guard let cachesPath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).first else {
+            finish(false)
             return
         }
 
-        let files = manager.subpathsAtPath(cachesPath)
+        let files = manager.subpaths(atPath: cachesPath)
         guard let fileNames = files else {
-            finish(success: true)
+            finish(true)
             return
         }
 
         for fileName in fileNames {
             let filePath = cachesPath + "/" + fileName
             do {
-                try manager.removeItemAtPath(filePath)
+                try manager.removeItem(atPath: filePath)
             } catch {
 
             }
         }
-        finish(success: true)
+        finish(true)
     }
 
     /// 设置状态栏颜色
-    public static func SetStatusBarStyle(style: UIStatusBarStyle, animated: Bool) {
-        guard UIApplication.sharedApplication().statusBarStyle != style else {
+    open static func SetStatusBarStyle(_ style: UIStatusBarStyle, animated: Bool) {
+        guard UIApplication.shared.statusBarStyle != style else {
             return
         }
-        UIApplication.sharedApplication().setStatusBarStyle(style, animated: animated)
+        UIApplication.shared.setStatusBarStyle(style, animated: animated)
     }
 
     /// 当前应用版本号
-    public static var Version: String {
+    open static var Version: String {
 
         let unknownValue = "Unknown"
 
-        guard let dictionary = NSBundle.mainBundle().infoDictionary else {
+        guard let dictionary = Bundle.main.infoDictionary else {
             ccLogWarning("Can not find Info.plist")
             return unknownValue
         }
@@ -85,10 +86,10 @@ public class HaloApplication {
     }
 
     /// 当前应用编译号
-    public static var Build: String {
+    open static var Build: String {
         let unknownValue = "00001"
 
-        guard let dictionary = NSBundle.mainBundle().infoDictionary else {
+        guard let dictionary = Bundle.main.infoDictionary else {
             ccLogWarning("Can not find Info.plist")
             return unknownValue
         }
@@ -109,7 +110,7 @@ public class HaloApplication {
 /// ### ScreenBounds
 ///
 /// Only support portrait
-public let ScreenBounds = UIScreen.mainScreen().bounds
+public let ScreenBounds = UIScreen.main.bounds
 
 /// ### ScreenHeight
 ///
@@ -133,7 +134,7 @@ public var ScreenWidth: CGFloat {
  - parameter _414: 6p/6sp
 
  */
-public func ValueWithScreenWidth_320(_320: Halo.CGFloatable, _375: Halo.CGFloatable, _414: Halo.CGFloatable) -> CGFloat {
+public func ValueWithScreenWidth_320(_ _320: Halo.CGFloatable, _375: Halo.CGFloatable, _414: Halo.CGFloatable) -> CGFloat {
     switch ScreenWidth {
     case 414.f:
         return _414.f
@@ -153,7 +154,7 @@ public func ValueWithScreenWidth_320(_320: Halo.CGFloatable, _375: Halo.CGFloata
  - parameter _736: 6p/6sp
 
  */
-public func ValueWithScreenHeight_480(_480: Halo.CGFloatable, _568: Halo.CGFloatable, _667: Halo.CGFloatable, _736: Halo.CGFloatable) -> CGFloat {
+public func ValueWithScreenHeight_480(_ _480: Halo.CGFloatable, _568: Halo.CGFloatable, _667: Halo.CGFloatable, _736: Halo.CGFloatable) -> CGFloat {
     switch ScreenHeight {
     case 480.f:
         return _480.f
@@ -187,18 +188,18 @@ public var TabBarHeight: CGFloat = 49
 /**
  - returns: 返回一个相对于 ScreenWidth 水平居中的 CGRect
  */
-public func CM(y y: CGFloatable, width: CGFloatable, height: CGFloatable) -> CGRect {
+public func CM(y: CGFloatable, width: CGFloatable, height: CGFloatable) -> CGRect {
     return CGRect(x: (ScreenWidth - width)/2, y: y, width: width, height: height)
 }
 
 /**
  - returns: 返回一个相对于 ScreenWidth 水平居中，宽度为 ScreenWidth 的 CGRect
  */
-public func SWCM(y y: CGFloatable, height: CGFloatable) -> CGRect {
+public func SWCM(y: CGFloatable, height: CGFloatable) -> CGRect {
     return CGRect(x: 0, y: y, width: ScreenWidth, height: height)
 }
 
 /// 当前系统版本
 public var CurrentSystemVersion: Float {
-    return (UIDevice.currentDevice().systemVersion as NSString).floatValue
+    return (UIDevice.current.systemVersion as NSString).floatValue
 }

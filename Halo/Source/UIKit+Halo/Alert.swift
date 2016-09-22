@@ -1,56 +1,56 @@
 
 import UIKit
 
-public class Alert {
+open class Alert {
 
     var title: String?
     var message: String?
 
-    var style = UIAlertControllerStyle.Alert
+    var style = UIAlertControllerStyle.alert
     var actions = [UIAlertAction]()
 
     weak var alertController: UIAlertController?
 
-    public class func showIn(vc: UIViewController) -> Alert {
+    open class func showIn(_ vc: UIViewController) -> Alert {
 
         let alert = Alert()
 
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async {
             let alertController = UIAlertController(title: alert.title, message: alert.message, preferredStyle: alert.style)
             alert.alertController = alertController
             for action in alert.actions {
                 alertController.addAction(action)
             }
-            vc.presentViewController(alertController, animated: true, completion: nil)
+            vc.present(alertController, animated: true, completion: nil)
         }
 
         return alert
     }
 
     /// Set title
-    public func title(title: String?) -> Self {
+    open func title(_ title: String?) -> Self {
         self.title = title
         return self
     }
 
     /// Set message
-    public func message(message: String?) -> Self {
+    open func message(_ message: String?) -> Self {
         self.message = message
         return self
     }
 
     /// Set style
-    public func preferredStyle(style: UIAlertControllerStyle) -> Self {
+    open func preferredStyle(_ style: UIAlertControllerStyle) -> Self {
         self.style = style
         return self
     }
 
     /// Add a button
-    public func addAction(title: String?, style: UIAlertActionStyle, handler: ((UIAlertAction) -> Void)?) -> Self {
+    open func addAction(_ title: String?, style: UIAlertActionStyle, handler: ((UIAlertAction) -> Void)?) -> Self {
         let action = UIAlertAction(title: title, style: style) { [weak self] in
             handler?($0)
 
-            self?.alertController?.dismissViewControllerAnimated(true, completion: nil)
+            self?.alertController?.dismiss(animated: true, completion: nil)
         }
         actions.append(action)
         return self

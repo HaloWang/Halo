@@ -9,41 +9,42 @@ public extension UIButton {
     - parameter upInsideAction: action
     - returns: self
     */
-    func target(target: AnyObject?, upInsideAction action: Selector) -> Self {
-        addTarget(target, action : action, forControlEvents:.TouchUpInside)
+    func target(_ target: AnyObject?, upInsideAction action: Selector) -> Self {
+        addTarget(target, action : action, for:.touchUpInside)
         return self
     }
-    /**
-    设置 Normal 状态下，按钮的背景图片
-    - parameter image: 图片
-    - returns: self
-    */
-    func backgroundImageForNormal(image: UIImage?) -> Self {
-        setBackgroundImage(image, forState: .Normal)
+
+    /// The image of UIControlState.normal
+    ///
+    /// - parameter image: The image yout wants to set
+    ///
+    /// - returns: self
+    func backgroundImageForNormal(_ image: UIImage?) -> Self {
+        setBackgroundImage(image, for: UIControlState())
         return self
     }
-    func imageForNormal(image: UIImage?) -> Self {
-        setImage(image, forState: .Normal)
+    func imageForNormal(_ image: UIImage?) -> Self {
+        setImage(image, for: UIControlState())
         return self
     }
-    func title(title: String?) -> Self {
-        setTitle(title, forState: .Normal)
+    func title(_ title: String?) -> Self {
+        setTitle(title, for: UIControlState())
         return self
     }
-    func titleColor(titleColor: UIColor) -> Self {
-        setTitleColor(titleColor, forState: .Normal)
+    func titleColor(_ titleColor: UIColor) -> Self {
+        setTitleColor(titleColor, for: UIControlState())
         return self
     }
-    func titleFontSize(titleFontSize: CGFloat) -> Self {
-        titleLabel?.fontSize(titleFontSize)
+    func titleFontSize(_ titleFontSize: CGFloat) -> Self {
+        _ = titleLabel?.fontSize(titleFontSize)
         return self
     }
-    func titleSystemFontOfSize(titleSystemFontOfSize: CGFloat) -> Self {
-        titleLabel?.font(systemFontOfSize: titleSystemFontOfSize)
+    func titleSystemFontOfSize(_ titleSystemFontOfSize: CGFloat) -> Self {
+        _ = titleLabel?.font(systemFontOfSize: titleSystemFontOfSize)
         return self
     }
-    func enabled(enabled: Bool) -> Self {
-        self.enabled = enabled
+    func enabled(_ enabled: Bool) -> Self {
+        self.isEnabled = enabled
         return self
     }
     /**
@@ -52,11 +53,11 @@ public extension UIButton {
     - parameter titleColor: 标题文本颜色
     - returns: self
     */
-    func title(title: String?, titleColor: UIColor) -> Self {
+    func title(_ title: String?, titleColor: UIColor) -> Self {
         return self.title(title).titleColor(titleColor)
     }
-    func titleFont(font: UIFont) -> Self {
-        titleLabel?.font(font)
+    func titleFont(_ font: UIFont) -> Self {
+        _ = titleLabel?.font(font)
         return self
     }
 

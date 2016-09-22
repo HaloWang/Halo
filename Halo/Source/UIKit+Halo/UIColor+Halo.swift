@@ -1,45 +1,45 @@
 
 import UIKit
 
-public let White  = UIColor.whiteColor()
+public let White  = UIColor.white
 
-public let Black  = UIColor.blackColor()
+public let Black  = UIColor.black
 
-public let Clear  = UIColor.clearColor()
+public let Clear  = UIColor.clear
 
-public let Red    = UIColor.redColor()
+public let Red    = UIColor.red
 
-public let Orange = UIColor.orangeColor()
+public let Orange = UIColor.orange
 
-public let Yellow = UIColor.yellowColor()
+public let Yellow = UIColor.yellow
 
-public let Green  = UIColor.greenColor()
+public let Green  = UIColor.green
 
-public let Blue   = UIColor.blueColor()
+public let Blue   = UIColor.blue
 
-public let Purple = UIColor.purpleColor()
+public let Purple = UIColor.purple
 
 /// 系统分割线颜色 -> RGB(200, 199, 204)
 public var SystemSeparatorColor: UIColor {
 	return UIColor(red: 200/255, green: 199/255, blue: 204/255, alpha: 1)
 }
 
-public func RGB(red: CGFloat, _ green: CGFloat, _ blue: CGFloat) -> UIColor {
+public func RGB(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat) -> UIColor {
 	return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
 }
 
-public func RGBA(red: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> UIColor {
+public func RGBA(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> UIColor {
 	return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: alpha)
 }
 
 /// "RRGGBBAA"
-public func HEX(hexString: String) -> UIColor {
+public func HEX(_ hexString: String) -> UIColor {
     return UIColor(hexString: hexString)
 }
 
 public extension UIColor {
 
-    func alpha(alpha: Halo.CGFloatable) -> UIColor {
+    func alpha(_ alpha: Halo.CGFloatable) -> UIColor {
         var _red   = 0.f
         var _green = 0.f
         var _blue  = 0.f
@@ -62,11 +62,11 @@ public extension UIColor {
 
         let _hexString = hexString.hasPrefix("#") ? hexString : "#\(hexString)"
 
-        let index   = _hexString.startIndex.advancedBy(1)
-        let hex     = _hexString.substringFromIndex(index)
-        let scanner = NSScanner(string: hex)
+        let index   = _hexString.characters.index(_hexString.startIndex, offsetBy: 1)
+        let hex     = _hexString.substring(from: index)
+        let scanner = Scanner(string: hex)
         var hexValue: CUnsignedLongLong = 0
-        if scanner.scanHexLongLong(&hexValue) {
+        if scanner.scanHexInt64(&hexValue) {
             switch (hex.characters.count) {
             case 3:
                 red   = CGFloat((hexValue & 0xF00) >> 8)       / 15.0

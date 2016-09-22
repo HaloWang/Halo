@@ -9,15 +9,15 @@ import UIKit
 	- parameter height:   键盘在屏幕上的显示高度
 	- parameter duration: 键盘动画延时
 	*/
-	func keyboardWillChangeToHeight(height: CGFloat, duration: NSTimeInterval)
+	func keyboardWillChangeToHeight(_ height: CGFloat, duration: TimeInterval)
 }
 
-public class KeyboardObserver: NSObject {
+open class KeyboardObserver: NSObject {
 
-	private static let sharedInstance = KeyboardObserver()
+	fileprivate static let sharedInstance = KeyboardObserver()
 
 	/// set delegate
-	public static var delegate: KeyboardObserverDelegate? {
+	open static var delegate: KeyboardObserverDelegate? {
 		get {
 			return self.sharedInstance.delegate
 		}
@@ -27,31 +27,40 @@ public class KeyboardObserver: NSObject {
 	}
 
 	/// 当前键盘显示高度
-	public static var currentKeyboardHeight: CGFloat {
+	open static var currentKeyboardHeight: CGFloat {
 		return self.sharedInstance.currentKeyboardHeight
 	}
 
 	/// 当前键盘显示高度
-	private var currentKeyboardHeight: CGFloat	= 0
+	fileprivate var currentKeyboardHeight: CGFloat	= 0
 
-	private weak var delegate: KeyboardObserverDelegate?
+	fileprivate weak var delegate: KeyboardObserverDelegate?
 
-	private override init() {
+	fileprivate override init() {
 		super.init()
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(KeyboardObserver.keyboardFrameChange(_:)), name: UIKeyboardWillChangeFrameNotification, object: nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(KeyboardObserver.keyboardFrameChange(_:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
 	}
 
-	func keyboardFrameChange(notification: NSNotification) {
-		if let userInfo = notification.userInfo,
-			let keyboardY = userInfo[UIKeyboardFrameEndUserInfoKey]?.CGRectValue.origin.y,
-			let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey]?.doubleValue {
-				let screenHeight = UIScreen.mainScreen().bounds.size.height
-				currentKeyboardHeight = screenHeight - keyboardY
-				delegate?.keyboardWillChangeToHeight(currentKeyboardHeight, duration: duration)
-		}
+	func keyboardFrameChange(_ notification: Notification) {
+    
+        guard let userInfo = (notification as NSNotification).userInfo else {
+            return
+        }
+        
+        guard let keyboardY = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.origin.y else {
+            return
+        }
+        
+        guard let duration = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as AnyObject).doubleValue else {
+            return
+        }
+        
+        let screenHeight = UIScreen.main.bounds.size.height
+        currentKeyboardHeight = screenHeight - keyboardY
+        delegate?.keyboardWillChangeToHeight(currentKeyboardHeight, duration: duration)
 	}
 
 	deinit {
-		NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillChangeFrameNotification, object: nil)
+		NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
 	}
 }

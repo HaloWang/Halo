@@ -3,32 +3,32 @@ import UIKit
 
 public extension UITextView {
 
-    func returnKeyType(returnKeyType: UIReturnKeyType) -> Self {
+    func returnKeyType(_ returnKeyType: UIReturnKeyType) -> Self {
 		self.returnKeyType = returnKeyType
 		return self
 	}
 
-    func keyboardType(keyboardType: UIKeyboardType) -> Self {
+    func keyboardType(_ keyboardType: UIKeyboardType) -> Self {
 		self.keyboardType = keyboardType
 		return self
 	}
 
-    func secureTextEntry(secureTextEntry: Bool) -> Self {
-		self.secureTextEntry = secureTextEntry
+    func secureTextEntry(_ secureTextEntry: Bool) -> Self {
+		self.isSecureTextEntry = secureTextEntry
 		return self
 	}
 
-    func editable(editable: Bool) -> Self {
-		self.editable = editable
+    func editable(_ editable: Bool) -> Self {
+		self.isEditable = editable
 		return self
 	}
 
-    func selectable(selectable: Bool) -> Self {
-		self.selectable = selectable
+    func selectable(_ selectable: Bool) -> Self {
+		self.isSelectable = selectable
 		return self
 	}
 
-    func textContainerInset(textContainerInset: UIEdgeInsets) -> Self {
+    func textContainerInset(_ textContainerInset: UIEdgeInsets) -> Self {
 		self.textContainerInset = textContainerInset
 		return self
 	}
@@ -56,7 +56,7 @@ extension UITextView : HasText {
 
     public var h_font: UIFont {
         get {
-            return font ?? UIFont.systemFontOfSize(12)
+            return font ?? UIFont.systemFont(ofSize: 12)
         }
         set {
             font = newValue

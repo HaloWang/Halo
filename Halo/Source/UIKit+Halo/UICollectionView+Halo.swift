@@ -11,23 +11,23 @@ import UIKit
 public extension UICollectionView {
 
     /// 为 UICollectionView 绑定某种类型的 UITableViewCell
-    func registerCellClass<T: UICollectionViewCell>(cellClass: T.Type) -> Self {
-        registerClass(cellClass, forCellWithReuseIdentifier: cellClass.reuseIdentifier)
+    func registerCellClass<T: UICollectionViewCell>(_ cellClass: T.Type) -> Self {
+        register(cellClass, forCellWithReuseIdentifier: cellClass.reuseIdentifier)
         return self
     }
     /// 取某种类型的 UICollectionViewCell
-    func dequeueCell<T: UICollectionViewCell>(cell: T.Type, indexPath: NSIndexPath) -> T {
-        return dequeueReusableCellWithReuseIdentifier(cell.reuseIdentifier, forIndexPath: indexPath) as! T
+    func dequeueCell<T: UICollectionViewCell>(_ cell: T.Type, indexPath: IndexPath) -> T {
+        return dequeueReusableCell(withReuseIdentifier: cell.reuseIdentifier, for: indexPath) as! T
     }
 
     /// 同时设置 dataSource 和 delegate
-    func dataSourceAndDelegate(dataSourceAndDelegate:protocol<UICollectionViewDelegate, UICollectionViewDataSource>?) -> Self {
+    func dataSourceAndDelegate(_ dataSourceAndDelegate:UICollectionViewDelegate & UICollectionViewDataSource) -> Self {
         dataSource = dataSourceAndDelegate
         (self as UICollectionView).delegate = dataSourceAndDelegate
         return self
     }
 
-    var dataSourceAndDelegate : protocol<UICollectionViewDelegate, UICollectionViewDataSource>? {
+    var dataSourceAndDelegate : (UICollectionViewDelegate & UICollectionViewDataSource)? {
         get {
             guard let dataSource = dataSource else {
                 ccLogWarning("DataSource is nil")
@@ -40,7 +40,7 @@ public extension UICollectionView {
             }
 
             if dataSource.isEqual(delegate) {
-                return dataSource as? protocol<UICollectionViewDelegate, UICollectionViewDataSource>
+                return (dataSource as? UICollectionViewDelegate & UICollectionViewDataSource)!
             } else {
                 ccLogWarning("DataSource is \(dataSource)\n", "Delegate is \(delegate)\n", "They are different")
                 return nil
@@ -56,6 +56,6 @@ public extension UICollectionView {
 extension UICollectionViewCell {
     /// 返回 "Halo.ReuseIdentifier.YOUR_CLASS_NAME"
     static var reuseIdentifier: String {
-        return "Halo.ReuseIdentifier." + String(self)
+        return "Halo.ReuseIdentifier." + String(describing: self)
     }
 }

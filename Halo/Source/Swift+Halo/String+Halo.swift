@@ -6,15 +6,15 @@ public extension String {
 	/// NSURL(string: self)!
     ///
     /// 如果含有汉字，会使用 stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
-	var URL: NSURL {
-        if let URL = NSURL(string: self) {
+	var URL: Foundation.URL {
+        if let URL = Foundation.URL(string: self) {
             return URL
-        } else if let URL = NSURL(string: NS.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!) {
+        } else if let URL = Foundation.URL(string: NS.addingPercentEscapes(using: String.Encoding.utf8.rawValue)!) {
             return URL
         } else {
             ccLogWarning(self, "is not a url!")
             ccLogWarning(self, "Can not use NSUTF8StringEncoding")
-            return NSURL(string: "http://www.google.com")!
+            return Foundation.URL(string: "http://www.google.com")!
         }
 	}
 

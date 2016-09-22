@@ -21,40 +21,40 @@ public extension HasText {
         }
     }
 
-    func text(text: String?) -> Self {
+    func text(_ text: String?) -> Self {
         h_text = text ?? ""
         return self
     }
 
-    func textColor(color: UIColor) -> Self {
+    func textColor(_ color: UIColor) -> Self {
         h_textColor = color
         return self
     }
 
-    func font(font: UIFont) -> Self {
+    func font(_ font: UIFont) -> Self {
         h_font = font
         return self
     }
 
     func textAlignmentCenter() -> Self {
-        h_textAlignment = .Center
+        h_textAlignment = .center
         return self
     }
 
-    func textAlignment(textAlignment: NSTextAlignment) -> Self {
+    func textAlignment(_ textAlignment: NSTextAlignment) -> Self {
         h_textAlignment = textAlignment
         return self
     }
 
-    func text(text: String?, textColor: UIColor) -> Self {
+    func text(_ text: String?, textColor: UIColor) -> Self {
         return self.text(text).textColor(textColor)
     }
 
-    func font(systemFontOfSize systemFontOfSize: CGFloat) -> Self {
-        return font(UIFont.systemFontOfSize(systemFontOfSize))
+    func font(systemFontOfSize: CGFloat) -> Self {
+        return font(UIFont.systemFont(ofSize: systemFontOfSize))
     }
 
-    func fontSize(fontSize: CGFloat) -> Self {
+    func fontSize(_ fontSize: CGFloat) -> Self {
         if let newSizeFont = UIFont(name: h_font.fontName, size: fontSize) {
             h_font = newSizeFont
         }
@@ -63,20 +63,20 @@ public extension HasText {
 
     /// 在宽度确定时，该 UIView 在固定宽度下展示完全部文字所需的高度
     public var displayHeight: CGFloat {
-        return (h_text as NSString).boundingRectWithSize(CGSize(width: h_width, height: CGFloat(MAXFLOAT)),
-            options: .UsesLineFragmentOrigin,
+        return (h_text as NSString).boundingRect(with: CGSize(width: h_width, height: CGFloat(MAXFLOAT)),
+            options: .usesLineFragmentOrigin,
             attributes: [NSFontAttributeName:h_font], context: nil).size.height
     }
 
     public var singleLineDisplayWidth: CGFloat {
-        return (h_text as NSString).boundingRectWithSize(CGSize(width: CGFloat(MAXFLOAT), height: h_font.lineHeight),
-            options: .UsesLineFragmentOrigin,
+        return (h_text as NSString).boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: h_font.lineHeight),
+            options: .usesLineFragmentOrigin,
             attributes: [NSFontAttributeName:h_font], context: nil).size.width
     }
 }
 
 public extension UIFont {
 	static var systemFontName: String {
-		return UIFont.systemFontOfSize(12).fontName
+		return UIFont.systemFont(ofSize: 12).fontName
 	}
 }

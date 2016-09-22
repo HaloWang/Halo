@@ -10,8 +10,6 @@
 		094CB4051BDB5FA9004FD310 /* UICollectionView+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CB4041BDB5FA9004FD310 /* UICollectionView+Halo.swift */; };
 		0973AC491C44E08A00ABBB00 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0973AC481C44E08A00ABBB00 /* Alert.swift */; };
 		097C39911BC385A400FD4AF2 /* CollectionType+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097C39901BC385A400FD4AF2 /* CollectionType+Halo.swift */; };
-		097C39991BC3991500FD4AF2 /* HaloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097C39981BC3991500FD4AF2 /* HaloTests.swift */; };
-		097C399B1BC3991500FD4AF2 /* Halo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09DC29EF1B989A410045615F /* Halo.framework */; };
 		0981337E1BDF666400038EAE /* UILabel+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0981337D1BDF666400038EAE /* UILabel+Halo.swift */; };
 		098274B31BD5EFA400195B3B /* UINavigationController+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098274B21BD5EFA400195B3B /* UINavigationController+Halo.swift */; };
 		0982C8481BF1BD3300B9A31F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0982C8471BF1BD3300B9A31F /* AppDelegate.swift */; };
@@ -42,13 +40,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		097C399C1BC3991500FD4AF2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 09DC29E61B989A410045615F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 09DC29EE1B989A410045615F;
-			remoteInfo = Halo;
-		};
 		0982C8591BF1BD6600B9A31F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 09DC29E61B989A410045615F /* Project object */;
@@ -76,9 +67,6 @@
 		094CB4041BDB5FA9004FD310 /* UICollectionView+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Halo.swift"; sourceTree = "<group>"; };
 		0973AC481C44E08A00ABBB00 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		097C39901BC385A400FD4AF2 /* CollectionType+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CollectionType+Halo.swift"; sourceTree = "<group>"; };
-		097C39961BC3991500FD4AF2 /* HaloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HaloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		097C39981BC3991500FD4AF2 /* HaloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaloTests.swift; sourceTree = "<group>"; };
-		097C399A1BC3991500FD4AF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0981337D1BDF666400038EAE /* UILabel+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Halo.swift"; sourceTree = "<group>"; };
 		098274B21BD5EFA400195B3B /* UINavigationController+Halo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Halo.swift"; sourceTree = "<group>"; };
 		0982C8451BF1BD3300B9A31F /* HaloDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HaloDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,14 +99,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		097C39931BC3991500FD4AF2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				097C399B1BC3991500FD4AF2 /* Halo.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0982C8421BF1BD3300B9A31F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -137,15 +117,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		097C39971BC3991500FD4AF2 /* HaloTests */ = {
-			isa = PBXGroup;
-			children = (
-				097C39981BC3991500FD4AF2 /* HaloTests.swift */,
-				097C399A1BC3991500FD4AF2 /* Info.plist */,
-			);
-			path = HaloTests;
-			sourceTree = "<group>";
-		};
 		0982C8461BF1BD3300B9A31F /* HaloDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,7 +190,6 @@
 			children = (
 				09BACC4B1B9C9E08001314A5 /* Source */,
 				09DC29F11B989A410045615F /* Halo */,
-				097C39971BC3991500FD4AF2 /* HaloTests */,
 				0982C8461BF1BD3300B9A31F /* HaloDemo */,
 				09DC29F01B989A410045615F /* Products */,
 			);
@@ -229,7 +199,6 @@
 			isa = PBXGroup;
 			children = (
 				09DC29EF1B989A410045615F /* Halo.framework */,
-				097C39961BC3991500FD4AF2 /* HaloTests.xctest */,
 				0982C8451BF1BD3300B9A31F /* HaloDemo.app */,
 			);
 			name = Products;
@@ -266,24 +235,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		097C39951BC3991500FD4AF2 /* HaloTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 097C399E1BC3991500FD4AF2 /* Build configuration list for PBXNativeTarget "HaloTests" */;
-			buildPhases = (
-				097C39921BC3991500FD4AF2 /* Sources */,
-				097C39931BC3991500FD4AF2 /* Frameworks */,
-				097C39941BC3991500FD4AF2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				097C399D1BC3991500FD4AF2 /* PBXTargetDependency */,
-			);
-			name = HaloTests;
-			productName = HaloTests;
-			productReference = 097C39961BC3991500FD4AF2 /* HaloTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		0982C8441BF1BD3300B9A31F /* HaloDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0982C8541BF1BD3300B9A31F /* Build configuration list for PBXNativeTarget "HaloDemo" */;
@@ -329,17 +280,17 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = WangCe;
 				TargetAttributes = {
-					097C39951BC3991500FD4AF2 = {
-						CreatedOnToolsVersion = 7.0.1;
-					};
 					0982C8441BF1BD3300B9A31F = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 					09DC29EE1B989A410045615F = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -357,20 +308,12 @@
 			projectRoot = "";
 			targets = (
 				09DC29EE1B989A410045615F /* Halo */,
-				097C39951BC3991500FD4AF2 /* HaloTests */,
 				0982C8441BF1BD3300B9A31F /* HaloDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		097C39941BC3991500FD4AF2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0982C8431BF1BD3300B9A31F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -390,14 +333,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		097C39921BC3991500FD4AF2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				097C39991BC3991500FD4AF2 /* HaloTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0982C8411BF1BD3300B9A31F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -440,11 +375,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		097C399D1BC3991500FD4AF2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 09DC29EE1B989A410045615F /* Halo */;
-			targetProxy = 097C399C1BC3991500FD4AF2 /* PBXContainerItemProxy */;
-		};
 		0982C85A1BF1BD6600B9A31F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 09DC29EE1B989A410045615F /* Halo */;
@@ -464,53 +394,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		097C399F1BC3991500FD4AF2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				INFOPLIST_FILE = HaloTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = HaloWang.HaloTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		097C39A01BC3991500FD4AF2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = HaloTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = HaloWang.HaloTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		0982C8551BF1BD3300B9A31F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = HaloDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HaloWang.HaloDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		0982C8561BF1BD3300B9A31F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = HaloDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HaloWang.HaloDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -527,16 +440,16 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -576,11 +489,12 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -597,6 +511,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -608,6 +523,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -620,6 +536,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -627,6 +544,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -638,21 +556,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "WangCe.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		097C399E1BC3991500FD4AF2 /* Build configuration list for PBXNativeTarget "HaloTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				097C399F1BC3991500FD4AF2 /* Debug */,
-				097C39A01BC3991500FD4AF2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		0982C8541BF1BD3300B9A31F /* Build configuration list for PBXNativeTarget "HaloDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
