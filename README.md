@@ -1,6 +1,6 @@
 # Halo
 
-Halo 是我使用 Swift 开发 iOS 应用一年下来所积累的一个工具库
+Halo 是我使用 Swift 开发 iOS 应用所积累的一个工具库
 
 Halo 帮助我快速书写简洁的代码
 
@@ -42,11 +42,11 @@ object
     .propertyC(valueC)
     .propertyD(valueD)
 ```
-		
+
 效果图：
 
 ![](./imageRes/ChainableMethods.png)
-		
+​		
 我这样作的主要原因有：
 
 - 不喜欢在设置 object 的若干属性时每次都要多写一个 object
