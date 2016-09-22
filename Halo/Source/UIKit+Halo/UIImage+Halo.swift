@@ -23,6 +23,7 @@ public extension UIImage {
 
      - returns: 已经被所放的 UIImage
      */
+    @discardableResult
     func scaleToWidth(_ _width: CGFloat) -> UIImage {
 
         let scaledSize = CGSize(width: _width, height: (height / width) * _width )
@@ -48,6 +49,7 @@ public extension UIImage {
     /// 创建一张图片的纯色图片，经典实用场景是不同颜色的气泡
     ///
     /// 来自于: [JSQMessageViewController](https://github.com/jessesquires/JSQMessagesViewController)
+    @discardableResult
     func hl_mask(_ color:UIColor) -> UIImage {
         let imageRect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         UIGraphicsBeginImageContextWithOptions(imageRect.size, false, scale)
@@ -123,6 +125,7 @@ public extension UIImage {
      ⚠️ PNG Image can not use this method, transform PNG image to jpeg/jpg image before use this method!
 
      */
+    @discardableResult
     func blurredImageAsync(_ radius: CGFloat, iterations: Int, ratio: CGFloat, blendColor: UIColor? = nil, finish: @escaping (UIImage!) -> Void) {
         DispatchQueue.main.async {
             finish(self.blurredImage(radius, iterations: iterations, ratio: ratio, blendColor: blendColor))
@@ -134,6 +137,7 @@ public extension UIImage {
      ⚠️ PNG Image can not use this method, transform PNG image to jpeg/jpg image before use this method!
      */
 
+    @discardableResult
     func blurredImage(_ radius: CGFloat, iterations: Int, ratio: CGFloat, blendColor: UIColor? = nil) -> UIImage! {
         if floorf(Float(size.width)) * floorf(Float(size.height)) <= 0.0 || radius <= 0 {
             return self

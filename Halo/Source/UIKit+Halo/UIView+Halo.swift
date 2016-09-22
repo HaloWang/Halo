@@ -17,6 +17,7 @@ public func AnimateWithDuration(_ duration: TimeInterval, _ animations: @escapin
 
 public extension UIView {
 
+    @discardableResult
     func addSubviews(_ views: [UIView]) -> Self {
         for view in views {
             addSubview(view)
@@ -29,36 +30,43 @@ public extension UIView {
     - parameter superView: 父视图
     - returns: self
     */
+    @discardableResult
     func superView(_ superView: UIView) -> Self {
         superView.addSubview(self)
         return self
     }
 
+    @discardableResult
     func superview(_ superView: UIView) -> Self {
         superView.addSubview(self)
         return self
     }
 
+    @discardableResult
     func userInteractionEnabled(_ userInteractionEnabled: Bool) -> Self {
         self.isUserInteractionEnabled = userInteractionEnabled
         return self
     }
 
+    @discardableResult
     func backgroundColor(_ backgroundColor: UIColor) -> Self {
         self.backgroundColor = backgroundColor
         return self
     }
 
+    @discardableResult
     func cornerRadius(_ radius: CGFloat) -> Self {
         layer.cornerRadius = radius
         return self
     }
 
+    @discardableResult
     func alpha(_ alpha: CGFloat) -> Self {
         self.alpha = alpha
         return self
     }
 
+    @discardableResult
     func frame(_ frame: CGRect) -> Self {
         self.frame = frame
         return self
@@ -70,33 +78,39 @@ public extension UIView {
     }
 
     /// 参考 CM
+    @discardableResult
     func cm(y: CGFloatable, width: CGFloatable, height: CGFloatable) -> Self {
         self.frame = CM(y: y, width: width, height: height)
         return self
     }
 
     /// 参考 SWCM
+    @discardableResult
     func swcm(y: CGFloatable, height: CGFloatable) -> Self {
         self.frame = SWCM(y: y, height: height)
         return self
     }
 
+    @discardableResult
     func contentMode(_ contentMode: UIViewContentMode) -> Self {
         self.contentMode = contentMode
         return self
     }
 
     /// 设置 contentMode 为 .Center
+    @discardableResult
     func contentModeCenter() -> Self {
         self.contentMode = .center
         return self
     }
 
+    @discardableResult
     func clipsToBounds(_ clipsToBounds: Bool) -> Self {
         self.clipsToBounds = clipsToBounds
         return self
     }
 
+    @discardableResult
     func hidden(_ hidden: Bool) -> Self {
         self.isHidden = hidden
         return self
@@ -111,6 +125,7 @@ public extension UIView {
 
     - returns: self
     */
+    @discardableResult
     func cornerRadius(_ radius: CGFloat, borderWidth: CGFloat, borderColor: UIColor) -> Self {
         layer.cornerRadius = radius
         layer.borderWidth = borderWidth
@@ -125,6 +140,7 @@ public extension UIView {
     - parameter corners: 哪些角
 
     */
+    @discardableResult
     func setCornerRadius(_ radius: CGFloat, forCorners corners: UIRectCorner) -> Self {
         let maskPath = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: radius.size)
         let shapeLayer = CAShapeLayer()
@@ -162,6 +178,7 @@ public extension UIView {
     }
 
     /// 异步获取截图
+    @discardableResult
     func screenshot(_ finish: @escaping (UIImage?) -> Void) {
         DispatchQueue(label: LogString + ".Async", attributes: []).async {
             let image = self.screenshot

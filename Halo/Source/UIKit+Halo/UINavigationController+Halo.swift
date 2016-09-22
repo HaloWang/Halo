@@ -10,6 +10,7 @@ public extension UINavigationController {
      - parameter tintColor:   tintColor，默认为白色
      - parameter shadowColor: shadowColor，默认为要设置的纯色
      */
+    @discardableResult
     func barUseColor(_ color: UIColor, tintColor: UIColor = UIColor.white, shadowColor: UIColor? = nil) -> Self {
         //	1×1图片画布
         UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))

@@ -3,21 +3,25 @@ import UIKit
 
 public extension UITableView {
 
+    @discardableResult
     func separatorStyle(_ separatorStyle: UITableViewCellSeparatorStyle) -> Self {
         self.separatorStyle = separatorStyle
         return self
     }
 
+    @discardableResult
     func rowHeight(_ rowHeight: CGFloat) -> Self {
         self.rowHeight = rowHeight
         return self
     }
 
+    @discardableResult
     func tableFooterViewAdded() -> Self {
         tableFooterView = UIView()
         return self
     }
 
+    @discardableResult
     func separatorColor(_ separatorColor: UIColor) -> Self {
         self.separatorColor = separatorColor
         return self
@@ -26,17 +30,20 @@ public extension UITableView {
     //  受 http://blog.callmewhy.com/2015/10/21/extension-in-yoapp/ 启发
 
     /// 为 UITableView 绑定某种类型的 UITableViewCell
+    @discardableResult
     func registerCellClass<T: UITableViewCell>(_ cellClass: T.Type) -> Self {
         register(cellClass, forCellReuseIdentifier: cellClass.halo_reuseIdentifier)
         return self
     }
 
     /// 取某种类型的 UITableViewCell
+    @discardableResult
     func dequeueCell<T: UITableViewCell>(_ cell: T.Type) -> T {
         return dequeueReusableCell(withIdentifier: cell.halo_reuseIdentifier) as! T
     }
 
     /// 同时设置 dataSource 和 delegate
+    @discardableResult
     func dataSourceAndDelegate(_ dataSourceAndDelegate:UITableViewDelegate & UITableViewDataSource) -> Self {
         self.dataSourceAndDelegate = dataSourceAndDelegate
         return self

@@ -39,6 +39,7 @@ public func HEX(_ hexString: String) -> UIColor {
 
 public extension UIColor {
 
+    @discardableResult
     func alpha(_ alpha: Halo.CGFloatable) -> UIColor {
         var _red   = 0.f
         var _green = 0.f

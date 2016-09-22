@@ -11,16 +11,19 @@ import UIKit
 public extension UICollectionView {
 
     /// 为 UICollectionView 绑定某种类型的 UITableViewCell
+    @discardableResult
     func registerCellClass<T: UICollectionViewCell>(_ cellClass: T.Type) -> Self {
         register(cellClass, forCellWithReuseIdentifier: cellClass.reuseIdentifier)
         return self
     }
     /// 取某种类型的 UICollectionViewCell
+    @discardableResult
     func dequeueCell<T: UICollectionViewCell>(_ cell: T.Type, indexPath: IndexPath) -> T {
         return dequeueReusableCell(withReuseIdentifier: cell.reuseIdentifier, for: indexPath) as! T
     }
 
     /// 同时设置 dataSource 和 delegate
+    @discardableResult
     func dataSourceAndDelegate(_ dataSourceAndDelegate:UICollectionViewDelegate & UICollectionViewDataSource) -> Self {
         dataSource = dataSourceAndDelegate
         (self as UICollectionView).delegate = dataSourceAndDelegate

@@ -21,39 +21,47 @@ public extension HasText {
         }
     }
 
+    @discardableResult
     func text(_ text: String?) -> Self {
         h_text = text ?? ""
         return self
     }
 
+    @discardableResult
     func textColor(_ color: UIColor) -> Self {
         h_textColor = color
         return self
     }
 
+    @discardableResult
     func font(_ font: UIFont) -> Self {
         h_font = font
         return self
     }
 
+    @discardableResult
     func textAlignmentCenter() -> Self {
         h_textAlignment = .center
         return self
     }
 
+    @discardableResult
     func textAlignment(_ textAlignment: NSTextAlignment) -> Self {
         h_textAlignment = textAlignment
         return self
     }
 
+    @discardableResult
     func text(_ text: String?, textColor: UIColor) -> Self {
         return self.text(text).textColor(textColor)
     }
 
+    @discardableResult
     func font(systemFontOfSize: CGFloat) -> Self {
         return font(UIFont.systemFont(ofSize: systemFontOfSize))
     }
 
+    @discardableResult
     func fontSize(_ fontSize: CGFloat) -> Self {
         if let newSizeFont = UIFont(name: h_font.fontName, size: fontSize) {
             h_font = newSizeFont

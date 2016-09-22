@@ -3,41 +3,49 @@ import UIKit
 
 // MARK: - Properties
 public extension UIScrollView {
+    @discardableResult
     func alwaysBounceHorizontal(_ alwaysBounceHorizontal: Bool) -> Self {
         self.alwaysBounceHorizontal = alwaysBounceHorizontal
         return self
     }
 
+    @discardableResult
     func alwaysBounceVertical(_ alwaysBounceVertical: Bool) -> Self {
         self.alwaysBounceVertical = alwaysBounceVertical
         return self
     }
 
+    @discardableResult
     func scrollEnabled(_ scrollEnabled: Bool) -> Self {
         self.isScrollEnabled = scrollEnabled
         return self
     }
 
+    @discardableResult
     func pagingEnabled(_ pagingEnabled: Bool) -> Self {
         self.isPagingEnabled = pagingEnabled
         return self
     }
 
+    @discardableResult
     func showsVerticalScrollIndicator(_ showsVerticalScrollIndicator: Bool) -> Self {
         self.showsVerticalScrollIndicator = showsVerticalScrollIndicator
         return self
     }
 
+    @discardableResult
     func showsHorizontalScrollIndicator(_ showsHorizontalScrollIndicator: Bool) -> Self {
         self.showsHorizontalScrollIndicator = showsHorizontalScrollIndicator
         return self
     }
 
+    @discardableResult
     func delegate(_ delegate: UIScrollViewDelegate) -> Self {
         self.delegate = delegate
         return self
     }
 
+    @discardableResult
     func bounces(_ bounces: Bool) -> Self {
         self.bounces = bounces
         return self
@@ -102,21 +110,25 @@ public extension UIScrollView {
 	}
 
 
+    @discardableResult
     func contentInsetTop(_ top: CGFloat) -> Self {
         contentInset.top = top
         return self
     }
 
+    @discardableResult
     func contentInsetBottom(_ bottom: CGFloat) -> Self {
         contentInset.bottom = bottom
         return self
     }
 
+    @discardableResult
     func contentInsetLeft(_ left: CGFloat) -> Self {
         contentInset.left = left
         return self
     }
 
+    @discardableResult
     func contentInsetRight(_ right: CGFloat) -> Self {
         contentInset.right = right
         return self
@@ -149,6 +161,7 @@ public extension UIScrollView {
 		return self
 	}
 
+    @discardableResult
     func contentSize(_ width: CGFloat, height: CGFloat) -> Self {
         contentSize = CGSize(width: width, height: height)
         return self
