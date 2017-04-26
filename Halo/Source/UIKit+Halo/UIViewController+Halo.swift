@@ -4,17 +4,14 @@ import UIKit
 public extension UIViewController {
 
     /// navigationController?.pushViewController(vc, animated: animated)
-    @discardableResult
     func push(_ vc: UIViewController, animated: Bool = true) {
         navigationController?.pushViewController(vc, animated: animated)
     }
 
-    @discardableResult
     func rightBarButtonItemTitle(_ title: String?, targetSelfAction action: Selector) {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: title, style: UIBarButtonItemStyle.plain, target: self, action: action)
     }
 
-    @discardableResult
     func leftBarButtonItemTitle(_ title: String?, targetSelfAction action: Selector) {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: title, style: UIBarButtonItemStyle.plain, target: self, action: action)
     }

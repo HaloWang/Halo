@@ -178,7 +178,6 @@ public extension UIView {
     }
 
     /// 异步获取截图
-    @discardableResult
     func screenshot(_ finish: @escaping (UIImage?) -> Void) {
         DispatchQueue(label: LogString + ".Async", attributes: []).async {
             let image = self.screenshot
