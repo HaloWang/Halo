@@ -25,6 +25,12 @@ public extension UIView {
         return self
     }
 
+    @discardableResult
+    func addToSuperView(_ superview: UIView) -> Self {
+        superview.addSubview(self)
+        return self
+    }
+    
     /**
     设置 view.superView
     - parameter superView: 父视图

@@ -49,7 +49,7 @@ public extension UIViewController {
 
     @discardableResult
     func addSubviews(_ subviewsForView: [UIView]) -> Self {
-        _ = view.addSubviews(subviewsForView)
+        view.addSubviews(subviewsForView)
         return self
     }
 

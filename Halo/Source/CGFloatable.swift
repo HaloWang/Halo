@@ -39,6 +39,7 @@ extension Int : Halo.CGFloatable {
 
 public extension CGSize {
     init(width: Halo.CGFloatable, height: Halo.CGFloatable) {
+        self.init()
         self.width = width.f
         self.height = height.f
     }
@@ -46,6 +47,7 @@ public extension CGSize {
 
 public extension CGPoint {
     init(x: Halo.CGFloatable, y: Halo.CGFloatable) {
+        self.init()
         self.x = x.f
         self.y = y.f
     }
@@ -53,6 +55,7 @@ public extension CGPoint {
 
 public extension CGRect {
     init(x: Halo.CGFloatable, y: Halo.CGFloatable, width: Halo.CGFloatable, height: Halo.CGFloatable) {
+        self.init()
         self.origin = CGPoint(x: x, y: y)
         self.size = CGSize(width: width, height: height)
     }

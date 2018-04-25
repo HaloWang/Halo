@@ -41,7 +41,7 @@ open class KeyboardObserver: NSObject {
 		NotificationCenter.default.addObserver(self, selector: #selector(KeyboardObserver.keyboardFrameChange(_:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
 	}
 
-	func keyboardFrameChange(_ notification: Notification) {
+    @objc func keyboardFrameChange(_ notification: Notification) {
     
         guard let userInfo = (notification as NSNotification).userInfo else {
             return

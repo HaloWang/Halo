@@ -125,7 +125,7 @@ public extension UIImage {
      ⚠️ PNG Image can not use this method, transform PNG image to jpeg/jpg image before use this method!
 
      */
-    func blurredImageAsync(_ radius: CGFloat, iterations: Int, ratio: CGFloat, blendColor: UIColor? = nil, finish: @escaping (UIImage!) -> Void) {
+    func blurredImageAsync(_ radius: CGFloat, iterations: Int, ratio: CGFloat, blendColor: UIColor? = nil, finish: @escaping (UIImage?) -> Void) {
         DispatchQueue.main.async {
             finish(self.blurredImage(radius, iterations: iterations, ratio: ratio, blendColor: blendColor))
         }

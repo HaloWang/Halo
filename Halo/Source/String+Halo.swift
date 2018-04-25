@@ -22,23 +22,6 @@ public extension String {
     var NS: NSString {
         return self as NSString
     }
-
-    /// 字符串长度
-    var length: Int {
-        return characters.count
-    }
-
-	/// whether this String is all space or isEmpty
-	var isAllSpace: Bool {
-		return Array(characters).filter { $0 == " " }.count == characters.count
-	}
-}
-
-public extension Bool {
-    /// return !self
-    var NO: Bool {
-        return !self
-    }
 }
 
 public extension Int {
