@@ -44,9 +44,8 @@ public extension UIColor {
 		var alpha: CGFloat = 1.0
 
         let _hexString = hexString.hasPrefix("#") ? hexString : "#\(hexString)"
-
-        let index   = _hexString.characters.index(_hexString.startIndex, offsetBy: 1)
-        let hex     = _hexString.substring(from: index)
+        let hex = _hexString.NS.substring(from: 1)
+        
         let scanner = Scanner(string: hex)
         var hexValue: CUnsignedLongLong = 0
         if scanner.scanHexInt64(&hexValue) {

@@ -12,6 +12,8 @@ import Halo
 // MARK: - Properties & Init
 class ViewController: UIViewController {
     let v = UIView()
+    let t = UIView()
+    let q = UIView()
 }
 
 // MARK: - Lifecycle
@@ -25,6 +27,19 @@ extension ViewController {
             .backgroundColor(.red)
             .cornerRadius(15, borderWidth: 5, borderColor: UIColor.red.alpha(0.5))
             .frame(x: 100, y: 100, width: 100, height: 100)
+        
+        t
+            .superView(view)
+            .backgroundColor(.red)
+            .cornerRadius(15, borderWidth: 5, borderColor: UIColor(hexString: "#ff00").alpha(1))
+            .frame(x: 100, y: 200, width: 100, height: 100)
+        
+        q
+            .superView(view)
+            .backgroundColor(.white)
+            .cornerRadius(15, borderWidth: 5, borderColor: UIColor(hexString: "#0f0").alpha(1))
+            .frame(x: 100, y: 300, width: 100, height: 100)
+        
     }
     
     override func viewWillLayoutSubviews() {
