@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Halo_Example' do
+  pod 'Halo', :path => '../'
+
+  target 'Halo_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

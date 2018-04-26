@@ -1,5 +1,10 @@
 # Halo
 
+[![CI Status](https://img.shields.io/travis/HaloWang/Halo.svg?style=flat)](https://travis-ci.org/HaloWang/Halo)
+[![Version](https://img.shields.io/cocoapods/v/Halo.svg?style=flat)](https://cocoapods.org/pods/Halo)
+[![License](https://img.shields.io/cocoapods/l/Halo.svg?style=flat)](https://cocoapods.org/pods/Halo)
+[![Platform](https://img.shields.io/cocoapods/p/Halo.svg?style=flat)](https://cocoapods.org/pods/Halo)
+
 Halo 是我使用 Swift 开发 iOS 应用所积累的一个工具库
 
 Halo 帮助我快速书写简洁的代码

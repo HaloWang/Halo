@@ -1,0 +1,22 @@
+{
+  "name": "Halo",
+  "version": "0.1.0",
+  "summary": "A short description of Halo.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/HaloWang/Halo",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "HaloWang": "634692517@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/HaloWang/Halo.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Halo/Classes/**/*"
+}

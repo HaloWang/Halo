@@ -1,0 +1,6 @@
+framework module Halo {
+  umbrella header "Halo-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,839 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		021CDC2CE408BE39326F6D33D9A94C1E /* String+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671CCA8CC73F1E462C1310CCD91D04D /* String+Halo.swift */; };
+		0AA7CAACD4F2A146F3948C6BE6995930 /* Pods-Halo_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAF1FED1D9110BA1ACFCAD142BFAD9B /* Pods-Halo_Example-dummy.m */; };
+		13C0095210EF78BE5D1A0D4A55E5F4DA /* Halo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA74C135FBCF3C8B57BA2FAEBEE0C33 /* Halo-dummy.m */; };
+		28322D87A0EB968C7F9D85B7A7E315AC /* UIApplication+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25370BBDA9A8CAC0C6CC88C099F380D /* UIApplication+Halo.swift */; };
+		2EAC08958B02C89079A4C132F19D4BF0 /* UICollectionView+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A8D6EAE636D8DC63E4882B26646C0 /* UICollectionView+Halo.swift */; };
+		2F6D8A5BF609F7311DE1B9FBA46B85C9 /* Pods-Halo_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB36CA2F595D65E434C8CBB57B90FD1C /* Pods-Halo_Tests-dummy.m */; };
+		3A1AD547EC03913183ECB92B841D4FE8 /* Pods-Halo_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C4623EFBA7721F956B16B815517E72DA /* Pods-Halo_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		455291CC574FFF891AA78DE6D2BCF96F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		4771B270FE0DD9AC9AA08687AB0D2AAB /* UITextField+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6493270E983B6ADAC5B47DD111E46702 /* UITextField+Halo.swift */; };
+		4AD65BF4AEEB323AC54E10F0108A61FA /* UINavigationController+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B42337601AFC33B1ACAD56FB054E5C2 /* UINavigationController+Halo.swift */; };
+		52F8C9E69708DD43DBD464EC8159A836 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		65E8426E14E6B8D067C04B8CE5110C0B /* UIColor+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7A0377785BBB4DFB240EA976ED53ED /* UIColor+Halo.swift */; };
+		73A9828E413AB581A810B276A5519FE8 /* UIScrollView+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD7565FBE7664EF237B27FAD957928E /* UIScrollView+Halo.swift */; };
+		7A10FEE23BE79DDD753BF19AAC098ABE /* UIViewController+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A3F107634743177AC41A0FBF7EF377 /* UIViewController+Halo.swift */; };
+		7B154B6EF6F6110700CE32504670F1DD /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA585948CBD94B48D867A255AE857B5 /* Alert.swift */; };
+		7BB395AAF9488A7C3E4DCEE0AAF0E263 /* Halo_HasText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D395086AD01BE3F2E602677FF10F05F /* Halo_HasText.swift */; };
+		7BEBB01C8EEBB2FB78E62339B455782E /* UIImage+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177204AE8CA33AB306284CA064DDDD5F /* UIImage+Halo.swift */; };
+		88945B8ED95D437EFD3B112496622C8C /* UIButton+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C0208E2C9FC124B91980B517DE88C9 /* UIButton+Halo.swift */; };
+		89D9A56471CB633B0DF654C450D64F5F /* Halo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FAC9754221D4E5BCBFA261C035E94FC /* Halo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9293F3618F9DA3FB4546DFD7EFBFC436 /* UIView+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A94B2F0ED541ECC7ECA490F99EA4E9 /* UIView+Halo.swift */; };
+		948262C8199833242FDFE4D634783B2C /* CGFloatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23AC38CDBCB4AFBB35FC297C89B0ACF /* CGFloatable.swift */; };
+		98A5A2E7DC7AA2FF797DAD4B52132F63 /* CollectionType+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E358B591E13C7BE024697A0C0DFF7B61 /* CollectionType+Halo.swift */; };
+		A52880E83148D3503A353CBF6984696E /* UITableViewCell+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C9384ADFF396F3FF69054BD45E7331 /* UITableViewCell+Halo.swift */; };
+		A5E4E1F2AD9D4C342BB47D00A3748A69 /* Print+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27A8D54E46632A780D9AACF1EDE5731 /* Print+Halo.swift */; };
+		A75A0AFDBBF64BA7F58278260D8A18F1 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9843BF3CF18C1CF01F9F1A0A64975A /* KeyboardObserver.swift */; };
+		AEBC14AED2CD45F780C43BD7F9FFF7F1 /* UIImageView+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BE3764B4A6AD13F491E03D15B4EE0B /* UIImageView+Halo.swift */; };
+		B0532EFFBA616CC0ECD58514E3CF837C /* UILabel+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0E4D544B37A090337427C2931E3CDA /* UILabel+Halo.swift */; };
+		B53EAB85F20FC573E3B1DAF0351B9B05 /* UITableView+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859381D4C9FDAA932526D04C25BA0E8 /* UITableView+Halo.swift */; };
+		CE2F54C1B9578B5C8EC267F3CB617BFB /* UITextView+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33C5B6B3E10A99519D325A831C6C22D /* UITextView+Halo.swift */; };
+		D0B6C4B4B1EF5BFDE57CCC7F6B53D6B1 /* NSDate+Halo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08423404E1905C95AF37E53CB2629E6 /* NSDate+Halo.swift */; };
+		DC6CA779E8CD84C01B0F17C878504B88 /* Pods-Halo_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 584180A59495CFDE03B4EBD17858B906 /* Pods-Halo_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0DA923B407C3E4B5E2FE44978413E95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D57309C5C4D5C9A24418B4B893A23B5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DFD22BB1D57603FC156EDCEC55C90AD;
+			remoteInfo = "Pods-Halo_Example";
+		};
+		E6D8E66AE5897BD5A8D11E758671A3AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E07868073E1632610059D70CA86FB31;
+			remoteInfo = Halo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B42337601AFC33B1ACAD56FB054E5C2 /* UINavigationController+Halo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UINavigationController+Halo.swift"; path = "Halo/Classes/UINavigationController+Halo.swift"; sourceTree = "<group>"; };
+		0C1C14A182F99E7E3DC39830F455C05C /* Pods-Halo_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Halo_Example.modulemap"; sourceTree = "<group>"; };
+		130975732E20783A6935A633B1897ADE /* Halo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Halo.modulemap; sourceTree = "<group>"; };
+		14337FD92B23C04B3F847FE1B1554E2E /* Pods-Halo_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Halo_Tests-resources.sh"; sourceTree = "<group>"; };
+		14A3F107634743177AC41A0FBF7EF377 /* UIViewController+Halo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Halo.swift"; path = "Halo/Classes/UIViewController+Halo.swift"; sourceTree = "<group>"; };
+		177204AE8CA33AB306284CA064DDDD5F /* UIImage+Halo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Halo.swift"; path = "Halo/Classes/UIImage+Halo.swift"; sourceTree = "<group>"; };
+		1D577671193537D78A8F91BA2EFC6ABC /* Pods_Halo_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Halo_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FAC9754221D4E5BCBFA261C035E94FC /* Halo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Halo-umbrella.h"; sourceTree = "<group>"; };
+		33C9384ADFF396F3FF69054BD45E7331 /* UITableViewCell+Halo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableViewCell+Halo.swift"; path = "Halo/Classes/UITableViewCell+Halo.swift"; sourceTree = "<group>"; };
+		40BE3764B4A6AD13F491E03D15B4EE0B /* UIImageView+Halo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+Halo.swift"; path = "Halo/Classes/UIImageView+Halo.swift"; sourceTree = "<group>"; };
+		461D75007999545C00A2327F53DA1946 /* Halo-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Halo-prefix.pch"; sourceTree = "<group>"; };
+		4B7E025D20577D3A4108B2F36A87620D /* Halo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Halo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		584180A59495CFDE03B4EBD17858B906 /* Pods-Halo_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Halo_Example-umbrella.h"; sourceTree = "<group>"; };
+		593864F43961BBF7A669D4B51D52BD6B /* Pods-Halo_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Halo_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		5DAC09D05676D3B23B24B67CB0011AEA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6493270E983B6ADAC5B47DD111E46702 /* UITextField+Halo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+Halo.swift"; path = "Halo/Classes/UITextField+Halo.swift"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		67C0208E2C9FC124B91980B517DE88C9 /* UIButton+Halo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Halo.swift"; path = "Halo/Classes/UIButton+Halo.swift"; sourceTree = "<group>"; };
+		6854F7EC0C93BCF903582BD9329A3D59 /* Pods-Halo_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Halo_Example.release.xcconfig"; sourceTree = "<group>"; };
+		6B2B4441C35E1C5284E52D0C2FA5E99C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D395086AD01BE3F2E602677FF10F05F /* Halo_HasText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Halo_HasText.swift; path = Halo/Classes/Halo_HasText.swift; sourceTree = "<group>"; };
+		730212B307B174846FBEED88B566984A /* Pods-Halo_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Halo_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		770A8D6EAE636D8DC63E4882B26646C0 /* UICollectionView+Halo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Halo.swift"; path = "Halo/Classes/UICollectionView+Halo.swift"; sourceTree = "<group>"; };
+		78E1B99BC6EE3986BECA2ECAD056A4D0 /* Pods_Halo_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Halo_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B0130D5724384C0D2FB7AE57981FC45 /* Pods-Halo_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Halo_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		7E0E4D544B37A090337427C2931E3CDA /* UILabel+Halo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILabel+Halo.swift"; path = "Halo/Classes/UILabel+Halo.swift"; sourceTree = "<group>"; };
+		814FB775F966D609FA1066871B059672 /* Pods-Halo_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Halo_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		8D9843BF3CF18C1CF01F9F1A0A64975A /* KeyboardObserver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardObserver.swift; path = Halo/Classes/KeyboardObserver.swift; sourceTree = "<group>"; };
+		8EA585948CBD94B48D867A255AE857B5 /* Alert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alert.swift; path = Halo/Classes/Alert.swift; sourceTree = "<group>"; };
+		92163EE75488DCB37A33DDEB2E4407E2 /* Pods-Halo_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Halo_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		97671F40DFBBF6D20D9FBCEDCCD11C06 /* Pods-Halo_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Halo_Example-resources.sh"; sourceTree = "<group>"; };
+		998CA3753BF4D3B481E1A9D34D8EACAC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		A11566CFB56CF62F2580FE566943D71D /* Pods-Halo_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Halo_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		A6B1B82F412544C56D94EF9AFD463655 /* Pods-Halo_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Halo_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		AAA74C135FBCF3C8B57BA2FAEBEE0C33 /* Halo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Halo-dummy.m"; sourceTree = "<group>"; };
+		B58FED9E566C03F84E4E95A3732DF926 /* Pods-Halo_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Halo_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		B6419DB0B06C3F02483896F74B68D0BB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B859381D4C9FDAA932526D04C25BA0E8 /* UITableView+Halo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+Halo.swift"; path = "Halo/Classes/UITableView+Halo.swift"; sourceTree = "<group>"; };
+		BFE3FD67AC8272DE66135CD9C0AF73E1 /* Pods-Halo_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Halo_Example-frameworks.sh"; sourceTree = "<group>"; };
+		C08423404E1905C95AF37E53CB2629E6 /* NSDate+Halo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSDate+Halo.swift"; path = "Halo/Classes/NSDate+Halo.swift"; sourceTree = "<group>"; };
+		C4623EFBA7721F956B16B815517E72DA /* Pods-Halo_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Halo_Tests-umbrella.h"; sourceTree = "<group>"; };
+		CD7A0377785BBB4DFB240EA976ED53ED /* UIColor+Halo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Halo.swift"; path = "Halo/Classes/UIColor+Halo.swift"; sourceTree = "<group>"; };
+		D1A6B665242211CAC0FBEF183A98CE30 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D25370BBDA9A8CAC0C6CC88C099F380D /* UIApplication+Halo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplication+Halo.swift"; path = "Halo/Classes/UIApplication+Halo.swift"; sourceTree = "<group>"; };
+		DB48647465134D03B0D9FD6DA08D6C80 /* Pods-Halo_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Halo_Tests.modulemap"; sourceTree = "<group>"; };
+		DCD7565FBE7664EF237B27FAD957928E /* UIScrollView+Halo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIScrollView+Halo.swift"; path = "Halo/Classes/UIScrollView+Halo.swift"; sourceTree = "<group>"; };
+		E27A8D54E46632A780D9AACF1EDE5731 /* Print+Halo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Print+Halo.swift"; path = "Halo/Classes/Print+Halo.swift"; sourceTree = "<group>"; };
+		E358B591E13C7BE024697A0C0DFF7B61 /* CollectionType+Halo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CollectionType+Halo.swift"; path = "Halo/Classes/CollectionType+Halo.swift"; sourceTree = "<group>"; };
+		E771FE15C39E2EE49DF3EEEF0DC968DF /* Halo.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = Halo.podspec; sourceTree = "<group>"; };
+		F23AC38CDBCB4AFBB35FC297C89B0ACF /* CGFloatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGFloatable.swift; path = Halo/Classes/CGFloatable.swift; sourceTree = "<group>"; };
+		F33C5B6B3E10A99519D325A831C6C22D /* UITextView+Halo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextView+Halo.swift"; path = "Halo/Classes/UITextView+Halo.swift"; sourceTree = "<group>"; };
+		F605F75C36E7BB18330A3A3735E1D232 /* Halo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Halo.xcconfig; sourceTree = "<group>"; };
+		F671CCA8CC73F1E462C1310CCD91D04D /* String+Halo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Halo.swift"; path = "Halo/Classes/String+Halo.swift"; sourceTree = "<group>"; };
+		F9A94B2F0ED541ECC7ECA490F99EA4E9 /* UIView+Halo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Halo.swift"; path = "Halo/Classes/UIView+Halo.swift"; sourceTree = "<group>"; };
+		FB36CA2F595D65E434C8CBB57B90FD1C /* Pods-Halo_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Halo_Tests-dummy.m"; sourceTree = "<group>"; };
+		FFAF1FED1D9110BA1ACFCAD142BFAD9B /* Pods-Halo_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Halo_Example-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		095D72FD9AAD815552791A1856A9E230 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52F8C9E69708DD43DBD464EC8159A836 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		157BCF0B1115D948D963F5C34755BEE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0DA923B407C3E4B5E2FE44978413E95 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89D09D666D0188AF7F638F82D93FD21B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				455291CC574FFF891AA78DE6D2BCF96F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09DD25F13855A31E2FF76FD7B3B185EF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				40DC314970E23D02D9436C7BE1E4BE3A /* Pods-Halo_Example */,
+				17365CEF0355AD8F2667B489FBBB343D /* Pods-Halo_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		17365CEF0355AD8F2667B489FBBB343D /* Pods-Halo_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5DAC09D05676D3B23B24B67CB0011AEA /* Info.plist */,
+				DB48647465134D03B0D9FD6DA08D6C80 /* Pods-Halo_Tests.modulemap */,
+				730212B307B174846FBEED88B566984A /* Pods-Halo_Tests-acknowledgements.markdown */,
+				B58FED9E566C03F84E4E95A3732DF926 /* Pods-Halo_Tests-acknowledgements.plist */,
+				FB36CA2F595D65E434C8CBB57B90FD1C /* Pods-Halo_Tests-dummy.m */,
+				593864F43961BBF7A669D4B51D52BD6B /* Pods-Halo_Tests-frameworks.sh */,
+				14337FD92B23C04B3F847FE1B1554E2E /* Pods-Halo_Tests-resources.sh */,
+				C4623EFBA7721F956B16B815517E72DA /* Pods-Halo_Tests-umbrella.h */,
+				A11566CFB56CF62F2580FE566943D71D /* Pods-Halo_Tests.debug.xcconfig */,
+				A6B1B82F412544C56D94EF9AFD463655 /* Pods-Halo_Tests.release.xcconfig */,
+			);
+			name = "Pods-Halo_Tests";
+			path = "Target Support Files/Pods-Halo_Tests";
+			sourceTree = "<group>";
+		};
+		40DC314970E23D02D9436C7BE1E4BE3A /* Pods-Halo_Example */ = {
+			isa = PBXGroup;
+			children = (
+				6B2B4441C35E1C5284E52D0C2FA5E99C /* Info.plist */,
+				0C1C14A182F99E7E3DC39830F455C05C /* Pods-Halo_Example.modulemap */,
+				92163EE75488DCB37A33DDEB2E4407E2 /* Pods-Halo_Example-acknowledgements.markdown */,
+				7B0130D5724384C0D2FB7AE57981FC45 /* Pods-Halo_Example-acknowledgements.plist */,
+				FFAF1FED1D9110BA1ACFCAD142BFAD9B /* Pods-Halo_Example-dummy.m */,
+				BFE3FD67AC8272DE66135CD9C0AF73E1 /* Pods-Halo_Example-frameworks.sh */,
+				97671F40DFBBF6D20D9FBCEDCCD11C06 /* Pods-Halo_Example-resources.sh */,
+				584180A59495CFDE03B4EBD17858B906 /* Pods-Halo_Example-umbrella.h */,
+				814FB775F966D609FA1066871B059672 /* Pods-Halo_Example.debug.xcconfig */,
+				6854F7EC0C93BCF903582BD9329A3D59 /* Pods-Halo_Example.release.xcconfig */,
+			);
+			name = "Pods-Halo_Example";
+			path = "Target Support Files/Pods-Halo_Example";
+			sourceTree = "<group>";
+		};
+		418FF1E24676282B5CE08EA87B55EEE5 /* Halo */ = {
+			isa = PBXGroup;
+			children = (
+				8EA585948CBD94B48D867A255AE857B5 /* Alert.swift */,
+				F23AC38CDBCB4AFBB35FC297C89B0ACF /* CGFloatable.swift */,
+				E358B591E13C7BE024697A0C0DFF7B61 /* CollectionType+Halo.swift */,
+				6D395086AD01BE3F2E602677FF10F05F /* Halo_HasText.swift */,
+				8D9843BF3CF18C1CF01F9F1A0A64975A /* KeyboardObserver.swift */,
+				C08423404E1905C95AF37E53CB2629E6 /* NSDate+Halo.swift */,
+				E27A8D54E46632A780D9AACF1EDE5731 /* Print+Halo.swift */,
+				F671CCA8CC73F1E462C1310CCD91D04D /* String+Halo.swift */,
+				D25370BBDA9A8CAC0C6CC88C099F380D /* UIApplication+Halo.swift */,
+				67C0208E2C9FC124B91980B517DE88C9 /* UIButton+Halo.swift */,
+				770A8D6EAE636D8DC63E4882B26646C0 /* UICollectionView+Halo.swift */,
+				CD7A0377785BBB4DFB240EA976ED53ED /* UIColor+Halo.swift */,
+				177204AE8CA33AB306284CA064DDDD5F /* UIImage+Halo.swift */,
+				40BE3764B4A6AD13F491E03D15B4EE0B /* UIImageView+Halo.swift */,
+				7E0E4D544B37A090337427C2931E3CDA /* UILabel+Halo.swift */,
+				0B42337601AFC33B1ACAD56FB054E5C2 /* UINavigationController+Halo.swift */,
+				DCD7565FBE7664EF237B27FAD957928E /* UIScrollView+Halo.swift */,
+				B859381D4C9FDAA932526D04C25BA0E8 /* UITableView+Halo.swift */,
+				33C9384ADFF396F3FF69054BD45E7331 /* UITableViewCell+Halo.swift */,
+				6493270E983B6ADAC5B47DD111E46702 /* UITextField+Halo.swift */,
+				F33C5B6B3E10A99519D325A831C6C22D /* UITextView+Halo.swift */,
+				F9A94B2F0ED541ECC7ECA490F99EA4E9 /* UIView+Halo.swift */,
+				14A3F107634743177AC41A0FBF7EF377 /* UIViewController+Halo.swift */,
+				4D7D139950371047FB94A1BC5C9B094E /* Pod */,
+				A2D2918129F7E2C15629FEC609E33E65 /* Support Files */,
+			);
+			name = Halo;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		4D7D139950371047FB94A1BC5C9B094E /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				E771FE15C39E2EE49DF3EEEF0DC968DF /* Halo.podspec */,
+				998CA3753BF4D3B481E1A9D34D8EACAC /* LICENSE */,
+				B6419DB0B06C3F02483896F74B68D0BB /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				E4EAF6C74C60124C14A4949DE5454773 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				890056037B1F5E9120151A23B0304F27 /* Products */,
+				09DD25F13855A31E2FF76FD7B3B185EF /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		890056037B1F5E9120151A23B0304F27 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B7E025D20577D3A4108B2F36A87620D /* Halo.framework */,
+				1D577671193537D78A8F91BA2EFC6ABC /* Pods_Halo_Example.framework */,
+				78E1B99BC6EE3986BECA2ECAD056A4D0 /* Pods_Halo_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2D2918129F7E2C15629FEC609E33E65 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				130975732E20783A6935A633B1897ADE /* Halo.modulemap */,
+				F605F75C36E7BB18330A3A3735E1D232 /* Halo.xcconfig */,
+				AAA74C135FBCF3C8B57BA2FAEBEE0C33 /* Halo-dummy.m */,
+				461D75007999545C00A2327F53DA1946 /* Halo-prefix.pch */,
+				1FAC9754221D4E5BCBFA261C035E94FC /* Halo-umbrella.h */,
+				D1A6B665242211CAC0FBEF183A98CE30 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Halo";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E4EAF6C74C60124C14A4949DE5454773 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				418FF1E24676282B5CE08EA87B55EEE5 /* Halo */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		195B3E2BC84A3BAB9FF5B2D445B91962 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC6CA779E8CD84C01B0F17C878504B88 /* Pods-Halo_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76019F8ECB82EE5B9699AC035DF288A1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A1AD547EC03913183ECB92B841D4FE8 /* Pods-Halo_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F01F39E78ADB69D5512804908073E78A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89D9A56471CB633B0DF654C450D64F5F /* Halo-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8DFD22BB1D57603FC156EDCEC55C90AD /* Pods-Halo_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 635FB7B2231C308432C90EA0F16030FD /* Build configuration list for PBXNativeTarget "Pods-Halo_Example" */;
+			buildPhases = (
+				8D2C5F5479AE79A959733EA5476234D9 /* Sources */,
+				157BCF0B1115D948D963F5C34755BEE3 /* Frameworks */,
+				195B3E2BC84A3BAB9FF5B2D445B91962 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47FFAC9DAE72BCBC73BEDF5758ADF8EA /* PBXTargetDependency */,
+			);
+			name = "Pods-Halo_Example";
+			productName = "Pods-Halo_Example";
+			productReference = 1D577671193537D78A8F91BA2EFC6ABC /* Pods_Halo_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8F2EB4439A0140017ECD6CFC94680E54 /* Pods-Halo_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13FA6D827CC9899709B3FDE4D0B46C6C /* Build configuration list for PBXNativeTarget "Pods-Halo_Tests" */;
+			buildPhases = (
+				5CC2F184ADB06E77AACDD2B8971F8EA8 /* Sources */,
+				095D72FD9AAD815552791A1856A9E230 /* Frameworks */,
+				76019F8ECB82EE5B9699AC035DF288A1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D44AE2E43948F21C16481B642E1D3947 /* PBXTargetDependency */,
+			);
+			name = "Pods-Halo_Tests";
+			productName = "Pods-Halo_Tests";
+			productReference = 78E1B99BC6EE3986BECA2ECAD056A4D0 /* Pods_Halo_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9E07868073E1632610059D70CA86FB31 /* Halo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 442D21BBEE9C7F0DC3B100FD6A8FB12F /* Build configuration list for PBXNativeTarget "Halo" */;
+			buildPhases = (
+				9909C47E3CBDD87CAFADCBA7B0D47DE8 /* Sources */,
+				89D09D666D0188AF7F638F82D93FD21B /* Frameworks */,
+				F01F39E78ADB69D5512804908073E78A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Halo;
+			productName = Halo;
+			productReference = 4B7E025D20577D3A4108B2F36A87620D /* Halo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 890056037B1F5E9120151A23B0304F27 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9E07868073E1632610059D70CA86FB31 /* Halo */,
+				8DFD22BB1D57603FC156EDCEC55C90AD /* Pods-Halo_Example */,
+				8F2EB4439A0140017ECD6CFC94680E54 /* Pods-Halo_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5CC2F184ADB06E77AACDD2B8971F8EA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F6D8A5BF609F7311DE1B9FBA46B85C9 /* Pods-Halo_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D2C5F5479AE79A959733EA5476234D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AA7CAACD4F2A146F3948C6BE6995930 /* Pods-Halo_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9909C47E3CBDD87CAFADCBA7B0D47DE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B154B6EF6F6110700CE32504670F1DD /* Alert.swift in Sources */,
+				948262C8199833242FDFE4D634783B2C /* CGFloatable.swift in Sources */,
+				98A5A2E7DC7AA2FF797DAD4B52132F63 /* CollectionType+Halo.swift in Sources */,
+				13C0095210EF78BE5D1A0D4A55E5F4DA /* Halo-dummy.m in Sources */,
+				7BB395AAF9488A7C3E4DCEE0AAF0E263 /* Halo_HasText.swift in Sources */,
+				A75A0AFDBBF64BA7F58278260D8A18F1 /* KeyboardObserver.swift in Sources */,
+				D0B6C4B4B1EF5BFDE57CCC7F6B53D6B1 /* NSDate+Halo.swift in Sources */,
+				A5E4E1F2AD9D4C342BB47D00A3748A69 /* Print+Halo.swift in Sources */,
+				021CDC2CE408BE39326F6D33D9A94C1E /* String+Halo.swift in Sources */,
+				28322D87A0EB968C7F9D85B7A7E315AC /* UIApplication+Halo.swift in Sources */,
+				88945B8ED95D437EFD3B112496622C8C /* UIButton+Halo.swift in Sources */,
+				2EAC08958B02C89079A4C132F19D4BF0 /* UICollectionView+Halo.swift in Sources */,
+				65E8426E14E6B8D067C04B8CE5110C0B /* UIColor+Halo.swift in Sources */,
+				7BEBB01C8EEBB2FB78E62339B455782E /* UIImage+Halo.swift in Sources */,
+				AEBC14AED2CD45F780C43BD7F9FFF7F1 /* UIImageView+Halo.swift in Sources */,
+				B0532EFFBA616CC0ECD58514E3CF837C /* UILabel+Halo.swift in Sources */,
+				4AD65BF4AEEB323AC54E10F0108A61FA /* UINavigationController+Halo.swift in Sources */,
+				73A9828E413AB581A810B276A5519FE8 /* UIScrollView+Halo.swift in Sources */,
+				B53EAB85F20FC573E3B1DAF0351B9B05 /* UITableView+Halo.swift in Sources */,
+				A52880E83148D3503A353CBF6984696E /* UITableViewCell+Halo.swift in Sources */,
+				4771B270FE0DD9AC9AA08687AB0D2AAB /* UITextField+Halo.swift in Sources */,
+				CE2F54C1B9578B5C8EC267F3CB617BFB /* UITextView+Halo.swift in Sources */,
+				9293F3618F9DA3FB4546DFD7EFBFC436 /* UIView+Halo.swift in Sources */,
+				7A10FEE23BE79DDD753BF19AAC098ABE /* UIViewController+Halo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		47FFAC9DAE72BCBC73BEDF5758ADF8EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Halo;
+			target = 9E07868073E1632610059D70CA86FB31 /* Halo */;
+			targetProxy = E6D8E66AE5897BD5A8D11E758671A3AF /* PBXContainerItemProxy */;
+		};
+		D44AE2E43948F21C16481B642E1D3947 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Halo_Example";
+			target = 8DFD22BB1D57603FC156EDCEC55C90AD /* Pods-Halo_Example */;
+			targetProxy = D57309C5C4D5C9A24418B4B893A23B5C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3B66873FDFD1B5769C22BBF1580921A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6B1B82F412544C56D94EF9AFD463655 /* Pods-Halo_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Halo_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Halo_Tests/Pods-Halo_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3BE6646038B46BA03C3ECAD00B53B4CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F605F75C36E7BB18330A3A3735E1D232 /* Halo.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Halo/Halo-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Halo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Halo/Halo.modulemap";
+				PRODUCT_MODULE_NAME = Halo;
+				PRODUCT_NAME = Halo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7E99D3207898EA7098C41EF12D15C5F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A11566CFB56CF62F2580FE566943D71D /* Pods-Halo_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Halo_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Halo_Tests/Pods-Halo_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		910874ADAFC9669B685ED3EA6003E95A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F605F75C36E7BB18330A3A3735E1D232 /* Halo.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Halo/Halo-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Halo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Halo/Halo.modulemap";
+				PRODUCT_MODULE_NAME = Halo;
+				PRODUCT_NAME = Halo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		956D0600F8BFEBA89973948C6AA93888 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6854F7EC0C93BCF903582BD9329A3D59 /* Pods-Halo_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Halo_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Halo_Example/Pods-Halo_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B42B54097A876E8A982CBF5DAA91B1AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		EC36A3129B91BCDC7C2929FE9310A994 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 814FB775F966D609FA1066871B059672 /* Pods-Halo_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Halo_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Halo_Example/Pods-Halo_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13FA6D827CC9899709B3FDE4D0B46C6C /* Build configuration list for PBXNativeTarget "Pods-Halo_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E99D3207898EA7098C41EF12D15C5F8 /* Debug */,
+				3B66873FDFD1B5769C22BBF1580921A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */,
+				B42B54097A876E8A982CBF5DAA91B1AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		442D21BBEE9C7F0DC3B100FD6A8FB12F /* Build configuration list for PBXNativeTarget "Halo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				910874ADAFC9669B685ED3EA6003E95A /* Debug */,
+				3BE6646038B46BA03C3ECAD00B53B4CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		635FB7B2231C308432C90EA0F16030FD /* Build configuration list for PBXNativeTarget "Pods-Halo_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC36A3129B91BCDC7C2929FE9310A994 /* Debug */,
+				956D0600F8BFEBA89973948C6AA93888 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                = "Halo"
-  s.version             = "0.1.5"
+  s.version             = "0.1.6"
   s.summary             = "My own iOS development kit, written by Swift."
   s.homepage            = "https://github.com/HaloWang/Halo"
   s.license             = { :type => "MIT", :file => "LICENSE" }
@@ -11,9 +11,4 @@ Pod::Spec.new do |s|
   s.frameworks          = "UIKit"
   s.requires_arc        = true
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.1' }
-
-  s.subspec 'Foundation' do |ss|
-    ss.source_files = "Halo/Source/Swift+Halo/*.{swift}"
-  end
-
 end

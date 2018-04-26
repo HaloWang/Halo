@@ -1,0 +1,16 @@
+PODS:
+  - Halo (0.1.0)
+
+DEPENDENCIES:
+  - Halo (from `../`)
+
+EXTERNAL SOURCES:
+  Halo:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Halo: c617a7de665b31b38c4f1512c08e7c650fa7eab4
+
+PODFILE CHECKSUM: dc58a7ac187adeca240a2f3c59bbe1ecb4faead4
+
+COCOAPODS: 1.5.0
