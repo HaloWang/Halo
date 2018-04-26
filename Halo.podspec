@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author              = { "王策" => "634692517@qq.com" }
   s.platform            = :ios, "8.0"
   s.source              = { :git => "https://github.com/HaloWang/Halo.git", :tag => s.version }
-  s.source_files        = "Halo/Source/*.{swift}"
+  s.source_files        = "Halo/Classes/*.{swift}"
   s.frameworks          = "UIKit"
   s.requires_arc        = true
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.1' }
